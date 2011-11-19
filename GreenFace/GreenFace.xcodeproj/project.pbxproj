@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7E6E61A1477FBF50037750E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6E6191477FBF50037750E /* UIKit.framework */; };
+		A7E6E61C1477FBF50037750E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6E61B1477FBF50037750E /* Foundation.framework */; };
+		A7E6E61E1477FBF50037750E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6E61D1477FBF50037750E /* CoreGraphics.framework */; };
+		A7E6E6221477FBF50037750E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6E6211477FBF50037750E /* OpenGLES.framework */; };
+		A7E6E6281477FBF50037750E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6261477FBF50037750E /* InfoPlist.strings */; };
+		A7E6E62A1477FBF50037750E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6291477FBF50037750E /* main.m */; };
+		A7E6E6421477FD620037750E /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E63F1477FD620037750E /* EAGLView.m */; };
+		A7E6E6431477FD620037750E /* IronJumpAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6411477FD620037750E /* IronJumpAppDelegate.m */; };
+		A7E6E6791477FD900037750E /* FPDiamond.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6471477FD8F0037750E /* FPDiamond.m */; };
+		A7E6E67A1477FD900037750E /* FPElevator.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6491477FD8F0037750E /* FPElevator.m */; };
+		A7E6E67B1477FD900037750E /* FPExit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E64B1477FD8F0037750E /* FPExit.m */; };
+		A7E6E67D1477FD900037750E /* FPFont.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E64F1477FD8F0037750E /* FPFont.m */; };
+		A7E6E67E1477FD900037750E /* FPGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6511477FD8F0037750E /* FPGame.m */; };
+		A7E6E67F1477FD900037750E /* FPGameAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6531477FD8F0037750E /* FPGameAtlas.m */; };
+		A7E6E6811477FD900037750E /* FPGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6581477FD8F0037750E /* FPGraphics.m */; };
+		A7E6E6831477FD900037750E /* FPMagnet.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E65C1477FD8F0037750E /* FPMagnet.m */; };
+		A7E6E6841477FD900037750E /* FPMath.c in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E65D1477FD8F0037750E /* FPMath.c */; };
+		A7E6E6851477FD900037750E /* FPMovablePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6601477FD8F0037750E /* FPMovablePlatform.m */; };
+		A7E6E6861477FD900037750E /* FPPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6621477FD8F0037750E /* FPPlatform.m */; };
+		A7E6E6871477FD900037750E /* FPPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6641477FD8F0037750E /* FPPlayer.m */; };
+		A7E6E6881477FD900037750E /* FPReplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6661477FD8F0037750E /* FPReplay.m */; };
+		A7E6E6891477FD900037750E /* FPSpeedPowerUp.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6681477FD8F0037750E /* FPSpeedPowerUp.m */; };
+		A7E6E68A1477FD900037750E /* FPStage.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E66A1477FD8F0037750E /* FPStage.m */; };
+		A7E6E68B1477FD900037750E /* FPTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E66C1477FD8F0037750E /* FPTexture.m */; };
+		A7E6E68C1477FD900037750E /* FPTextureArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E66E1477FD8F0037750E /* FPTextureArray.m */; };
+		A7E6E68D1477FD900037750E /* FPTextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6701477FD8F0037750E /* FPTextureAtlas.m */; };
+		A7E6E68E1477FD900037750E /* FPTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6721477FD8F0037750E /* FPTrampoline.m */; };
+		A7E6E68F1477FD900037750E /* FPXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6741477FD8F0037750E /* FPXMLParser.m */; };
+		A7E6E6901477FD900037750E /* FPXMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6761477FD8F0037750E /* FPXMLWriter.m */; };
+		A7E6E6A81477FFF50037750E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6A61477FFF50037750E /* MainWindow.xib */; };
+		A7E6E6AA1478063A0037750E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6E6A91478063A0037750E /* QuartzCore.framework */; };
+		A7E6E6EE1478069D0037750E /* AndaleMono.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6E51478069D0037750E /* AndaleMono.png */; };
+		A7E6E6EF1478069D0037750E /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6E61478069D0037750E /* arrow.png */; };
+		A7E6E6F01478069D0037750E /* Level_black.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6E71478069D0037750E /* Level_black.png */; };
+		A7E6E6F11478069D0037750E /* Level_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6E81478069D0037750E /* Level_blue.png */; };
+		A7E6E6F21478069D0037750E /* Level_shine.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6E91478069D0037750E /* Level_shine.png */; };
+		A7E6E6F31478069D0037750E /* levelatlas.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6EA1478069D0037750E /* levelatlas.png */; };
+		A7E6E6F41478069D0037750E /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6EB1478069D0037750E /* menu.png */; };
+		A7E6E6F51478069D0037750E /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6EC1478069D0037750E /* play.png */; };
+		A7E6E6F61478069D0037750E /* win.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6ED1478069D0037750E /* win.png */; };
+		A7E6E71D147806D90037750E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6F7147806D90037750E /* Default.png */; };
+		A7E6E71E147806D90037750E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6F8147806D90037750E /* Icon.png */; };
+		A7E6E71F147806D90037750E /* closed.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6FA147806D90037750E /* closed.level */; };
+		A7E6E720147806D90037750E /* collisions.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6FB147806D90037750E /* collisions.level */; };
+		A7E6E721147806D90037750E /* easyelevators.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6FC147806D90037750E /* easyelevators.level */; };
+		A7E6E722147806D90037750E /* easyplatforms.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6FD147806D90037750E /* easyplatforms.level */; };
+		A7E6E723147806D90037750E /* easytrampoline.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6FE147806D90037750E /* easytrampoline.level */; };
+		A7E6E724147806D90037750E /* elevatormadness.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6FF147806D90037750E /* elevatormadness.level */; };
+		A7E6E725147806D90037750E /* elevators.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E700147806D90037750E /* elevators.level */; };
+		A7E6E726147806D90037750E /* example.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E701147806D90037750E /* example.level */; };
+		A7E6E727147806D90037750E /* exit.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E702147806D90037750E /* exit.level */; };
+		A7E6E728147806D90037750E /* fall.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E703147806D90037750E /* fall.level */; };
+		A7E6E729147806D90037750E /* fun.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E704147806D90037750E /* fun.level */; };
+		A7E6E72A147806D90037750E /* hardplatforms.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E705147806D90037750E /* hardplatforms.level */; };
+		A7E6E72B147806D90037750E /* jump.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E706147806D90037750E /* jump.level */; };
+		A7E6E72C147806D90037750E /* labyrinth.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E707147806D90037750E /* labyrinth.level */; };
+		A7E6E72D147806D90037750E /* magnetmoves.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E708147806D90037750E /* magnetmoves.level */; };
+		A7E6E72E147806D90037750E /* magnets.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E709147806D90037750E /* magnets.level */; };
+		A7E6E72F147806D90037750E /* magnetshard.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E70A147806D90037750E /* magnetshard.level */; };
+		A7E6E730147806D90037750E /* movable.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E70B147806D90037750E /* movable.level */; };
+		A7E6E731147806D90037750E /* movable_test.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E70C147806D90037750E /* movable_test.level */; };
+		A7E6E732147806D90037750E /* movableforjump.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E70D147806D90037750E /* movableforjump.level */; };
+		A7E6E733147806D90037750E /* movablelearn.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E70E147806D90037750E /* movablelearn.level */; };
+		A7E6E734147806D90037750E /* moving1.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E70F147806D90037750E /* moving1.level */; };
+		A7E6E735147806D90037750E /* moving2.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E710147806D90037750E /* moving2.level */; };
+		A7E6E736147806D90037750E /* platforms.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E711147806D90037750E /* platforms.level */; };
+		A7E6E737147806D90037750E /* platformslearn.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E712147806D90037750E /* platformslearn.level */; };
+		A7E6E738147806D90037750E /* puzzle.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E713147806D90037750E /* puzzle.level */; };
+		A7E6E739147806D90037750E /* speed.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E714147806D90037750E /* speed.level */; };
+		A7E6E73A147806D90037750E /* speed2.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E715147806D90037750E /* speed2.level */; };
+		A7E6E73B147806D90037750E /* speed3.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E716147806D90037750E /* speed3.level */; };
+		A7E6E73C147806D90037750E /* speed4.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E717147806D90037750E /* speed4.level */; };
+		A7E6E73D147806D90037750E /* test.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E718147806D90037750E /* test.level */; };
+		A7E6E73E147806D90037750E /* trampognet.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E719147806D90037750E /* trampognet.level */; };
+		A7E6E73F147806D90037750E /* trampoline.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E71A147806D90037750E /* trampoline.level */; };
+		A7E6E740147806D90037750E /* trampoline2.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E71B147806D90037750E /* trampoline2.level */; };
+		A7E6E741147806D90037750E /* tutorial.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E71C147806D90037750E /* tutorial.level */; };
+		A7E6E746147808C60037750E /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E743147808C60037750E /* 01.png */; };
+		A7E6E747147808C60037750E /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E744147808C60037750E /* 02.png */; };
+		A7E6E748147808C60037750E /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E745147808C60037750E /* 03.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A7E6E6151477FBF50037750E /* GreenFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7E6E6191477FBF50037750E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A7E6E61B1477FBF50037750E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A7E6E61D1477FBF50037750E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A7E6E6211477FBF50037750E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		A7E6E6251477FBF50037750E /* GreenFace-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GreenFace-Info.plist"; sourceTree = "<group>"; };
+		A7E6E6271477FBF50037750E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7E6E6291477FBF50037750E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A7E6E62B1477FBF50037750E /* GreenFace-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GreenFace-Prefix.pch"; sourceTree = "<group>"; };
+		A7E6E63E1477FD620037750E /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		A7E6E63F1477FD620037750E /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
+		A7E6E6401477FD620037750E /* IronJumpAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IronJumpAppDelegate.h; sourceTree = "<group>"; };
+		A7E6E6411477FD620037750E /* IronJumpAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IronJumpAppDelegate.m; sourceTree = "<group>"; };
+		A7E6E6461477FD8F0037750E /* FPDiamond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPDiamond.h; path = ../../SharedClasses/FPDiamond.h; sourceTree = "<group>"; };
+		A7E6E6471477FD8F0037750E /* FPDiamond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPDiamond.m; path = ../../SharedClasses/FPDiamond.m; sourceTree = "<group>"; };
+		A7E6E6481477FD8F0037750E /* FPElevator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPElevator.h; path = ../../SharedClasses/FPElevator.h; sourceTree = "<group>"; };
+		A7E6E6491477FD8F0037750E /* FPElevator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPElevator.m; path = ../../SharedClasses/FPElevator.m; sourceTree = "<group>"; };
+		A7E6E64A1477FD8F0037750E /* FPExit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPExit.h; path = ../../SharedClasses/FPExit.h; sourceTree = "<group>"; };
+		A7E6E64B1477FD8F0037750E /* FPExit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPExit.m; path = ../../SharedClasses/FPExit.m; sourceTree = "<group>"; };
+		A7E6E64E1477FD8F0037750E /* FPFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPFont.h; path = ../../SharedClasses/FPFont.h; sourceTree = "<group>"; };
+		A7E6E64F1477FD8F0037750E /* FPFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPFont.m; path = ../../SharedClasses/FPFont.m; sourceTree = "<group>"; };
+		A7E6E6501477FD8F0037750E /* FPGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPGame.h; path = ../../SharedClasses/FPGame.h; sourceTree = "<group>"; };
+		A7E6E6511477FD8F0037750E /* FPGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPGame.m; path = ../../SharedClasses/FPGame.m; sourceTree = "<group>"; };
+		A7E6E6521477FD8F0037750E /* FPGameAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPGameAtlas.h; path = ../../SharedClasses/FPGameAtlas.h; sourceTree = "<group>"; };
+		A7E6E6531477FD8F0037750E /* FPGameAtlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPGameAtlas.m; path = ../../SharedClasses/FPGameAtlas.m; sourceTree = "<group>"; };
+		A7E6E6541477FD8F0037750E /* FPGameProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPGameProtocols.h; path = ../../SharedClasses/FPGameProtocols.h; sourceTree = "<group>"; };
+		A7E6E6571477FD8F0037750E /* FPGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPGraphics.h; path = ../../SharedClasses/FPGraphics.h; sourceTree = "<group>"; };
+		A7E6E6581477FD8F0037750E /* FPGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPGraphics.m; path = ../../SharedClasses/FPGraphics.m; sourceTree = "<group>"; };
+		A7E6E65B1477FD8F0037750E /* FPMagnet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPMagnet.h; path = ../../SharedClasses/FPMagnet.h; sourceTree = "<group>"; };
+		A7E6E65C1477FD8F0037750E /* FPMagnet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPMagnet.m; path = ../../SharedClasses/FPMagnet.m; sourceTree = "<group>"; };
+		A7E6E65D1477FD8F0037750E /* FPMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = FPMath.c; path = ../../SharedClasses/FPMath.c; sourceTree = "<group>"; };
+		A7E6E65E1477FD8F0037750E /* FPMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPMath.h; path = ../../SharedClasses/FPMath.h; sourceTree = "<group>"; };
+		A7E6E65F1477FD8F0037750E /* FPMovablePlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPMovablePlatform.h; path = ../../SharedClasses/FPMovablePlatform.h; sourceTree = "<group>"; };
+		A7E6E6601477FD8F0037750E /* FPMovablePlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPMovablePlatform.m; path = ../../SharedClasses/FPMovablePlatform.m; sourceTree = "<group>"; };
+		A7E6E6611477FD8F0037750E /* FPPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPPlatform.h; path = ../../SharedClasses/FPPlatform.h; sourceTree = "<group>"; };
+		A7E6E6621477FD8F0037750E /* FPPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPPlatform.m; path = ../../SharedClasses/FPPlatform.m; sourceTree = "<group>"; };
+		A7E6E6631477FD8F0037750E /* FPPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPPlayer.h; path = ../../SharedClasses/FPPlayer.h; sourceTree = "<group>"; };
+		A7E6E6641477FD8F0037750E /* FPPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPPlayer.m; path = ../../SharedClasses/FPPlayer.m; sourceTree = "<group>"; };
+		A7E6E6651477FD8F0037750E /* FPReplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPReplay.h; path = ../../SharedClasses/FPReplay.h; sourceTree = "<group>"; };
+		A7E6E6661477FD8F0037750E /* FPReplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPReplay.m; path = ../../SharedClasses/FPReplay.m; sourceTree = "<group>"; };
+		A7E6E6671477FD8F0037750E /* FPSpeedPowerUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPSpeedPowerUp.h; path = ../../SharedClasses/FPSpeedPowerUp.h; sourceTree = "<group>"; };
+		A7E6E6681477FD8F0037750E /* FPSpeedPowerUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPSpeedPowerUp.m; path = ../../SharedClasses/FPSpeedPowerUp.m; sourceTree = "<group>"; };
+		A7E6E6691477FD8F0037750E /* FPStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPStage.h; path = ../../SharedClasses/FPStage.h; sourceTree = "<group>"; };
+		A7E6E66A1477FD8F0037750E /* FPStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPStage.m; path = ../../SharedClasses/FPStage.m; sourceTree = "<group>"; };
+		A7E6E66B1477FD8F0037750E /* FPTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPTexture.h; path = ../../SharedClasses/FPTexture.h; sourceTree = "<group>"; };
+		A7E6E66C1477FD8F0037750E /* FPTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPTexture.m; path = ../../SharedClasses/FPTexture.m; sourceTree = "<group>"; };
+		A7E6E66D1477FD8F0037750E /* FPTextureArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPTextureArray.h; path = ../../SharedClasses/FPTextureArray.h; sourceTree = "<group>"; };
+		A7E6E66E1477FD8F0037750E /* FPTextureArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPTextureArray.m; path = ../../SharedClasses/FPTextureArray.m; sourceTree = "<group>"; };
+		A7E6E66F1477FD8F0037750E /* FPTextureAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPTextureAtlas.h; path = ../../SharedClasses/FPTextureAtlas.h; sourceTree = "<group>"; };
+		A7E6E6701477FD8F0037750E /* FPTextureAtlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPTextureAtlas.m; path = ../../SharedClasses/FPTextureAtlas.m; sourceTree = "<group>"; };
+		A7E6E6711477FD8F0037750E /* FPTrampoline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPTrampoline.h; path = ../../SharedClasses/FPTrampoline.h; sourceTree = "<group>"; };
+		A7E6E6721477FD8F0037750E /* FPTrampoline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPTrampoline.m; path = ../../SharedClasses/FPTrampoline.m; sourceTree = "<group>"; };
+		A7E6E6731477FD8F0037750E /* FPXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPXMLParser.h; path = ../../SharedClasses/FPXMLParser.h; sourceTree = "<group>"; };
+		A7E6E6741477FD8F0037750E /* FPXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPXMLParser.m; path = ../../SharedClasses/FPXMLParser.m; sourceTree = "<group>"; };
+		A7E6E6751477FD8F0037750E /* FPXMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPXMLWriter.h; path = ../../SharedClasses/FPXMLWriter.h; sourceTree = "<group>"; };
+		A7E6E6761477FD8F0037750E /* FPXMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPXMLWriter.m; path = ../../SharedClasses/FPXMLWriter.m; sourceTree = "<group>"; };
+		A7E6E6A71477FFF50037750E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		A7E6E6A91478063A0037750E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A7E6E6E51478069D0037750E /* AndaleMono.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AndaleMono.png; path = Images/AndaleMono.png; sourceTree = "<group>"; };
+		A7E6E6E61478069D0037750E /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = Images/arrow.png; sourceTree = "<group>"; };
+		A7E6E6E71478069D0037750E /* Level_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Level_black.png; path = Images/Level_black.png; sourceTree = "<group>"; };
+		A7E6E6E81478069D0037750E /* Level_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Level_blue.png; path = Images/Level_blue.png; sourceTree = "<group>"; };
+		A7E6E6E91478069D0037750E /* Level_shine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Level_shine.png; path = Images/Level_shine.png; sourceTree = "<group>"; };
+		A7E6E6EA1478069D0037750E /* levelatlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = levelatlas.png; path = Images/levelatlas.png; sourceTree = "<group>"; };
+		A7E6E6EB1478069D0037750E /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = Images/menu.png; sourceTree = "<group>"; };
+		A7E6E6EC1478069D0037750E /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play.png; path = Images/play.png; sourceTree = "<group>"; };
+		A7E6E6ED1478069D0037750E /* win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = win.png; path = Images/win.png; sourceTree = "<group>"; };
+		A7E6E6F7147806D90037750E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A7E6E6F8147806D90037750E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		A7E6E6FA147806D90037750E /* closed.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = closed.level; sourceTree = "<group>"; };
+		A7E6E6FB147806D90037750E /* collisions.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = collisions.level; sourceTree = "<group>"; };
+		A7E6E6FC147806D90037750E /* easyelevators.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = easyelevators.level; sourceTree = "<group>"; };
+		A7E6E6FD147806D90037750E /* easyplatforms.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = easyplatforms.level; sourceTree = "<group>"; };
+		A7E6E6FE147806D90037750E /* easytrampoline.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = easytrampoline.level; sourceTree = "<group>"; };
+		A7E6E6FF147806D90037750E /* elevatormadness.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = elevatormadness.level; sourceTree = "<group>"; };
+		A7E6E700147806D90037750E /* elevators.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = elevators.level; sourceTree = "<group>"; };
+		A7E6E701147806D90037750E /* example.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = example.level; sourceTree = "<group>"; };
+		A7E6E702147806D90037750E /* exit.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = exit.level; sourceTree = "<group>"; };
+		A7E6E703147806D90037750E /* fall.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = fall.level; sourceTree = "<group>"; };
+		A7E6E704147806D90037750E /* fun.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = fun.level; sourceTree = "<group>"; };
+		A7E6E705147806D90037750E /* hardplatforms.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = hardplatforms.level; sourceTree = "<group>"; };
+		A7E6E706147806D90037750E /* jump.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = jump.level; sourceTree = "<group>"; };
+		A7E6E707147806D90037750E /* labyrinth.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = labyrinth.level; sourceTree = "<group>"; };
+		A7E6E708147806D90037750E /* magnetmoves.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = magnetmoves.level; sourceTree = "<group>"; };
+		A7E6E709147806D90037750E /* magnets.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = magnets.level; sourceTree = "<group>"; };
+		A7E6E70A147806D90037750E /* magnetshard.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = magnetshard.level; sourceTree = "<group>"; };
+		A7E6E70B147806D90037750E /* movable.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = movable.level; sourceTree = "<group>"; };
+		A7E6E70C147806D90037750E /* movable_test.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = movable_test.level; sourceTree = "<group>"; };
+		A7E6E70D147806D90037750E /* movableforjump.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = movableforjump.level; sourceTree = "<group>"; };
+		A7E6E70E147806D90037750E /* movablelearn.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = movablelearn.level; sourceTree = "<group>"; };
+		A7E6E70F147806D90037750E /* moving1.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = moving1.level; sourceTree = "<group>"; };
+		A7E6E710147806D90037750E /* moving2.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = moving2.level; sourceTree = "<group>"; };
+		A7E6E711147806D90037750E /* platforms.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = platforms.level; sourceTree = "<group>"; };
+		A7E6E712147806D90037750E /* platformslearn.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = platformslearn.level; sourceTree = "<group>"; };
+		A7E6E713147806D90037750E /* puzzle.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = puzzle.level; sourceTree = "<group>"; };
+		A7E6E714147806D90037750E /* speed.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = speed.level; sourceTree = "<group>"; };
+		A7E6E715147806D90037750E /* speed2.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = speed2.level; sourceTree = "<group>"; };
+		A7E6E716147806D90037750E /* speed3.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = speed3.level; sourceTree = "<group>"; };
+		A7E6E717147806D90037750E /* speed4.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = speed4.level; sourceTree = "<group>"; };
+		A7E6E718147806D90037750E /* test.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = test.level; sourceTree = "<group>"; };
+		A7E6E719147806D90037750E /* trampognet.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trampognet.level; sourceTree = "<group>"; };
+		A7E6E71A147806D90037750E /* trampoline.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trampoline.level; sourceTree = "<group>"; };
+		A7E6E71B147806D90037750E /* trampoline2.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trampoline2.level; sourceTree = "<group>"; };
+		A7E6E71C147806D90037750E /* tutorial.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = tutorial.level; sourceTree = "<group>"; };
+		A7E6E743147808C60037750E /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
+		A7E6E744147808C60037750E /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
+		A7E6E745147808C60037750E /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7E6E6121477FBF50037750E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7E6E6AA1478063A0037750E /* QuartzCore.framework in Frameworks */,
+				A7E6E61A1477FBF50037750E /* UIKit.framework in Frameworks */,
+				A7E6E61C1477FBF50037750E /* Foundation.framework in Frameworks */,
+				A7E6E61E1477FBF50037750E /* CoreGraphics.framework in Frameworks */,
+				A7E6E6221477FBF50037750E /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7E6E60A1477FBF40037750E = {
+			isa = PBXGroup;
+			children = (
+				A7E6E6231477FBF50037750E /* GreenFace */,
+				A7E6E6181477FBF50037750E /* Frameworks */,
+				A7E6E6161477FBF50037750E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7E6E6161477FBF50037750E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7E6E6151477FBF50037750E /* GreenFace.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7E6E6181477FBF50037750E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7E6E6A91478063A0037750E /* QuartzCore.framework */,
+				A7E6E6191477FBF50037750E /* UIKit.framework */,
+				A7E6E61B1477FBF50037750E /* Foundation.framework */,
+				A7E6E61D1477FBF50037750E /* CoreGraphics.framework */,
+				A7E6E6211477FBF50037750E /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7E6E6231477FBF50037750E /* GreenFace */ = {
+			isa = PBXGroup;
+			children = (
+				A7E6E6F9147806D90037750E /* Levels */,
+				A7E6E6451477FD840037750E /* Images */,
+				A7E6E6441477FD790037750E /* SharedClasses */,
+				A7E6E63E1477FD620037750E /* EAGLView.h */,
+				A7E6E63F1477FD620037750E /* EAGLView.m */,
+				A7E6E6401477FD620037750E /* IronJumpAppDelegate.h */,
+				A7E6E6411477FD620037750E /* IronJumpAppDelegate.m */,
+				A7E6E6A61477FFF50037750E /* MainWindow.xib */,
+				A7E6E6241477FBF50037750E /* Supporting Files */,
+			);
+			path = GreenFace;
+			sourceTree = "<group>";
+		};
+		A7E6E6241477FBF50037750E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7E6E6F7147806D90037750E /* Default.png */,
+				A7E6E6F8147806D90037750E /* Icon.png */,
+				A7E6E6251477FBF50037750E /* GreenFace-Info.plist */,
+				A7E6E6261477FBF50037750E /* InfoPlist.strings */,
+				A7E6E6291477FBF50037750E /* main.m */,
+				A7E6E62B1477FBF50037750E /* GreenFace-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7E6E6441477FD790037750E /* SharedClasses */ = {
+			isa = PBXGroup;
+			children = (
+				A7E6E6461477FD8F0037750E /* FPDiamond.h */,
+				A7E6E6471477FD8F0037750E /* FPDiamond.m */,
+				A7E6E6481477FD8F0037750E /* FPElevator.h */,
+				A7E6E6491477FD8F0037750E /* FPElevator.m */,
+				A7E6E64A1477FD8F0037750E /* FPExit.h */,
+				A7E6E64B1477FD8F0037750E /* FPExit.m */,
+				A7E6E64E1477FD8F0037750E /* FPFont.h */,
+				A7E6E64F1477FD8F0037750E /* FPFont.m */,
+				A7E6E6501477FD8F0037750E /* FPGame.h */,
+				A7E6E6511477FD8F0037750E /* FPGame.m */,
+				A7E6E6521477FD8F0037750E /* FPGameAtlas.h */,
+				A7E6E6531477FD8F0037750E /* FPGameAtlas.m */,
+				A7E6E6541477FD8F0037750E /* FPGameProtocols.h */,
+				A7E6E6571477FD8F0037750E /* FPGraphics.h */,
+				A7E6E6581477FD8F0037750E /* FPGraphics.m */,
+				A7E6E65B1477FD8F0037750E /* FPMagnet.h */,
+				A7E6E65C1477FD8F0037750E /* FPMagnet.m */,
+				A7E6E65D1477FD8F0037750E /* FPMath.c */,
+				A7E6E65E1477FD8F0037750E /* FPMath.h */,
+				A7E6E65F1477FD8F0037750E /* FPMovablePlatform.h */,
+				A7E6E6601477FD8F0037750E /* FPMovablePlatform.m */,
+				A7E6E6611477FD8F0037750E /* FPPlatform.h */,
+				A7E6E6621477FD8F0037750E /* FPPlatform.m */,
+				A7E6E6631477FD8F0037750E /* FPPlayer.h */,
+				A7E6E6641477FD8F0037750E /* FPPlayer.m */,
+				A7E6E6651477FD8F0037750E /* FPReplay.h */,
+				A7E6E6661477FD8F0037750E /* FPReplay.m */,
+				A7E6E6671477FD8F0037750E /* FPSpeedPowerUp.h */,
+				A7E6E6681477FD8F0037750E /* FPSpeedPowerUp.m */,
+				A7E6E6691477FD8F0037750E /* FPStage.h */,
+				A7E6E66A1477FD8F0037750E /* FPStage.m */,
+				A7E6E66B1477FD8F0037750E /* FPTexture.h */,
+				A7E6E66C1477FD8F0037750E /* FPTexture.m */,
+				A7E6E66D1477FD8F0037750E /* FPTextureArray.h */,
+				A7E6E66E1477FD8F0037750E /* FPTextureArray.m */,
+				A7E6E66F1477FD8F0037750E /* FPTextureAtlas.h */,
+				A7E6E6701477FD8F0037750E /* FPTextureAtlas.m */,
+				A7E6E6711477FD8F0037750E /* FPTrampoline.h */,
+				A7E6E6721477FD8F0037750E /* FPTrampoline.m */,
+				A7E6E6731477FD8F0037750E /* FPXMLParser.h */,
+				A7E6E6741477FD8F0037750E /* FPXMLParser.m */,
+				A7E6E6751477FD8F0037750E /* FPXMLWriter.h */,
+				A7E6E6761477FD8F0037750E /* FPXMLWriter.m */,
+			);
+			name = SharedClasses;
+			sourceTree = "<group>";
+		};
+		A7E6E6451477FD840037750E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A7E6E742147808C60037750E /* move */,
+				A7E6E6E51478069D0037750E /* AndaleMono.png */,
+				A7E6E6E61478069D0037750E /* arrow.png */,
+				A7E6E6E71478069D0037750E /* Level_black.png */,
+				A7E6E6E81478069D0037750E /* Level_blue.png */,
+				A7E6E6E91478069D0037750E /* Level_shine.png */,
+				A7E6E6EA1478069D0037750E /* levelatlas.png */,
+				A7E6E6EB1478069D0037750E /* menu.png */,
+				A7E6E6EC1478069D0037750E /* play.png */,
+				A7E6E6ED1478069D0037750E /* win.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		A7E6E6F9147806D90037750E /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				A7E6E6FA147806D90037750E /* closed.level */,
+				A7E6E6FB147806D90037750E /* collisions.level */,
+				A7E6E6FC147806D90037750E /* easyelevators.level */,
+				A7E6E6FD147806D90037750E /* easyplatforms.level */,
+				A7E6E6FE147806D90037750E /* easytrampoline.level */,
+				A7E6E6FF147806D90037750E /* elevatormadness.level */,
+				A7E6E700147806D90037750E /* elevators.level */,
+				A7E6E701147806D90037750E /* example.level */,
+				A7E6E702147806D90037750E /* exit.level */,
+				A7E6E703147806D90037750E /* fall.level */,
+				A7E6E704147806D90037750E /* fun.level */,
+				A7E6E705147806D90037750E /* hardplatforms.level */,
+				A7E6E706147806D90037750E /* jump.level */,
+				A7E6E707147806D90037750E /* labyrinth.level */,
+				A7E6E708147806D90037750E /* magnetmoves.level */,
+				A7E6E709147806D90037750E /* magnets.level */,
+				A7E6E70A147806D90037750E /* magnetshard.level */,
+				A7E6E70B147806D90037750E /* movable.level */,
+				A7E6E70C147806D90037750E /* movable_test.level */,
+				A7E6E70D147806D90037750E /* movableforjump.level */,
+				A7E6E70E147806D90037750E /* movablelearn.level */,
+				A7E6E70F147806D90037750E /* moving1.level */,
+				A7E6E710147806D90037750E /* moving2.level */,
+				A7E6E711147806D90037750E /* platforms.level */,
+				A7E6E712147806D90037750E /* platformslearn.level */,
+				A7E6E713147806D90037750E /* puzzle.level */,
+				A7E6E714147806D90037750E /* speed.level */,
+				A7E6E715147806D90037750E /* speed2.level */,
+				A7E6E716147806D90037750E /* speed3.level */,
+				A7E6E717147806D90037750E /* speed4.level */,
+				A7E6E718147806D90037750E /* test.level */,
+				A7E6E719147806D90037750E /* trampognet.level */,
+				A7E6E71A147806D90037750E /* trampoline.level */,
+				A7E6E71B147806D90037750E /* trampoline2.level */,
+				A7E6E71C147806D90037750E /* tutorial.level */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		A7E6E742147808C60037750E /* move */ = {
+			isa = PBXGroup;
+			children = (
+				A7E6E743147808C60037750E /* 01.png */,
+				A7E6E744147808C60037750E /* 02.png */,
+				A7E6E745147808C60037750E /* 03.png */,
+			);
+			name = move;
+			path = Images/move;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7E6E6141477FBF50037750E /* GreenFace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7E6E63B1477FBF50037750E /* Build configuration list for PBXNativeTarget "GreenFace" */;
+			buildPhases = (
+				A7E6E6111477FBF50037750E /* Sources */,
+				A7E6E6121477FBF50037750E /* Frameworks */,
+				A7E6E6131477FBF50037750E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GreenFace;
+			productName = GreenFace;
+			productReference = A7E6E6151477FBF50037750E /* GreenFace.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7E6E60C1477FBF40037750E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Filip Kunc";
+			};
+			buildConfigurationList = A7E6E60F1477FBF40037750E /* Build configuration list for PBXProject "GreenFace" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A7E6E60A1477FBF40037750E;
+			productRefGroup = A7E6E6161477FBF50037750E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7E6E6141477FBF50037750E /* GreenFace */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7E6E6131477FBF50037750E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7E6E6281477FBF50037750E /* InfoPlist.strings in Resources */,
+				A7E6E6A81477FFF50037750E /* MainWindow.xib in Resources */,
+				A7E6E6EE1478069D0037750E /* AndaleMono.png in Resources */,
+				A7E6E6EF1478069D0037750E /* arrow.png in Resources */,
+				A7E6E6F01478069D0037750E /* Level_black.png in Resources */,
+				A7E6E6F11478069D0037750E /* Level_blue.png in Resources */,
+				A7E6E6F21478069D0037750E /* Level_shine.png in Resources */,
+				A7E6E6F31478069D0037750E /* levelatlas.png in Resources */,
+				A7E6E6F41478069D0037750E /* menu.png in Resources */,
+				A7E6E6F51478069D0037750E /* play.png in Resources */,
+				A7E6E6F61478069D0037750E /* win.png in Resources */,
+				A7E6E71D147806D90037750E /* Default.png in Resources */,
+				A7E6E71E147806D90037750E /* Icon.png in Resources */,
+				A7E6E71F147806D90037750E /* closed.level in Resources */,
+				A7E6E720147806D90037750E /* collisions.level in Resources */,
+				A7E6E721147806D90037750E /* easyelevators.level in Resources */,
+				A7E6E722147806D90037750E /* easyplatforms.level in Resources */,
+				A7E6E723147806D90037750E /* easytrampoline.level in Resources */,
+				A7E6E724147806D90037750E /* elevatormadness.level in Resources */,
+				A7E6E725147806D90037750E /* elevators.level in Resources */,
+				A7E6E726147806D90037750E /* example.level in Resources */,
+				A7E6E727147806D90037750E /* exit.level in Resources */,
+				A7E6E728147806D90037750E /* fall.level in Resources */,
+				A7E6E729147806D90037750E /* fun.level in Resources */,
+				A7E6E72A147806D90037750E /* hardplatforms.level in Resources */,
+				A7E6E72B147806D90037750E /* jump.level in Resources */,
+				A7E6E72C147806D90037750E /* labyrinth.level in Resources */,
+				A7E6E72D147806D90037750E /* magnetmoves.level in Resources */,
+				A7E6E72E147806D90037750E /* magnets.level in Resources */,
+				A7E6E72F147806D90037750E /* magnetshard.level in Resources */,
+				A7E6E730147806D90037750E /* movable.level in Resources */,
+				A7E6E731147806D90037750E /* movable_test.level in Resources */,
+				A7E6E732147806D90037750E /* movableforjump.level in Resources */,
+				A7E6E733147806D90037750E /* movablelearn.level in Resources */,
+				A7E6E734147806D90037750E /* moving1.level in Resources */,
+				A7E6E735147806D90037750E /* moving2.level in Resources */,
+				A7E6E736147806D90037750E /* platforms.level in Resources */,
+				A7E6E737147806D90037750E /* platformslearn.level in Resources */,
+				A7E6E738147806D90037750E /* puzzle.level in Resources */,
+				A7E6E739147806D90037750E /* speed.level in Resources */,
+				A7E6E73A147806D90037750E /* speed2.level in Resources */,
+				A7E6E73B147806D90037750E /* speed3.level in Resources */,
+				A7E6E73C147806D90037750E /* speed4.level in Resources */,
+				A7E6E73D147806D90037750E /* test.level in Resources */,
+				A7E6E73E147806D90037750E /* trampognet.level in Resources */,
+				A7E6E73F147806D90037750E /* trampoline.level in Resources */,
+				A7E6E740147806D90037750E /* trampoline2.level in Resources */,
+				A7E6E741147806D90037750E /* tutorial.level in Resources */,
+				A7E6E746147808C60037750E /* 01.png in Resources */,
+				A7E6E747147808C60037750E /* 02.png in Resources */,
+				A7E6E748147808C60037750E /* 03.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7E6E6111477FBF50037750E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7E6E62A1477FBF50037750E /* main.m in Sources */,
+				A7E6E6421477FD620037750E /* EAGLView.m in Sources */,
+				A7E6E6431477FD620037750E /* IronJumpAppDelegate.m in Sources */,
+				A7E6E6791477FD900037750E /* FPDiamond.m in Sources */,
+				A7E6E67A1477FD900037750E /* FPElevator.m in Sources */,
+				A7E6E67B1477FD900037750E /* FPExit.m in Sources */,
+				A7E6E67D1477FD900037750E /* FPFont.m in Sources */,
+				A7E6E67E1477FD900037750E /* FPGame.m in Sources */,
+				A7E6E67F1477FD900037750E /* FPGameAtlas.m in Sources */,
+				A7E6E6811477FD900037750E /* FPGraphics.m in Sources */,
+				A7E6E6831477FD900037750E /* FPMagnet.m in Sources */,
+				A7E6E6841477FD900037750E /* FPMath.c in Sources */,
+				A7E6E6851477FD900037750E /* FPMovablePlatform.m in Sources */,
+				A7E6E6861477FD900037750E /* FPPlatform.m in Sources */,
+				A7E6E6871477FD900037750E /* FPPlayer.m in Sources */,
+				A7E6E6881477FD900037750E /* FPReplay.m in Sources */,
+				A7E6E6891477FD900037750E /* FPSpeedPowerUp.m in Sources */,
+				A7E6E68A1477FD900037750E /* FPStage.m in Sources */,
+				A7E6E68B1477FD900037750E /* FPTexture.m in Sources */,
+				A7E6E68C1477FD900037750E /* FPTextureArray.m in Sources */,
+				A7E6E68D1477FD900037750E /* FPTextureAtlas.m in Sources */,
+				A7E6E68E1477FD900037750E /* FPTrampoline.m in Sources */,
+				A7E6E68F1477FD900037750E /* FPXMLParser.m in Sources */,
+				A7E6E6901477FD900037750E /* FPXMLWriter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A7E6E6261477FBF50037750E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7E6E6271477FBF50037750E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A7E6E6A61477FFF50037750E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7E6E6A71477FFF50037750E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7E6E6391477FBF50037750E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A7E6E63A1477FBF50037750E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7E6E63C1477FBF50037750E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GreenFace/GreenFace-Prefix.pch";
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = "GreenFace/GreenFace-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A7E6E63D1477FBF50037750E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GreenFace/GreenFace-Prefix.pch";
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = "GreenFace/GreenFace-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7E6E60F1477FBF40037750E /* Build configuration list for PBXProject "GreenFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7E6E6391477FBF50037750E /* Debug */,
+				A7E6E63A1477FBF50037750E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7E6E63B1477FBF50037750E /* Build configuration list for PBXNativeTarget "GreenFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7E6E63C1477FBF50037750E /* Debug */,
+				A7E6E63D1477FBF50037750E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7E6E60C1477FBF40037750E /* Project object */;
+}
