@@ -80,36 +80,8 @@ NSArray *GetLevelsInDocumentDirectory(void)
 		[FPGameAtlas sharedAtlas];
         
 		NSMutableArray *levels = [[NSMutableArray alloc] init];
-		[levels addObject:@"tutorial"]; // 1
-		[levels addObject:@"easytrampoline"]; // 2
-		[levels addObject:@"trampoline"]; // 3
-		[levels addObject:@"exit"]; // 4
-		[levels addObject:@"platformslearn"]; // 5
-		[levels addObject:@"jump"]; // 6
-		[levels addObject:@"fun"]; // 7
-		[levels addObject:@"easyplatforms"]; // 8
-		[levels addObject:@"fall"]; // 9
-		[levels addObject:@"platforms"]; // 10
-		[levels addObject:@"closed"]; // 11
-		[levels addObject:@"trampoline2"]; // 12
-		[levels addObject:@"easyelevators"]; // 13
-		[levels addObject:@"elevators"]; // 14
-		[levels addObject:@"hardplatforms"]; // 15
-		[levels addObject:@"movablelearn"]; // 16
-		[levels addObject:@"movable"]; // 17
-		[levels addObject:@"puzzle"]; // 18
-		[levels addObject:@"elevatormadness"]; // 19
-		[levels addObject:@"magnets"]; // 20
-		[levels addObject:@"magnetshard"]; // 21
-		[levels addObject:@"magnetmoves"]; // 22
-		[levels addObject:@"speed"]; // 23
-        [levels addObject:@"moving1"]; // 24
-        [levels addObject:@"moving2"]; // 25
-        [levels addObject:@"speed2"]; // 26
-        [levels addObject:@"collisions"]; // 27
-        [levels addObject:@"speed3"]; // 28
-        [levels addObject:@"speed4"]; // 29
-        [levels addObject:@"labyrinth"]; //30
+		[levels addObject:@"Tutorial"]; // 1
+        [levels addObject:@"Puzzle"]; // 2
 		
 		NSArray *customLevels = GetLevelsInDocumentDirectory();
 		NSLog(@"customLevels: %@", customLevels);
@@ -326,20 +298,13 @@ NSArray *GetLevelsInDocumentDirectory(void)
 	if (current.isCustom)
 		path = levelName;
 	else
-    {
-		path = [[NSBundle mainBundle] pathForResource:levelName ofType:@"level"];
-        if (!path)
-            path = [[NSBundle mainBundle] pathForResource:levelName ofType:@"xlevel"];
-    }
+		path = [[NSBundle mainBundle] pathForResource:levelName ofType:@"greenlevel"];
 	
 	[FPStage saveDefaults];
     
 	NSData *data = [NSData dataWithContentsOfFile:path];
     
-    if ([path hasSuffix:@"xlevel"])
-        game = [[FPGame alloc] initWithXMLData:data width:320 height:480];
-    else
-        game = [[FPGame alloc] initWithBinaryData:data width:320 height:480];
+    game = [[FPGame alloc] initWithXMLData:data width:320 height:480];
 
     for (id<FPGameObject> gameObject in [game gameObjects])
 	{

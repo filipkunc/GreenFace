@@ -340,15 +340,21 @@ const float playerSize = 64.0f;
 	if (speedUpCounter <= 0)
 		return;	
 	
-	glColor4f(1, 1, 1, fabsf(sinf(alpha)) * 0.5f + 0.5f);
-	CGPoint point = CGPointMake(x - 16.0f, y - 16.0f);
+	glColor4f(1, 1, 1, fabsf(sinf(alpha)) * 0.3f + 0.1f);
+	CGPoint point = CGPointMake(x - playerSize / 2.0f, y - playerSize / 2.0f);
+    
+    glPushMatrix();
+    glTranslatef(point.x, point.y, 0.0f);
+    glScalef(2.0f, 2.0f, 1.0f);
 	
 #if TARGET_OS_IPHONE
-	[[FPGameAtlas sharedAtlas] addSpeedEffectAtPoint:point];
+	[[FPGameAtlas sharedAtlas] addSpeedEffectAtPoint:CGPointZero];
 	[[FPGameAtlas sharedAtlas] drawAllTiles];
 #else
-	[jumpTexture drawAtPoint:point];
+	[jumpTexture drawAtPoint:CGPointZero];
 #endif
+    
+    glPopMatrix();
 }
 
 - (id<FPGameObject>)duplicateWithOffsetX:(float)offsetX offsetY:(float)offsetY

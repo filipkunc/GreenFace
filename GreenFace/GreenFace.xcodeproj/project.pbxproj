@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A76664D1147847B5002A4159 /* Tutorial.greenlevel in Resources */ = {isa = PBXBuildFile; fileRef = A76664CF147847B5002A4159 /* Tutorial.greenlevel */; };
+		A76664D314784E3D002A4159 /* Puzzle.greenlevel in Resources */ = {isa = PBXBuildFile; fileRef = A76664D214784E3D002A4159 /* Puzzle.greenlevel */; };
 		A7E6E61A1477FBF50037750E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6E6191477FBF50037750E /* UIKit.framework */; };
 		A7E6E61C1477FBF50037750E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6E61B1477FBF50037750E /* Foundation.framework */; };
 		A7E6E61E1477FBF50037750E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6E61D1477FBF50037750E /* CoreGraphics.framework */; };
@@ -49,47 +51,14 @@
 		A7E6E6F61478069D0037750E /* win.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6ED1478069D0037750E /* win.png */; };
 		A7E6E71D147806D90037750E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6F7147806D90037750E /* Default.png */; };
 		A7E6E71E147806D90037750E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6F8147806D90037750E /* Icon.png */; };
-		A7E6E71F147806D90037750E /* closed.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6FA147806D90037750E /* closed.level */; };
-		A7E6E720147806D90037750E /* collisions.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6FB147806D90037750E /* collisions.level */; };
-		A7E6E721147806D90037750E /* easyelevators.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6FC147806D90037750E /* easyelevators.level */; };
-		A7E6E722147806D90037750E /* easyplatforms.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6FD147806D90037750E /* easyplatforms.level */; };
-		A7E6E723147806D90037750E /* easytrampoline.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6FE147806D90037750E /* easytrampoline.level */; };
-		A7E6E724147806D90037750E /* elevatormadness.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6FF147806D90037750E /* elevatormadness.level */; };
-		A7E6E725147806D90037750E /* elevators.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E700147806D90037750E /* elevators.level */; };
-		A7E6E726147806D90037750E /* example.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E701147806D90037750E /* example.level */; };
-		A7E6E727147806D90037750E /* exit.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E702147806D90037750E /* exit.level */; };
-		A7E6E728147806D90037750E /* fall.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E703147806D90037750E /* fall.level */; };
-		A7E6E729147806D90037750E /* fun.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E704147806D90037750E /* fun.level */; };
-		A7E6E72A147806D90037750E /* hardplatforms.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E705147806D90037750E /* hardplatforms.level */; };
-		A7E6E72B147806D90037750E /* jump.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E706147806D90037750E /* jump.level */; };
-		A7E6E72C147806D90037750E /* labyrinth.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E707147806D90037750E /* labyrinth.level */; };
-		A7E6E72D147806D90037750E /* magnetmoves.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E708147806D90037750E /* magnetmoves.level */; };
-		A7E6E72E147806D90037750E /* magnets.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E709147806D90037750E /* magnets.level */; };
-		A7E6E72F147806D90037750E /* magnetshard.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E70A147806D90037750E /* magnetshard.level */; };
-		A7E6E730147806D90037750E /* movable.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E70B147806D90037750E /* movable.level */; };
-		A7E6E731147806D90037750E /* movable_test.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E70C147806D90037750E /* movable_test.level */; };
-		A7E6E732147806D90037750E /* movableforjump.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E70D147806D90037750E /* movableforjump.level */; };
-		A7E6E733147806D90037750E /* movablelearn.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E70E147806D90037750E /* movablelearn.level */; };
-		A7E6E734147806D90037750E /* moving1.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E70F147806D90037750E /* moving1.level */; };
-		A7E6E735147806D90037750E /* moving2.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E710147806D90037750E /* moving2.level */; };
-		A7E6E736147806D90037750E /* platforms.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E711147806D90037750E /* platforms.level */; };
-		A7E6E737147806D90037750E /* platformslearn.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E712147806D90037750E /* platformslearn.level */; };
-		A7E6E738147806D90037750E /* puzzle.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E713147806D90037750E /* puzzle.level */; };
-		A7E6E739147806D90037750E /* speed.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E714147806D90037750E /* speed.level */; };
-		A7E6E73A147806D90037750E /* speed2.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E715147806D90037750E /* speed2.level */; };
-		A7E6E73B147806D90037750E /* speed3.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E716147806D90037750E /* speed3.level */; };
-		A7E6E73C147806D90037750E /* speed4.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E717147806D90037750E /* speed4.level */; };
-		A7E6E73D147806D90037750E /* test.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E718147806D90037750E /* test.level */; };
-		A7E6E73E147806D90037750E /* trampognet.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E719147806D90037750E /* trampognet.level */; };
-		A7E6E73F147806D90037750E /* trampoline.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E71A147806D90037750E /* trampoline.level */; };
-		A7E6E740147806D90037750E /* trampoline2.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E71B147806D90037750E /* trampoline2.level */; };
-		A7E6E741147806D90037750E /* tutorial.level in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E71C147806D90037750E /* tutorial.level */; };
 		A7E6E746147808C60037750E /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E743147808C60037750E /* 01.png */; };
 		A7E6E747147808C60037750E /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E744147808C60037750E /* 02.png */; };
 		A7E6E748147808C60037750E /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E745147808C60037750E /* 03.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A76664CF147847B5002A4159 /* Tutorial.greenlevel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tutorial.greenlevel; sourceTree = "<group>"; };
+		A76664D214784E3D002A4159 /* Puzzle.greenlevel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Puzzle.greenlevel; sourceTree = "<group>"; };
 		A7E6E6151477FBF50037750E /* GreenFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E6E6191477FBF50037750E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7E6E61B1477FBF50037750E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -159,41 +128,6 @@
 		A7E6E6ED1478069D0037750E /* win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = win.png; path = Images/win.png; sourceTree = "<group>"; };
 		A7E6E6F7147806D90037750E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A7E6E6F8147806D90037750E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		A7E6E6FA147806D90037750E /* closed.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = closed.level; sourceTree = "<group>"; };
-		A7E6E6FB147806D90037750E /* collisions.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = collisions.level; sourceTree = "<group>"; };
-		A7E6E6FC147806D90037750E /* easyelevators.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = easyelevators.level; sourceTree = "<group>"; };
-		A7E6E6FD147806D90037750E /* easyplatforms.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = easyplatforms.level; sourceTree = "<group>"; };
-		A7E6E6FE147806D90037750E /* easytrampoline.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = easytrampoline.level; sourceTree = "<group>"; };
-		A7E6E6FF147806D90037750E /* elevatormadness.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = elevatormadness.level; sourceTree = "<group>"; };
-		A7E6E700147806D90037750E /* elevators.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = elevators.level; sourceTree = "<group>"; };
-		A7E6E701147806D90037750E /* example.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = example.level; sourceTree = "<group>"; };
-		A7E6E702147806D90037750E /* exit.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = exit.level; sourceTree = "<group>"; };
-		A7E6E703147806D90037750E /* fall.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = fall.level; sourceTree = "<group>"; };
-		A7E6E704147806D90037750E /* fun.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = fun.level; sourceTree = "<group>"; };
-		A7E6E705147806D90037750E /* hardplatforms.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = hardplatforms.level; sourceTree = "<group>"; };
-		A7E6E706147806D90037750E /* jump.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = jump.level; sourceTree = "<group>"; };
-		A7E6E707147806D90037750E /* labyrinth.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = labyrinth.level; sourceTree = "<group>"; };
-		A7E6E708147806D90037750E /* magnetmoves.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = magnetmoves.level; sourceTree = "<group>"; };
-		A7E6E709147806D90037750E /* magnets.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = magnets.level; sourceTree = "<group>"; };
-		A7E6E70A147806D90037750E /* magnetshard.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = magnetshard.level; sourceTree = "<group>"; };
-		A7E6E70B147806D90037750E /* movable.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = movable.level; sourceTree = "<group>"; };
-		A7E6E70C147806D90037750E /* movable_test.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = movable_test.level; sourceTree = "<group>"; };
-		A7E6E70D147806D90037750E /* movableforjump.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = movableforjump.level; sourceTree = "<group>"; };
-		A7E6E70E147806D90037750E /* movablelearn.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = movablelearn.level; sourceTree = "<group>"; };
-		A7E6E70F147806D90037750E /* moving1.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = moving1.level; sourceTree = "<group>"; };
-		A7E6E710147806D90037750E /* moving2.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = moving2.level; sourceTree = "<group>"; };
-		A7E6E711147806D90037750E /* platforms.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = platforms.level; sourceTree = "<group>"; };
-		A7E6E712147806D90037750E /* platformslearn.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = platformslearn.level; sourceTree = "<group>"; };
-		A7E6E713147806D90037750E /* puzzle.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = puzzle.level; sourceTree = "<group>"; };
-		A7E6E714147806D90037750E /* speed.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = speed.level; sourceTree = "<group>"; };
-		A7E6E715147806D90037750E /* speed2.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = speed2.level; sourceTree = "<group>"; };
-		A7E6E716147806D90037750E /* speed3.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = speed3.level; sourceTree = "<group>"; };
-		A7E6E717147806D90037750E /* speed4.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = speed4.level; sourceTree = "<group>"; };
-		A7E6E718147806D90037750E /* test.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = test.level; sourceTree = "<group>"; };
-		A7E6E719147806D90037750E /* trampognet.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trampognet.level; sourceTree = "<group>"; };
-		A7E6E71A147806D90037750E /* trampoline.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trampoline.level; sourceTree = "<group>"; };
-		A7E6E71B147806D90037750E /* trampoline2.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = trampoline2.level; sourceTree = "<group>"; };
-		A7E6E71C147806D90037750E /* tutorial.level */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = tutorial.level; sourceTree = "<group>"; };
 		A7E6E743147808C60037750E /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
 		A7E6E744147808C60037750E /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
 		A7E6E745147808C60037750E /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
@@ -343,41 +277,8 @@
 		A7E6E6F9147806D90037750E /* Levels */ = {
 			isa = PBXGroup;
 			children = (
-				A7E6E6FA147806D90037750E /* closed.level */,
-				A7E6E6FB147806D90037750E /* collisions.level */,
-				A7E6E6FC147806D90037750E /* easyelevators.level */,
-				A7E6E6FD147806D90037750E /* easyplatforms.level */,
-				A7E6E6FE147806D90037750E /* easytrampoline.level */,
-				A7E6E6FF147806D90037750E /* elevatormadness.level */,
-				A7E6E700147806D90037750E /* elevators.level */,
-				A7E6E701147806D90037750E /* example.level */,
-				A7E6E702147806D90037750E /* exit.level */,
-				A7E6E703147806D90037750E /* fall.level */,
-				A7E6E704147806D90037750E /* fun.level */,
-				A7E6E705147806D90037750E /* hardplatforms.level */,
-				A7E6E706147806D90037750E /* jump.level */,
-				A7E6E707147806D90037750E /* labyrinth.level */,
-				A7E6E708147806D90037750E /* magnetmoves.level */,
-				A7E6E709147806D90037750E /* magnets.level */,
-				A7E6E70A147806D90037750E /* magnetshard.level */,
-				A7E6E70B147806D90037750E /* movable.level */,
-				A7E6E70C147806D90037750E /* movable_test.level */,
-				A7E6E70D147806D90037750E /* movableforjump.level */,
-				A7E6E70E147806D90037750E /* movablelearn.level */,
-				A7E6E70F147806D90037750E /* moving1.level */,
-				A7E6E710147806D90037750E /* moving2.level */,
-				A7E6E711147806D90037750E /* platforms.level */,
-				A7E6E712147806D90037750E /* platformslearn.level */,
-				A7E6E713147806D90037750E /* puzzle.level */,
-				A7E6E714147806D90037750E /* speed.level */,
-				A7E6E715147806D90037750E /* speed2.level */,
-				A7E6E716147806D90037750E /* speed3.level */,
-				A7E6E717147806D90037750E /* speed4.level */,
-				A7E6E718147806D90037750E /* test.level */,
-				A7E6E719147806D90037750E /* trampognet.level */,
-				A7E6E71A147806D90037750E /* trampoline.level */,
-				A7E6E71B147806D90037750E /* trampoline2.level */,
-				A7E6E71C147806D90037750E /* tutorial.level */,
+				A76664D214784E3D002A4159 /* Puzzle.greenlevel */,
+				A76664CF147847B5002A4159 /* Tutorial.greenlevel */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -457,44 +358,11 @@
 				A7E6E6F61478069D0037750E /* win.png in Resources */,
 				A7E6E71D147806D90037750E /* Default.png in Resources */,
 				A7E6E71E147806D90037750E /* Icon.png in Resources */,
-				A7E6E71F147806D90037750E /* closed.level in Resources */,
-				A7E6E720147806D90037750E /* collisions.level in Resources */,
-				A7E6E721147806D90037750E /* easyelevators.level in Resources */,
-				A7E6E722147806D90037750E /* easyplatforms.level in Resources */,
-				A7E6E723147806D90037750E /* easytrampoline.level in Resources */,
-				A7E6E724147806D90037750E /* elevatormadness.level in Resources */,
-				A7E6E725147806D90037750E /* elevators.level in Resources */,
-				A7E6E726147806D90037750E /* example.level in Resources */,
-				A7E6E727147806D90037750E /* exit.level in Resources */,
-				A7E6E728147806D90037750E /* fall.level in Resources */,
-				A7E6E729147806D90037750E /* fun.level in Resources */,
-				A7E6E72A147806D90037750E /* hardplatforms.level in Resources */,
-				A7E6E72B147806D90037750E /* jump.level in Resources */,
-				A7E6E72C147806D90037750E /* labyrinth.level in Resources */,
-				A7E6E72D147806D90037750E /* magnetmoves.level in Resources */,
-				A7E6E72E147806D90037750E /* magnets.level in Resources */,
-				A7E6E72F147806D90037750E /* magnetshard.level in Resources */,
-				A7E6E730147806D90037750E /* movable.level in Resources */,
-				A7E6E731147806D90037750E /* movable_test.level in Resources */,
-				A7E6E732147806D90037750E /* movableforjump.level in Resources */,
-				A7E6E733147806D90037750E /* movablelearn.level in Resources */,
-				A7E6E734147806D90037750E /* moving1.level in Resources */,
-				A7E6E735147806D90037750E /* moving2.level in Resources */,
-				A7E6E736147806D90037750E /* platforms.level in Resources */,
-				A7E6E737147806D90037750E /* platformslearn.level in Resources */,
-				A7E6E738147806D90037750E /* puzzle.level in Resources */,
-				A7E6E739147806D90037750E /* speed.level in Resources */,
-				A7E6E73A147806D90037750E /* speed2.level in Resources */,
-				A7E6E73B147806D90037750E /* speed3.level in Resources */,
-				A7E6E73C147806D90037750E /* speed4.level in Resources */,
-				A7E6E73D147806D90037750E /* test.level in Resources */,
-				A7E6E73E147806D90037750E /* trampognet.level in Resources */,
-				A7E6E73F147806D90037750E /* trampoline.level in Resources */,
-				A7E6E740147806D90037750E /* trampoline2.level in Resources */,
-				A7E6E741147806D90037750E /* tutorial.level in Resources */,
 				A7E6E746147808C60037750E /* 01.png in Resources */,
 				A7E6E747147808C60037750E /* 02.png in Resources */,
 				A7E6E748147808C60037750E /* 03.png in Resources */,
+				A76664D1147847B5002A4159 /* Tutorial.greenlevel in Resources */,
+				A76664D314784E3D002A4159 /* Puzzle.greenlevel in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +510,7 @@
 				A7E6E63D1477FBF50037750E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
