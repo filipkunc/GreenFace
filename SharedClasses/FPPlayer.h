@@ -41,7 +41,7 @@ extern const int maxSpeedUpCount;
 	BOOL isVisible;
     
     int moveCounter;
-    int animationCounter;
+    float animationCounter;
     BOOL leftOriented;
 }
 

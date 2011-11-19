@@ -189,10 +189,13 @@ const float playerSize = 64.0f;
 	alpha += 0.07f;
 	if (alpha > M_PI)
 		alpha -= M_PI;
+
+    float moveSpeed = fabsf(moveX);
+    animationCounter += MAX(moveSpeed / maxSpeed, 0.6f);
     
-    if (!moveLeftOrRight && fabs(moveX) < 3.5f)
+    if (animationCounter > 5)
     {
-        if (++animationCounter > 5)
+        if (!moveLeftOrRight && moveSpeed < 3.5f)
         {
             if (++moveCounter > 2)
             {
@@ -202,12 +205,9 @@ const float playerSize = 64.0f;
             else
             {
                 animationCounter = 0;
-            }
+            }            
         }
-    }
-    else
-    {
-        if (++animationCounter > 5)
+        else
         {
             if (++moveCounter > 2)
                 moveCounter = 0;
@@ -215,6 +215,7 @@ const float playerSize = 64.0f;
         }
     }
 }
+
 
 - (BOOL)collisionLeftRight:(id<FPGameProtocol>)game
 {
