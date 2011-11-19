@@ -103,12 +103,12 @@
   <FPPlatform>
     <x>2752.000000</x>
     <y>896.000000</y>
-    <widthSegments>10</widthSegments>
+    <widthSegments>16</widthSegments>
     <heightSegments>4</heightSegments>
   </FPPlatform>
   <FPExit>
-    <x>2880.000000</x>
-    <y>800.000000</y>
+    <x>2976.000000</x>
+    <y>768.000000</y>
   </FPExit>
   <FPMovablePlatform>
     <x>2752.000000</x>
@@ -117,7 +117,7 @@
     <heightSegments>5</heightSegments>
   </FPMovablePlatform>
   <FPMovablePlatform>
-    <x>2976.000000</x>
+    <x>3168.000000</x>
     <y>736.000000</y>
     <widthSegments>3</widthSegments>
     <heightSegments>5</heightSegments>
@@ -128,7 +128,7 @@
     <widthSegments>3</widthSegments>
   </FPMagnet>
   <FPMagnet>
-    <x>2976.000000</x>
+    <x>3168.000000</x>
     <y>640.000000</y>
     <widthSegments>3</widthSegments>
   </FPMagnet>
