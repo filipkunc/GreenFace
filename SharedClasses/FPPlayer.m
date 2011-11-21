@@ -11,8 +11,10 @@
 #import "FPTextureArray.h"
 
 FPTextureArray *playerTexture = nil;
+FPTextureArray *jumpTexture = nil;
+
 #if !TARGET_OS_IPHONE
-FPTexture *jumpTexture = nil;
+FPTexture *speedTexture = nil;
 #endif
 
 const float tolerance = 3.0f;
@@ -35,11 +37,15 @@ const float playerSize = 64.0f;
 	if (!playerTexture)
 	{
         playerTexture = [[FPTextureArray alloc] init];
-        [playerTexture addTexture:@"01.png"];
-        [playerTexture addTexture:@"02.png"];
-        [playerTexture addTexture:@"03.png"];
+        [playerTexture addTexture:@"W_01.png"];
+        [playerTexture addTexture:@"W_02.png"];
+        [playerTexture addTexture:@"W_03.png"];
+        [playerTexture addTexture:@"W_04.png"];
+		jumpTexture = [[FPTextureArray alloc] init];
+        [jumpTexture addTexture:@"WJ_01.png"];
+        [jumpTexture addTexture:@"WJ_02.png"];
 #if !TARGET_OS_IPHONE
-		jumpTexture = [[FPTexture alloc] initWithFile:@"speed.png" convertToAlpha:NO];
+        speedTexture = [[FPTexture alloc] initWithFile:@"speed.png" convertToAlpha:NO];
 #endif
 	}
 	return [playerTexture textureAtIndex:0];
@@ -59,6 +65,7 @@ const float playerSize = 64.0f;
 		alpha = 1.0f;
         isVisible = YES;
         moveCounter = 0;
+        jumpCounter = 0;
         animationCounter = 0;
         leftOriented = NO;
 	}
@@ -191,27 +198,45 @@ const float playerSize = 64.0f;
 		alpha -= M_PI;
 
     float moveSpeed = fabsf(moveX);
-    animationCounter += MAX(moveSpeed / maxSpeed, 0.6f);
     
-    if (animationCounter > 5)
+    if (jumping)
     {
-        if (!moveLeftOrRight && moveSpeed < 3.5f)
+        animationCounter++;
+        
+        if (animationCounter > 10)
         {
-            if (++moveCounter > 2)
+            if (++jumpCounter >= [jumpTexture count])
             {
-                moveCounter = 2;
-                animationCounter = 6;
+                jumpCounter = (int)[jumpTexture count] - 1;
+                animationCounter = 10;
+            }
+        }
+    }
+    else
+    {
+        jumpCounter = 0;
+        animationCounter += MAX(moveSpeed / maxSpeed, 0.6f);
+        
+        if (animationCounter > 5)
+        {
+            if (!moveLeftOrRight && moveSpeed < 3.5f)
+            {
+                if (++moveCounter >= [playerTexture count])
+                {
+                    moveCounter = (int)[playerTexture count] - 1;
+                    animationCounter = 6;
+                }
+                else
+                {
+                    animationCounter = 0;
+                }            
             }
             else
             {
+                if (++moveCounter >= [playerTexture count])
+                    moveCounter = 0;
                 animationCounter = 0;
-            }            
-        }
-        else
-        {
-            if (++moveCounter > 2)
-                moveCounter = 0;
-            animationCounter = 0;
+            }
         }
     }
 }
@@ -330,7 +355,10 @@ const float playerSize = 64.0f;
         glTranslatef(x, y, 0.0f);
         glScalef(1.0f, 1.0f, 1);
     }
-	[[playerTexture textureAtIndex:moveCounter] draw];
+    if (jumping)
+        [[jumpTexture textureAtIndex:jumpCounter] draw];
+    else
+        [[playerTexture textureAtIndex:moveCounter] draw];
 	glPopMatrix();
 //#endif
 }
@@ -351,7 +379,7 @@ const float playerSize = 64.0f;
 	[[FPGameAtlas sharedAtlas] addSpeedEffectAtPoint:CGPointZero];
 	[[FPGameAtlas sharedAtlas] drawAllTiles];
 #else
-	[jumpTexture drawAtPoint:CGPointZero];
+	[speedTexture drawAtPoint:CGPointZero];
 #endif
     
     glPopMatrix();
