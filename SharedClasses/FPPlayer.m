@@ -48,7 +48,7 @@ const float playerSize = 64.0f;
         speedTexture = [[FPTexture alloc] initWithFile:@"speed.png" convertToAlpha:NO];
 #endif
 	}
-	return [playerTexture textureAtIndex:0];
+	return [playerTexture textureAtIndex:3];
 }
 
 - (id)init
@@ -64,7 +64,7 @@ const float playerSize = 64.0f;
 		speedUpCounter = 0;
 		alpha = 1.0f;
         isVisible = YES;
-        moveCounter = 0;
+        moveCounter = 3;
         jumpCounter = 0;
         animationCounter = 0;
         leftOriented = NO;
@@ -201,6 +201,7 @@ const float playerSize = 64.0f;
     
     if (jumping)
     {
+        moveCounter = (int)[playerTexture count] - 1;
         animationCounter++;
         
         if (animationCounter > 10)

@@ -81,7 +81,8 @@ NSArray *GetLevelsInDocumentDirectory(void)
         
 		NSMutableArray *levels = [[NSMutableArray alloc] init];
 		[levels addObject:@"Tutorial"]; // 1
-        [levels addObject:@"Puzzle"]; // 2
+        [levels addObject:@"Jump"]; // 2
+        [levels addObject:@"Puzzle"]; // 3
 		
 		NSArray *customLevels = GetLevelsInDocumentDirectory();
 		NSLog(@"customLevels: %@", customLevels);
