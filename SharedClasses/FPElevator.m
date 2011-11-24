@@ -124,6 +124,7 @@ FPTextureArray *elevatorTextures = nil;
 {
 	FPPlayer *player = (FPPlayer *)[game player];
 	CGRect playerRect = player.rect;
+    playerRect.size.height -= tolerance;
 	CGRect moveRect = CGRectWithMove(self.rect, diffX, diffY);
 	
 	if (diffY > 0.0f)
@@ -156,7 +157,9 @@ FPTextureArray *elevatorTextures = nil;
 			{
 				if (gameObject.isMovable)
 				{
-                    if (CGRectIntersectsRectWithTolerance(gameObject.rect, moveRect))
+                    CGRect gameObjectRect = gameObject.rect;
+                    gameObjectRect.size.height -= tolerance;
+                    if (CGRectIntersectsRectWithTolerance(gameObjectRect, moveRect))
 					{
 						diffX = 0.0f;
 						break;
@@ -166,7 +169,7 @@ FPTextureArray *elevatorTextures = nil;
 		}
 	}
 		
-	playerRect.size.height += tolerance;	
+	playerRect.size.height += tolerance * 2.0f;	
 
     if (CGRectIntersectsRectWithTolerance(playerRect, moveRect))
 	{
@@ -225,6 +228,8 @@ FPTextureArray *elevatorTextures = nil;
 	{
 		movableRect = CGRectWithMove(movableOnElevator.rect, diffX, diffY);
 		[movableOnElevator moveWithX:diffX y:0.0f];		
+        if ([movableOnElevator collisionLeftRight:game])
+            [movableOnElevator moveWithX:-diffX y:0.0f];
 		if (CGRectIntersectsRectWithTolerance(playerRect, movableRect))
 		{
 			[game moveWorldWithX:-diffX y:0.0f];
@@ -284,7 +289,7 @@ FPTextureArray *elevatorTextures = nil;
 {
 	const float speed = 2.0f;
 	
-	float diffX, diffY;
+	float diffX = 0.0f, diffY = 0.0f;
 	
 	if (movingToEnd)
 	{
