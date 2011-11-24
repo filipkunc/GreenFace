@@ -30,7 +30,7 @@ const float playerSize = 64.0f;
 
 @implementation FPPlayer
 
-@synthesize x, y, moveX, moveY, speedUpCounter, isVisible, rotation, alpha;
+@synthesize x, y, moveX, moveY, speedUpCounter, isVisible, alpha;
 
 + (FPTexture *)loadTextureIfNeeded
 {
@@ -191,7 +191,6 @@ const float playerSize = 64.0f;
 		moveX = 0.0f;
     [game moveWorldWithX:0.0f y:moveY];
 	[self collisionUpDown:game];
-	rotation -= moveX * 3.0f;
 	
 	alpha += 0.07f;
 	if (alpha > M_PI)

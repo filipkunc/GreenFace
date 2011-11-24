@@ -33,7 +33,6 @@ extern const int maxSpeedUpCount;
 {
 	float x, y;
 	float moveX, moveY;
-	float rotation;
 	BOOL jumping;
 
 	int speedUpCounter;	
@@ -46,7 +45,7 @@ extern const int maxSpeedUpCount;
     BOOL leftOriented;
 }
 
-@property (readwrite, assign) float moveX, moveY, rotation, alpha;
+@property (readwrite, assign) float moveX, moveY, alpha;
 @property (readwrite, assign) int speedUpCounter;
 
 - (id)initWithWidth:(float)aWidth height:(float)aHeight;

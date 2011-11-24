@@ -20,7 +20,6 @@ typedef struct
 {
     FPReplayItem *replayItems;
 
-    float playerRotation;
     float playerAlpha;
     int playerSpeedUpCounter;
     

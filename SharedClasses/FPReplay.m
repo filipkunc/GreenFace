@@ -30,7 +30,6 @@
         }
         
         FPPlayer *player = (FPPlayer *)game.player;
-        playerRotation = player.rotation;
         playerAlpha = player.alpha;
         playerSpeedUpCounter = player.speedUpCounter;
         
@@ -60,7 +59,6 @@
     }
     
     FPPlayer *player = (FPPlayer *)game.player;
-    player.rotation = playerRotation;
     player.alpha = playerAlpha;
     player.speedUpCounter = playerSpeedUpCounter;
     
