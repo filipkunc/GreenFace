@@ -85,13 +85,21 @@ function createLevelScript()
 
 function keyDown(e)
 {
-    if (e.keyCode == 13)
+    switch (e.keyCode)
     {
-        var documentString = createGameDocument();
-        //alert(documentString);
+        case 13: // enter
+        {
+            var documentString = createGameDocument();
+            //alert(documentString);
         
-        var newWindow = windowOpener(480, 295, '', '');
-        newWindow.document.write(documentString);
-        newWindow.document.close();
+            var newWindow = windowOpener(480, 295, 'Game Simulation', '');
+            newWindow.document.write(documentString);
+            newWindow.document.close();
+        } break;
+        case 8: // backspace
+        case 46: // delete
+        {
+            levelCanvas.deleteSelected();
+        } break;
     }
 }

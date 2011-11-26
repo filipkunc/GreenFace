@@ -7,9 +7,9 @@ function FPPlatformFactory()
 {
     this.image = platformImage;
     
-    this.create = function(x, y)
+    this.create = function(levelObjects, x, y)
     {
-        return new FPPlatform(x, y, 1, 1);
+        levelObjects.push(new FPPlatform(x, y, 1, 1));
     }    
 }
 

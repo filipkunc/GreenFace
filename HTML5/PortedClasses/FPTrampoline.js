@@ -12,9 +12,9 @@ function FPTrampolineFactory()
 {
     this.image = trampolineImage[0];
     
-    this.create = function(x, y)
+    this.create = function(levelObjects, x, y)
     {
-        return new FPTrampoline(x, y, 1);
+        levelObjects.push(new FPTrampoline(x, y, 1));
     }    
 }
 

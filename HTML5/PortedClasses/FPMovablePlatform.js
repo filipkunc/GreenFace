@@ -7,9 +7,9 @@ function FPMovablePlatformFactory()
 {
     this.image = movableImage;
     
-    this.create = function(x, y)
+    this.create = function(levelObjects, x, y)
     {
-        return new FPMovablePlatform(x, y, 1, 1);
+        levelObjects.push(new FPMovablePlatform(x, y, 1, 1));
     }    
 }
 

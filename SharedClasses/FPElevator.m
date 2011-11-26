@@ -114,12 +114,6 @@ FPTextureArray *elevatorTextures = nil;
 	}
 }
 
-- (void)moveCurrentX:(float)offsetX y:(float)offsetY
-{
-	x += offsetX;
-	y += offsetY;
-}
-
 - (void)elevatorCollision:(id<FPGameProtocol>)game diffX:(float)diffX diffY:(float)diffY
 {
 	FPPlayer *player = (FPPlayer *)[game player];

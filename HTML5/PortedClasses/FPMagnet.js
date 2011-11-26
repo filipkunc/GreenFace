@@ -7,9 +7,9 @@ function FPMagnetFactory()
 {
     this.image = magnetImage;
     
-    this.create = function(x, y)
+    this.create = function(levelObjects, x, y)
     {
-        return new FPMagnet(x, y, 1);
+        levelObjects.push(new FPMagnet(x, y, 1));
     }    
 }
 

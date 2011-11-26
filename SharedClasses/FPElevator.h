@@ -25,7 +25,6 @@
 	
 - (id)initWithWidthSegments:(int)aWidthSegments endX:(float)anEndX endY:(float)anEndY;
 - (void)initAffectedObjectsIfNeeded:(id<FPGameProtocol>)game;
-- (void)moveCurrentX:(float)offsetX y:(float)offsetY;
 - (void)elevatorCollision:(id<FPGameProtocol>)game diffX:(float)diffX diffY:(float)diffY;
 
 @end

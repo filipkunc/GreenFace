@@ -35,12 +35,12 @@ function FPPlayerFactory()
 {
     this.image = playerImage[3];
     
-    this.create = function(x, y)
+    this.create = function(levelObjects, x, y)
     {
         var player = new FPPlayer();
         player.x = x;
         player.y = y;
-        return player;
+        levelObjects.push(player);
     }    
 }
 
@@ -316,8 +316,8 @@ function FPPlayer()
         if (firstPass)
             return null;
         
-        var levelString = new String('game.moveWorld(240.0 - ');
-        levelString += this.x.toString() + ', 160.0 - ';
+        var levelString = new String('game.moveWorld(208.0 - ');
+        levelString += this.x.toString() + ', 128.0 - ';
         levelString += this.y.toString() + ');';
         return levelString;        
     }

@@ -7,9 +7,9 @@ function FPExitFactory()
 {
     this.image = exitImage;
     
-    this.create = function(x, y)
+    this.create = function(levelObjects, x, y)
     {
-        return new FPExit(x, y);
+        levelObjects.push(new FPExit(x, y));
     }    
 }
 

@@ -7,9 +7,9 @@ function FPDiamondFactory()
 {
     this.image = diamondImage;
     
-    this.create = function(x, y)
+    this.create = function(levelObjects, x, y)
     {
-        return new FPDiamond(x, y);
+        levelObjects.push(new FPDiamond(x, y));
     }    
 }
 

@@ -14,9 +14,11 @@ function FPElevatorFactory()
 {
     this.image = elevatorImage[0];
     
-    this.create = function(x, y)
+    this.create = function(levelObjects, x, y)
     {
-        return new FPElevator(x, y, x, y + 64, 1);
+        var elevator = new FPElevator(x, y, x, y + 96, 1);
+        levelObjects.push(elevator);
+        levelObjects.push(new FPElevatorEnd(elevator));
     }    
 }
 
@@ -35,6 +37,7 @@ function FPElevator(x, y, endX, endY, widthSegments)
     this.affectedObjects = null;
     this.isVisible = true;
     this.selected = false;
+    this.elevatorEnd = null;
 
     this.isPlatform = function()
     {
@@ -57,14 +60,11 @@ function FPElevator(x, y, endX, endY, widthSegments)
         this.y += offsetY;
         this.startX += offsetX;
         this.startY += offsetY;
-        this.endX += offsetX;
-        this.endY += offsetY;
-    }
-    
-    this.moveCurrent = function(offsetX, offsetY)
-    {
-        this.x += offsetX;
-        this.y += offsetY;
+        if (this.elevatorEnd == null)
+        {
+            this.endX += offsetX;
+            this.endY += offsetY;
+        }
     }
     
     this.elevatorCollision = function(game, diffX, diffY)
@@ -160,7 +160,7 @@ function FPElevator(x, y, endX, endY, widthSegments)
                 {
                     for (j in this.affectedObjects)
                     {
-                        var gameObject = this.affectedObjects[i];
+                        var gameObject = this.affectedObjects[j];
                         moveRect = FPRectWithMove(gameObject.rect(), diffX, diffY);
                         if (movableRect.bottom() < moveRect.bottom() &&
                             FPRectIntersectsRectWithTolerance(movableRect, moveRect))
@@ -241,8 +241,6 @@ function FPElevator(x, y, endX, endY, widthSegments)
     
     this.update = function(game)
     {
-        //return;
-        
         var diffX = 0.0, diffY = 0.0;
 
     	if (this.movingToEnd)
@@ -303,5 +301,60 @@ function FPElevator(x, y, endX, endY, widthSegments)
         {
             context.drawImage(elevatorImage[this.textureIndex], this.x + ix * 32.0, this.y);
         }
+    }
+    
+    this.toLevelString = function(firstPass)
+    {
+        if (!firstPass)
+            return null;
+        
+        var levelString = new String('game.addGameObject(new FPElevator(');
+        levelString += this.x.toString() + ',';
+        levelString += this.y.toString() + ',';
+        levelString += this.endX.toString() + ',';
+        levelString += this.endY.toString() + ',';
+        levelString += this.widthSegments.toString() + '));';
+        return levelString;
+    }
+}
+
+function FPElevatorEnd(elevator)
+{
+    this.elevator = elevator;
+    this.elevator.elevatorEnd = this;
+    
+    this.rect = function()
+    {
+        return new FPRect(this.elevator.endX, this.elevator.endY, this.elevator.widthSegments * 32.0, 32.0);
+    }
+    
+    this.move = function(offsetX, offsetY)
+    {
+        this.elevator.endX += offsetX;
+        this.elevator.endY += offsetY;
+    }
+    
+    this.draw = function(context)
+    {
+        context.globalAlpha = 0.5;
+        for (ix = 0; ix < this.elevator.widthSegments; ix++)
+        {
+            context.drawImage(elevatorImage[this.elevator.textureIndex], this.elevator.endX + ix * 32.0, this.elevator.endY);
+        }        
+        context.globalAlpha = 1.0;        
+        
+        var start = this.elevator.rect().center();
+        var end = this.rect().center();
+
+        context.strokeStyle = "rgb(0,255,0)";
+        context.beginPath();
+        context.moveTo(start.x, start.y);
+        context.lineTo(end.x, end.y);
+        context.stroke();
+    }
+    
+    this.toLevelString = function(firstPass)
+    {
+        return null;
     }
 }

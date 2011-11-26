@@ -85,6 +85,11 @@ function FPRect(x, y, width, height)
             return true;
         return false;
     }
+    
+    this.center = function()
+    {
+        return new FPPoint(this.origin.x + this.size.width / 2.0, this.origin.y + this.size.height / 2.0);
+    }
 }
 
 function FPRectIntersection(a, b)
