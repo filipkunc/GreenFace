@@ -10,6 +10,16 @@ elevatorImage[2].src = "Images/vytah03.png";
 
 const speed = 2.0;
 
+function FPElevatorFactory()
+{
+    this.image = elevatorImage[0];
+    
+    this.create = function(x, y)
+    {
+        return new FPElevator(x, y, x, y + 64, 1);
+    }    
+}
+
 function FPElevator(x, y, endX, endY, widthSegments)
 {
     this.x = x;
@@ -24,6 +34,7 @@ function FPElevator(x, y, endX, endY, widthSegments)
     this.movingToEnd = true;
     this.affectedObjects = null;
     this.isVisible = true;
+    this.selected = false;
 
     this.isPlatform = function()
     {

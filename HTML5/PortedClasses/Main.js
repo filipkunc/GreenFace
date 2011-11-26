@@ -1,13 +1,13 @@
 // Copyright 2010 Filip Kunc. All rights reserved.
 
+window.onload = init;
+
 const FPS = 60;
 
 var canvas = null;
 var context = null;
 
 var game = new FPGame();
-
-window.onload = init;
 
 function loadXMLDoc(dname)
 {
@@ -21,11 +21,9 @@ function loadXMLDoc(dname)
     return xhttp.responseXML;
 }
 
-function init()
+function loadLevel(levelName)
 {
-	canvas = document.getElementById('canvas');
-	context = canvas.getContext('2d');
-	var xmlDoc = loadXMLDoc('Levels/Tutorial.greenlevel');
+    var xmlDoc = loadXMLDoc(levelName);
     
     var posX, posY, widthSegments, heightSegments;
     var playerOffsetX, playerOffsetY;
@@ -106,7 +104,26 @@ function init()
     
     game.moveWorld(240.0 - playerOffsetX, 160.0 - playerOffsetY);
     
-    setInterval(draw, 1000 / FPS);
+}
+
+function init()
+{
+	canvas = document.getElementById('canvas');
+	context = canvas.getContext('2d');
+	
+	//loadLevel('Levels/Tutorial.greenlevel');
+}
+
+function runGame()
+{
+    setInterval(draw, 1000 / FPS);  
+}
+
+function draw()
+{
+    game.update();
+	context.fillRect(0, 0, canvas.width, canvas.height);
+    game.draw(context);
 }
 
 function keyDown(event)
@@ -129,11 +146,4 @@ function keyUp(event)
         game.inputAcceleration.x = 0.0;
     if (event.keyCode == 38)
         game.inputAcceleration.y = 0.0;
-}
-
-function draw()
-{
-    game.update();
-	context.fillRect(0, 0, canvas.width, canvas.height);
-    game.draw(context);
 }

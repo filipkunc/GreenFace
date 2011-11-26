@@ -31,6 +31,19 @@ const maxSpeedUpCount = 60 * 6; // 60 FPS * 6 sec
 const mathPi = 3.1415926535;
 const playerSize = 64.0;
 
+function FPPlayerFactory()
+{
+    this.image = playerImage[3];
+    
+    this.create = function(x, y)
+    {
+        var player = new FPPlayer();
+        player.x = x;
+        player.y = y;
+        return player;
+    }    
+}
+
 function FPPlayer()
 {
     this.x = 480.0 / 2.0 - playerSize / 2.0;
@@ -45,6 +58,7 @@ function FPPlayer()
     this.jumpCounter = 0;
     this.animationCounter = 0;
     this.leftOriented = false;
+    this.selected = false;
     
     this.rect = function()
     {
@@ -295,5 +309,16 @@ function FPPlayer()
         context.globalAlpha = Math.abs(Math.sin(this.alpha)) * 0.5 + 0.5;
         context.drawImage(jumpImage, 240 - playerSize, 160 - playerSize);
         context.globalAlpha = 1.0;
+    }
+    
+    this.toLevelString = function(firstPass)
+    {
+        if (firstPass)
+            return null;
+        
+        var levelString = new String('game.moveWorld(240.0 - ');
+        levelString += this.x.toString() + ', 160.0 - ';
+        levelString += this.y.toString() + ');';
+        return levelString;        
     }
 }

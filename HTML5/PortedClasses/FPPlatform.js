@@ -3,6 +3,16 @@
 var platformImage = new Image();
 platformImage.src = "Images/plos_marble.png";
 
+function FPPlatformFactory()
+{
+    this.image = platformImage;
+    
+    this.create = function(x, y)
+    {
+        return new FPPlatform(x, y, 1, 1);
+    }    
+}
+
 function FPPlatform(x, y, widthSegments, heightSegments)
 {
     this.x = x;
@@ -10,6 +20,7 @@ function FPPlatform(x, y, widthSegments, heightSegments)
     this.widthSegments = widthSegments;
     this.heightSegments = heightSegments;
     this.isVisible = true;
+    this.selected = false;
 
     this.isPlatform = function()
     {
@@ -46,5 +57,18 @@ function FPPlatform(x, y, widthSegments, heightSegments)
                 context.drawImage(platformImage, this.x + ix * 32.0, this.y + iy * 32.0);
             }
         }
+    }
+    
+    this.toLevelString = function(firstPass)
+    {
+        if (!firstPass)
+            return null;
+        
+        var levelString = new String('game.addGameObject(new FPPlatform(');
+        levelString += this.x.toString() + ',';
+        levelString += this.y.toString() + ',';
+        levelString += this.widthSegments.toString() + ',';
+        levelString += this.heightSegments.toString() + '));';
+        return levelString;
     }
 }

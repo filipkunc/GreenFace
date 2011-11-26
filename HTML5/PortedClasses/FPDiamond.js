@@ -3,11 +3,22 @@
 var diamondImage = new Image();
 diamondImage.src = "Images/diamond.png";
 
+function FPDiamondFactory()
+{
+    this.image = diamondImage;
+    
+    this.create = function(x, y)
+    {
+        return new FPDiamond(x, y);
+    }    
+}
+
 function FPDiamond(x, y)
 {
     this.x = x;
     this.y = y;
     this.isVisible = true;
+    this.selected = false;
 
     this.isPlatform = function()
     {
@@ -46,5 +57,16 @@ function FPDiamond(x, y)
     this.draw = function(context)
     {
         context.drawImage(diamondImage, this.x, this.y);
+    }
+    
+    this.toLevelString = function(firstPass)
+    {
+        if (!firstPass)
+            return null;
+        
+        var levelString = new String('game.addGameObject(new FPDiamond(');
+        levelString += this.x.toString() + ',';
+        levelString += this.y.toString() + '));';
+        return levelString;
     }
 }

@@ -3,12 +3,23 @@
 var magnetImage = new Image();
 magnetImage.src = "Images/magnet.png";
 
+function FPMagnetFactory()
+{
+    this.image = magnetImage;
+    
+    this.create = function(x, y)
+    {
+        return new FPMagnet(x, y, 1);
+    }    
+}
+
 function FPMagnet(x, y, widthSegments)
 {
     this.x = x;
     this.y = y;
     this.widthSegments = widthSegments;
     this.isVisible = true;
+    this.selected = false;
 
     this.isPlatform = function()
     {
@@ -53,5 +64,17 @@ function FPMagnet(x, y, widthSegments)
         {
             context.drawImage(magnetImage, this.x + ix * 32.0, this.y);
         }
+    }
+    
+    this.toLevelString = function(firstPass)
+    {
+        if (!firstPass)
+            return null;
+        
+        var levelString = new String('game.addGameObject(new FPMagnet(');
+        levelString += this.x.toString() + ',';
+        levelString += this.y.toString() + ',';
+        levelString += this.widthSegments.toString() + '));';
+        return levelString;
     }
 }

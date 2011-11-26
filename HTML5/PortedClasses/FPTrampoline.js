@@ -8,6 +8,16 @@ trampolineImage[1].src = "Images/trampoline02.png";
 trampolineImage[2] = new Image();
 trampolineImage[2].src = "Images/trampoline03.png";
 
+function FPTrampolineFactory()
+{
+    this.image = trampolineImage[0];
+    
+    this.create = function(x, y)
+    {
+        return new FPTrampoline(x, y, 1);
+    }    
+}
+
 function FPTrampoline(x, y, widthSegments)
 {
     this.animationCounter = 0;
@@ -17,6 +27,7 @@ function FPTrampoline(x, y, widthSegments)
     this.y = y;
     this.widthSegments = widthSegments;
     this.isVisible = true;
+    this.selected = false;
 
     this.isPlatform = function()
     {
@@ -87,5 +98,17 @@ function FPTrampoline(x, y, widthSegments)
         {
             context.drawImage(trampolineImage[this.textureIndex], this.x + ix * 64.0, this.y);
         }
+    }
+    
+    this.toLevelString = function(firstPass)
+    {
+        if (!firstPass)
+            return null;
+        
+        var levelString = new String('game.addGameObject(new FPTrampoline(');
+        levelString += this.x.toString() + ',';
+        levelString += this.y.toString() + ',';
+        levelString += this.widthSegments.toString() + '));';
+        return levelString;
     }
 }

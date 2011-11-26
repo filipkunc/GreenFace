@@ -3,6 +3,16 @@
 var movableImage = new Image();
 movableImage.src = "Images/movable.png";
 
+function FPMovablePlatformFactory()
+{
+    this.image = movableImage;
+    
+    this.create = function(x, y)
+    {
+        return new FPMovablePlatform(x, y, 1, 1);
+    }    
+}
+
 function FPMovablePlatform(x, y, widthSegments, heightSegments)
 {
     this.x = x;
@@ -11,6 +21,7 @@ function FPMovablePlatform(x, y, widthSegments, heightSegments)
     this.heightSegments = heightSegments;
     this.moveY = 0.0;
     this.isVisible = true;
+    this.selected = false;
 
     this.isPlatform = function()
     {
@@ -123,5 +134,18 @@ function FPMovablePlatform(x, y, widthSegments, heightSegments)
                 context.drawImage(movableImage, this.x + ix * 32.0, this.y + iy * 32.0);
             }
         }
+    }
+    
+    this.toLevelString = function(firstPass)
+    {
+        if (!firstPass)
+            return null;
+        
+        var levelString = new String('game.addGameObject(new FPMovablePlatform(');
+        levelString += this.x.toString() + ',';
+        levelString += this.y.toString() + ',';
+        levelString += this.widthSegments.toString() + ',';
+        levelString += this.heightSegments.toString() + '));';
+        return levelString;
     }
 }

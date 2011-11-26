@@ -3,11 +3,22 @@
 var exitImage = new Image();
 exitImage.src = "Images/exit.png";
 
+function FPExitFactory()
+{
+    this.image = exitImage;
+    
+    this.create = function(x, y)
+    {
+        return new FPExit(x, y);
+    }    
+}
+
 function FPExit(x, y)
 {
     this.x = x;
     this.y = y;
     this.isVisible = true;
+    this.selected = false;
 
     this.isPlatform = function()
     {
@@ -43,5 +54,16 @@ function FPExit(x, y)
     this.draw = function(context)
     {
         context.drawImage(exitImage, this.x, this.y);
+    }
+    
+    this.toLevelString = function(firstPass)
+    {
+        if (!firstPass)
+            return null;
+        
+        var levelString = new String('game.addGameObject(new FPExit(');
+        levelString += this.x.toString() + ',';
+        levelString += this.y.toString() + '));';
+        return levelString;
     }
 }

@@ -77,6 +77,14 @@ function FPRect(x, y, width, height)
     {
         return this.size.isEmptyWithTolerance();
     }
+    
+    this.containsPoint = function(x, y)
+    {
+        if (x >= this.origin.x && x <= this.origin.x + this.size.width &&
+            y >= this.origin.y && y <= this.origin.y + this.size.height)
+            return true;
+        return false;
+    }
 }
 
 function FPRectIntersection(a, b)
@@ -137,6 +145,16 @@ function FPRectIntersectsRectWithTolerance(a, b)
     if (intersection.isEmptyWithTolerance())
         return false;
     return true;
+}
+
+function FPRectFromPoints(a, b)
+{
+    var x1 = Math.min(a.x, b.x);
+    var x2 = Math.max(a.x, b.x);
+    var y1 = Math.min(a.y, b.y);
+    var y2 = Math.max(a.y, b.y);
+    
+    return new FPRect(x1, y1, x2 - x1, y2 - y1);
 }
 
 function absmax(n, max)
