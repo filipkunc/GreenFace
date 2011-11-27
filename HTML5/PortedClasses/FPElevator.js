@@ -71,6 +71,7 @@ function FPElevator(x, y, endX, endY, widthSegments)
     {
         var player = game.player;
         var playerRect = player.rect();
+        playerRect.size.height -= tolerance;        
         var moveRect = FPRectWithMove(this.rect(), diffX, diffY);
         
         if (diffY > 0.0)
@@ -103,9 +104,11 @@ function FPElevator(x, y, endX, endY, widthSegments)
                 for (i in game.gameObjects)
                 {
                     var gameObject = game.gameObjects[i];
+                    var gameObjectRect = gameObject.rect();
+                    gameObjectRect.size.height -= tolerance;
                     if (gameObject.isMovable())
                     {
-                        if (FPRectIntersectsRectWithTolerance(gameObject.rect(), moveRect))
+                        if (FPRectIntersectsRectWithTolerance(gameObjectRect, moveRect))
                         {
                             diffX = 0.0;
                             break;
@@ -115,7 +118,7 @@ function FPElevator(x, y, endX, endY, widthSegments)
             }
         }
         
-        playerRect.size.height += tolerance;
+        playerRect.size.height += tolerance * 2.0;
         
         if (FPRectIntersectsRectWithTolerance(playerRect, moveRect))
         {
@@ -177,6 +180,8 @@ function FPElevator(x, y, endX, endY, widthSegments)
         {
             var movableRect = FPRectWithMove(movableOnElevator.rect(), diffX, diffY);
             movableOnElevator.move(diffX, 0.0);
+            if (movableOnElevator.collisionLeftRight(game))
+                movableOnElevator.move(-diffX, 0.0);
             if (FPRectIntersectsRectWithTolerance(playerRect, movableRect))
             {
                 game.moveWorld(-diffX, 0.0);

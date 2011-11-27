@@ -1,8 +1,21 @@
 var oldCursor = null;
 var isMiddleMouse = false;
+var isDown = false;
+
+const FPDragHandleNone = 0;
+const FPDragHandleTopLeft = 1;
+const FPDragHandleBottomLeft = 2;
+const FPDragHandleTopRight = 3;
+const FPDragHandleBottomRight = 4;
+const FPDragHandleMiddleLeft = 5;
+const FPDragHandleMiddleTop = 6;
+const FPDragHandleMiddleRight = 7;
+const FPDragHandleMiddleBottom = 8;
 
 function levelMouseDown(e)
 {
+    isDown = true;
+    
     var cursor = getCursorPosition(levelCanvas.canvas, e);
     
     if (e.button == 1)
@@ -23,13 +36,17 @@ function levelMouseDown(e)
         levelCanvas.draggedObject = levelCanvas.levelObjects[beforeLength];
         levelCanvas.draw();
     }
-    else
+    else if (levelCanvas.currentHandle == FPDragHandleNone)
     {
         levelCanvas.draggedObject = levelCanvas.objectUnderMouse(cursor.x, cursor.y);
         if (levelCanvas.draggedObject == null)
         {
             levelCanvas.selectionStart = new FPPoint(cursor.x, cursor.y);
             levelCanvas.selectionEnd = new FPPoint(cursor.x, cursor.y);
+        }
+        else if (!levelCanvas.draggedObject.selected)
+        {
+            levelCanvas.deselectAll();
         }
     }
     
@@ -46,10 +63,36 @@ function alignCursorOnGrid(cursor)
 
 function levelMouseMove(e)
 {
-    if (oldCursor == null)
-        return;
-    
     var cursor = getCursorPosition(levelCanvas.canvas, e);
+    
+    if (!isDown)
+    {
+        if (levelCanvas.draggedObject != null)
+        {
+            var draggedObjectRect = levelCanvas.draggedObject.rect();
+            var handleRect = new FPRect(0.0, 0.0, 14.0, 14.0);
+            
+            levelCanvas.currentHandle = FPDragHandleNone;
+        
+            for (var handle = FPDragHandleTopLeft; handle <= FPDragHandleMiddleBottom; handle++)
+            {
+    			var handlePoint = levelCanvas.pointFromHandle(handle, draggedObjectRect);
+
+    			handleRect.origin.x = handlePoint.x - handleRect.size.width / 2.0;
+    			handleRect.origin.y = handlePoint.y - handleRect.size.height / 2.0;
+
+    			if (handleRect.containsPoint(cursor.x, cursor.y))
+    			{
+    				levelCanvas.currentHandle = handle;
+    				break;			
+    			}
+    		}
+    		
+    		levelCanvas.draw();
+	    }
+        
+        return;
+    }
     
     if (isMiddleMouse)
     {
@@ -88,6 +131,10 @@ function levelMouseMove(e)
             levelCanvas.draggedObject.widthSegments = widthSegments;
             levelCanvas.draggedObject.heightSegments = heightSegments;
         }
+        else if (levelCanvas.currentHandle != FPDragHandleNone)
+        {
+            levelCanvas.resizeDraggedObject(widthSegments, heightSegments);
+        }
         else
         {
             widthSegments *= 32.0;
@@ -105,15 +152,18 @@ function levelMouseMove(e)
 
 function levelMouseUp(e)
 {
+    isDown = false;
+    
     if (levelCanvas.selectionStart != null)
     {
+        levelCanvas.draggedObject = null;
+        
         levelCanvas.selectObjects();
         
         levelCanvas.selectionStart = null;
         levelCanvas.selectionEnd = null;
     }
     
-    levelCanvas.draggedObject = null;
     paletteCanvas.activeFactory = null;
     oldCursor = null;
     
@@ -126,7 +176,7 @@ function FPLevelCanvas(canvasName)
     this.canvas = document.getElementById(canvasName);
     this.context = this.canvas.getContext('2d');
     
-    this.canvas.width = document.width - 107;
+    this.canvas.width = document.width - 110;
     this.canvas.height = document.height - 4;
     
     this.levelObjects = new Array();
@@ -139,6 +189,8 @@ function FPLevelCanvas(canvasName)
     this.canvas.addEventListener('mousedown', levelMouseDown, false);
     this.canvas.addEventListener('mousemove', levelMouseMove, false);
     this.canvas.addEventListener('mouseup', levelMouseUp, false);
+    
+    this.currentHandle = FPDragHandleNone;
     
     this.drawGrid = function()
     {
@@ -175,12 +227,15 @@ function FPLevelCanvas(canvasName)
             var levelObject = this.levelObjects[i];
             levelObject.draw(this.context);
             
-            if (levelObject.selected)
+            if (levelObject.selected || levelObject == this.draggedObject)
             {
                 var levelObjectRect = levelObject.rect();
                 this.context.strokeStyle = "rgba(255,255,255, 1.0)";
                 this.context.strokeRect(levelObjectRect.origin.x, levelObjectRect.origin.y, levelObjectRect.size.width, levelObjectRect.size.height);
-            }           
+            }          
+            
+             if (levelObject == this.draggedObject)
+                this.drawHandles(levelObject); 
         }
         
         if (this.selectionStart != null)
@@ -223,12 +278,21 @@ function FPLevelCanvas(canvasName)
         }
     }
     
+    this.deselectAll = function()
+    {
+        for (i in this.levelObjects)
+        {
+            var levelObject = this.levelObjects[i];
+            levelObject.selected = false;
+        }
+    }
+    
     this.moveSelected = function(offsetX, offsetY)
     {
         for (i in this.levelObjects)
         {
             var levelObject = this.levelObjects[i];
-            if (levelObject.selected)
+            if (levelObject.selected || levelObject == this.draggedObject)
                 levelObject.move(offsetX, offsetY);
         }        
     }
@@ -247,4 +311,125 @@ function FPLevelCanvas(canvasName)
         this.levelObjects = this.levelObjects.filter(function (obj) { return !obj.selected; });
         this.draw();
     }
+    
+    this.pointFromHandle = function(handle, rect)
+    {
+        switch (handle)
+        {
+    		case FPDragHandleTopLeft:
+    			return new FPPoint(rect.origin.x, rect.origin.y);
+    		case FPDragHandleBottomLeft:
+    			return new FPPoint(rect.origin.x, rect.origin.y + rect.size.height);
+    		case FPDragHandleTopRight:
+    			return new FPPoint(rect.origin.x + rect.size.width, rect.origin.y);
+    		case FPDragHandleBottomRight:
+    			return new FPPoint(rect.origin.x + rect.size.width, rect.origin.y + rect.size.height);
+
+    		case FPDragHandleMiddleLeft:
+    			return new FPPoint(rect.origin.x, rect.origin.y + rect.size.height / 2.0);
+    		case FPDragHandleMiddleTop:
+    			return new FPPoint(rect.origin.x + rect.size.width / 2.0, rect.origin.y);
+    		case FPDragHandleMiddleRight:
+    			return new FPPoint(rect.origin.x + rect.size.width, rect.origin.y + rect.size.height / 2.0);
+    		case FPDragHandleMiddleBottom:
+    			return new FPPoint(rect.origin.x + rect.size.width / 2.0, rect.origin.y + rect.size.height);
+
+    		default:
+    			return new FPPoint(0.0, 0.0);
+    	}
+    }
+    
+    this.drawHandles = function(levelObject)
+    {
+        for (var handle = FPDragHandleTopLeft; handle <= FPDragHandleMiddleBottom; handle++)
+        {
+    		/*if (!widthHandles && [self isWidthHandle:handle])
+    			continue;
+
+    		if (!heightHandles && [self isHeightHandle:handle])
+    			continue;		*/
+
+    		if (handle == this.currentHandle)
+    		    this.context.fillStyle = "rgba(255, 0, 0, 0.8)";
+    		else
+    		    this.context.fillStyle = "rgba(255, 255, 128, 0.8)";
+
+            var levelObjectRect = levelObject.rect();
+    		var handlePoint = this.pointFromHandle(handle, levelObjectRect);
+    		this.context.fillRect(handlePoint.x - 3.0, handlePoint.y - 3.0, 6.0, 6.0);
+    	}
+    }
+    
+    this.resizeDraggedObject = function(widthSegments, heightSegments)
+    {
+        switch (this.currentHandle)
+        {
+		case FPDragHandleTopLeft:
+			this.resizeDraggedObjectTop(heightSegments);
+			this.resizeDraggedObjectLeft(widthSegments);
+			break;
+		case FPDragHandleTopRight:
+            this.resizeDraggedObjectTop(heightSegments);
+			this.resizeDraggedObjectRight(widthSegments);
+			break;
+		case FPDragHandleBottomLeft:
+			this.resizeDraggedObjectBottom(heightSegments);
+			this.resizeDraggedObjectLeft(widthSegments);
+			break;
+		case FPDragHandleBottomRight:
+			this.resizeDraggedObjectBottom(heightSegments);
+			this.resizeDraggedObjectRight(widthSegments);
+			break;
+		case FPDragHandleMiddleTop:
+			this.resizeDraggedObjectTop(heightSegments);
+			break;
+		case FPDragHandleMiddleBottom:
+			this.resizeDraggedObjectBottom(heightSegments);
+			break;
+		case FPDragHandleMiddleLeft:
+			this.resizeDraggedObjectLeft(widthSegments);
+			break;
+		case FPDragHandleMiddleRight:
+		    this.resizeDraggedObjectRight(widthSegments);
+			break;
+		}
+    }
+    
+    this.resizeDraggedObjectLeft = function(widthSegments)
+    {
+    	if (this.draggedObject.widthSegments - widthSegments < 1)
+    		widthSegments = 0;
+
+        this.draggedObject.move(widthSegments * 32.0, 0.0);
+    	oldCursor.x += widthSegments * 32.0;
+    	this.draggedObject.widthSegments -= widthSegments;
+    }
+    
+    this.resizeDraggedObjectRight = function(widthSegments)
+    {
+    	if (this.draggedObject.widthSegments + widthSegments < 1)
+    		widthSegments = 0;
+
+    	oldCursor.x += widthSegments * 32.0;
+    	this.draggedObject.widthSegments += widthSegments;
+    }
+    
+    this.resizeDraggedObjectTop = function(heightSegments)
+    {
+    	if (this.draggedObject.heightSegments - heightSegments < 1)
+    		heightSegments = 0;
+
+        this.draggedObject.move(0.0, heightSegments * 32.0);
+    	oldCursor.y += heightSegments * 32.0;
+    	this.draggedObject.heightSegments -= heightSegments;
+    }
+    
+    this.resizeDraggedObjectBottom = function(heightSegments)
+    {
+    	if (this.draggedObject.heightSegments + heightSegments < 1)
+    		heightSegments = 0;
+
+    	oldCursor.y += heightSegments * 32.0;
+    	this.draggedObject.heightSegments += heightSegments;
+    }    
 }
