@@ -61,14 +61,12 @@ function FPPlatform(x, y, widthSegments, heightSegments)
     
     this.toLevelString = function(firstPass)
     {
-        if (!firstPass)
-            return null;
-        
-        var levelString = new String('game.addGameObject(new FPPlatform(');
-        levelString += this.x.toString() + ',';
-        levelString += this.y.toString() + ',';
-        levelString += this.widthSegments.toString() + ',';
-        levelString += this.heightSegments.toString() + '));';
-        return levelString;
+        var levelString = new String('<FPPlatform>\n');
+        levelString += '<x>' + this.x.toString() + '</x>\n';
+        levelString += '<y>' + this.y.toString() + '</y>\n';
+        levelString += '<widthSegments>' + this.widthSegments.toString() + '</widthSegments>\n';
+        levelString += '<heightSegments>' + this.heightSegments.toString() + '</heightSegments>\n';
+        levelString += '</FPPlatform>\n';
+        return levelString;        
     }
 }

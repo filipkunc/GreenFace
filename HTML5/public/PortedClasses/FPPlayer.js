@@ -311,14 +311,12 @@ function FPPlayer()
         context.globalAlpha = 1.0;
     }
     
-    this.toLevelString = function(firstPass)
+    this.toLevelString = function()
     {
-        if (firstPass)
-            return null;
-        
-        var levelString = new String('game.moveWorld(208.0 - ');
-        levelString += this.x.toString() + ', 128.0 - ';
-        levelString += this.y.toString() + ');';
-        return levelString;        
+        var levelString = new String('<FPPlayer>\n');
+        levelString += '<x>' + this.x.toString() + '</x>\n';
+        levelString += '<y>' + this.y.toString() + '</y>\n';
+        levelString += '</FPPlayer>\n';
+        return levelString;
     }
 }

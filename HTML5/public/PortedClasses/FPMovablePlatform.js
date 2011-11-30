@@ -136,16 +136,14 @@ function FPMovablePlatform(x, y, widthSegments, heightSegments)
         }
     }
     
-    this.toLevelString = function(firstPass)
+    this.toLevelString = function()
     {
-        if (!firstPass)
-            return null;
-        
-        var levelString = new String('game.addGameObject(new FPMovablePlatform(');
-        levelString += this.x.toString() + ',';
-        levelString += this.y.toString() + ',';
-        levelString += this.widthSegments.toString() + ',';
-        levelString += this.heightSegments.toString() + '));';
-        return levelString;
+        var levelString = new String('<FPMovablePlatform>\n');
+        levelString += '<x>' + this.x.toString() + '</x>\n';
+        levelString += '<y>' + this.y.toString() + '</y>\n';
+        levelString += '<widthSegments>' + this.widthSegments.toString() + '</widthSegments>\n';
+        levelString += '<heightSegments>' + this.heightSegments.toString() + '</heightSegments>\n';
+        levelString += '</FPMovablePlatform>\n';
+        return levelString;        
     }
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>GreenFace</title>
+<script type="text/javascript">
+function windowOpener(windowWidth, windowHeight, windowName, windowUri)
+{
+    var centerWidth = (window.screen.width - windowWidth) / 2;
+    var centerHeight = (window.screen.height - windowHeight) / 2;
+
+    var newWindow = window.open(windowUri, windowName, 'resizable=0,width=' + windowWidth + 
+        ',height=' + windowHeight + 
+        ',left=' + centerWidth + 
+        ',top=' + centerHeight);
+
+    newWindow.focus();
+    return newWindow;
+}
+</script>
+<style type="text/css">
+h1 { text-align: center; }
+body { font-family: Arial, Helvetica, sans-serif; background-color:#BBB; }
+div { float: left; margin: 10px; }
+</style>
+</head>
+<body>
+  <h1>GreenFace</h1>
+  <form name="input" action="/leveleditor" method="get">
+  Level name: <input type="text" name="level" />
+  <input type="submit" value="Create new level" />
+  </form>
+  <% @levels.each do |level| %>
+  <div>
+  <h2><%= level %></h2>
+  <img src="/Screenshots/<%= level %>.png" width="480" height="320"></img>
+  <br />
+  <a href="/game.html?level=<%= level %>.xml" onclick="windowOpener(480, 295, 'Game Simulation', this.href); return false">Play</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/leveleditor.html?level=<%= level %>.xml">Edit</a>
+</div>
+  <% end %>
+</body>
+</html>

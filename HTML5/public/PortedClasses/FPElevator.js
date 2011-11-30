@@ -308,17 +308,15 @@ function FPElevator(x, y, endX, endY, widthSegments)
         }
     }
     
-    this.toLevelString = function(firstPass)
+    this.toLevelString = function()
     {
-        if (!firstPass)
-            return null;
-        
-        var levelString = new String('game.addGameObject(new FPElevator(');
-        levelString += this.x.toString() + ',';
-        levelString += this.y.toString() + ',';
-        levelString += this.endX.toString() + ',';
-        levelString += this.endY.toString() + ',';
-        levelString += this.widthSegments.toString() + '));';
+        var levelString = new String('<FPElevator>\n');
+        levelString += '<x>' + this.x.toString() + '</x>\n';
+        levelString += '<y>' + this.y.toString() + '</y>\n';
+        levelString += '<endX>' + this.endX.toString() + '</endX>\n';
+        levelString += '<endY>' + this.endY.toString() + '</endY>\n';
+        levelString += '<widthSegments>' + this.widthSegments.toString() + '</widthSegments>\n';
+        levelString += '</FPElevator>\n';
         return levelString;
     }
 }
@@ -358,7 +356,7 @@ function FPElevatorEnd(elevator)
         context.stroke();
     }
     
-    this.toLevelString = function(firstPass)
+    this.toLevelString = function()
     {
         return null;
     }

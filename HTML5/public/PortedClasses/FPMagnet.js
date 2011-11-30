@@ -66,15 +66,13 @@ function FPMagnet(x, y, widthSegments)
         }
     }
     
-    this.toLevelString = function(firstPass)
+    this.toLevelString = function()
     {
-        if (!firstPass)
-            return null;
-        
-        var levelString = new String('game.addGameObject(new FPMagnet(');
-        levelString += this.x.toString() + ',';
-        levelString += this.y.toString() + ',';
-        levelString += this.widthSegments.toString() + '));';
-        return levelString;
+        var levelString = new String('<FPMagnet>\n');
+        levelString += '<x>' + this.x.toString() + '</x>\n';
+        levelString += '<y>' + this.y.toString() + '</y>\n';
+        levelString += '<widthSegments>' + this.widthSegments.toString() + '</widthSegments>\n';
+        levelString += '</FPMagnet>\n';
+        return levelString;        
     }
 }
