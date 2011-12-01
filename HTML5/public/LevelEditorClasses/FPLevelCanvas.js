@@ -308,7 +308,7 @@ function FPLevelCanvas(canvasName)
     
     this.deleteSelected = function()
     {
-        this.levelObjects = this.levelObjects.filter(function (obj) { return !obj.selected; });
+        this.levelObjects = this.levelObjects.filter(function (obj) { return !obj.selected && obj != this.draggedObject; });
         this.draw();
     }
     
