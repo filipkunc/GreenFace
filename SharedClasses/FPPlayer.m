@@ -51,6 +51,12 @@ const float playerSize = 64.0f;
 	return [playerTexture textureAtIndex:3];
 }
 
++ (void)resetTextures
+{
+    playerTexture = nil;
+    jumpTexture = nil;
+}
+
 - (id)init
 {
 	self = [super init];

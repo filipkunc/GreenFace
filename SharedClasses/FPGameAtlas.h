@@ -22,6 +22,7 @@
 @property (readonly) int verticesUsed;
 
 + (FPGameAtlas *)sharedAtlas;
++ (void)resetSharedAtlas;
 
 - (id)initWithFile:(NSString *)fileName;
 - (void)removeAllTiles;

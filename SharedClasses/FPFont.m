@@ -27,11 +27,6 @@
 	if (text == nil)
 		return;
 	
-#if TARGET_OS_IPHONE
-	pt.x -= 80.0f;
-	pt.y += 80.0f;
-#endif
-	
 	GLfloat texCoordX = 1.0f / self.horizontalTileCount;
 	GLfloat texCoordY = 1.0f / self.verticalTileCount;	
 	int length = (int)[text length];

@@ -9,16 +9,19 @@
 
 #import <UIKit/UIKit.h>
 
-@class EAGLView;
+@class GFLevelsViewController;
+@class GFWebLevelsViewController;
 
 @interface IronJumpAppDelegate : NSObject <UIApplicationDelegate> 
 {
     UIWindow *window;
-    EAGLView *glView;
+    UITabBarController *tabBarController;
+    UINavigationController *navigationController;
+    GFLevelsViewController *levelsViewController;
+    GFWebLevelsViewController *webLevelsViewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet EAGLView *glView;
 
 @end
 

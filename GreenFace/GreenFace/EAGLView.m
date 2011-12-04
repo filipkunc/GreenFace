@@ -9,35 +9,9 @@
 #import "EAGLView.h"
 #import "FPMath.h"
 
-NSArray *GetLevelsInDocumentDirectory(void);
-
-NSArray *GetLevelsInDocumentDirectory(void)
-{
-	// Get list of document directories in sandbox
-	NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                                       NSUserDomainMask, YES);
-	
-	// Get one and only document directory from that list
-	NSString *documentDirectory = [documentDirectories objectAtIndex:0];
-	
-	NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentDirectory error:nil];
-	
-	if (files == nil)
-		return nil;
-	
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF ENDSWITH 'level'"];
-	files = [files filteredArrayUsingPredicate:predicate];
-    
-	NSMutableArray *fullPaths = [[NSMutableArray alloc] init];
-	for (NSString *file in files)
-		[fullPaths addObject:[documentDirectory stringByAppendingPathComponent:file]];
-	
-	return fullPaths;
-}
-
 @implementation EAGLView
 
-@synthesize animating;
+@synthesize animating, levelName;
 @dynamic animationFrameInterval;
 
 // You must implement this method
@@ -74,23 +48,10 @@ NSArray *GetLevelsInDocumentDirectory(void)
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		
-		[FPStage initStages];
 		win = [[FPTexture alloc] initWithFile:@"win.png" convertToAlpha:NO];
 		
 		[FPGameAtlas sharedAtlas];
         
-		NSMutableArray *levels = [[NSMutableArray alloc] init];
-		[levels addObject:@"Tutorial"]; // 1
-        [levels addObject:@"Jump"]; // 2
-        [levels addObject:@"Puzzle"]; // 3
-		
-		NSArray *customLevels = GetLevelsInDocumentDirectory();
-		NSLog(@"customLevels: %@", customLevels);
-		
-		[FPStage addStagesFromLevels:customLevels isCustom:YES];
-		[FPStage addStagesFromLevels:levels isCustom:NO];
-		[FPStage decideCurrentStage];
-		
 		game = nil;
         
         animating = FALSE;
@@ -111,7 +72,7 @@ NSArray *GetLevelsInDocumentDirectory(void)
 		[[UIAccelerometer sharedAccelerometer] setDelegate:nil];
 		[[UIAccelerometer sharedAccelerometer] setUpdateInterval:(1.0 / 30.0)];
 		[[UIAccelerometer sharedAccelerometer] setDelegate:self];
-		[[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+		[[UIApplication sharedApplication] setIdleTimerDisabled:YES];        
     }
 
     return self;
@@ -119,6 +80,8 @@ NSArray *GetLevelsInDocumentDirectory(void)
 
 - (void)dealloc
 {
+    [FPGame resetAllTextures];
+    
     // Tear down GL
     if (defaultFramebuffer)
     {
@@ -141,7 +104,6 @@ NSArray *GetLevelsInDocumentDirectory(void)
 
 - (void)drawView:(id)sender
 {
-	
 	[self update];
 	[self render];
 }
@@ -227,53 +189,6 @@ NSArray *GetLevelsInDocumentDirectory(void)
     }
 }
 
-#pragma mark Touch UI
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	for (UITouch *touch in touches)
-	{
-		CGPoint point = [touch locationInView:self];
-		
-        if (!game)
-        {
-            CGPoint location;
-            location.x = point.y - 80.0f;
-            location.y = 320.0f - point.x + 80.0f;
-            
-            [[FPStage currentStage] touchedOnLevelAtLocation:location];
-        }	
-        
-		return;
-	}
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	[self touchesBegan:touches withEvent:event];
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	for (UITouch *touch in touches)
-	{
-		CGPoint point = [touch locationInView:self];
-        
-        if (!game)
-        {
-            FPMenuButton menuButton = [FPStage touchEndedAtPoint:point];
-            if (menuButton == FPMenuButtonPlay)
-                [self resetGame];
-        }
-        else
-        {
-            game = nil;
-        }
-        
-		return;
-	}
-}
-
 #pragma mark Real accelerometer
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration 
@@ -292,20 +207,10 @@ NSArray *GetLevelsInDocumentDirectory(void)
 
 - (void)resetGame
 {
-	FPStage *current = [FPStage currentStage];
-	NSString *levelName = [current levelAtIndex:current.currentLevelIndex];
-	NSString *path = nil;
-	
-	if (current.isCustom)
-		path = levelName;
-	else
-		path = [[NSBundle mainBundle] pathForResource:levelName ofType:@"greenlevel"];
-	
-	[FPStage saveDefaults];
-    
+	NSString *path = [[NSBundle mainBundle] pathForResource:levelName ofType:@"greenlevel"];
 	NSData *data = [NSData dataWithContentsOfFile:path];
     
-    game = [[FPGame alloc] initWithXMLData:data width:320 height:480];
+    game = [[FPGame alloc] initWithXMLData:data width:480 height:320];
 
     for (id<FPGameObject> gameObject in [game gameObjects])
 	{
@@ -316,10 +221,7 @@ NSArray *GetLevelsInDocumentDirectory(void)
         }
     }
     
-	if (current.isCustom)
-        [FPGame setBackgroundIndex:0];
-    else
-        [FPGame setBackgroundIndex:1];
+    [FPGame setBackgroundIndex:1];
     
 	nextLevelCounter = 0;
 	winAnimation = 0.0f;
@@ -359,13 +261,8 @@ NSArray *GetLevelsInDocumentDirectory(void)
 	{
 		nextLevelCounter = 0;
 		
-		if (![FPStage nextLevel])
-		{
-			victory = YES;
-			return;
-		}
-		
-		[self resetGame];
+        victory = YES;
+		return;		
 	}
 }
 
@@ -407,9 +304,9 @@ NSArray *GetLevelsInDocumentDirectory(void)
 	glScalef(1, -1, 1);
 	
 	glPushMatrix();
-	glTranslatef(backingWidth / 2.0f, backingHeight / 2.0f, 0.0f);
+	/*glTranslatef(backingWidth / 2.0f, backingHeight / 2.0f, 0.0f);
 	glRotatef(90.0f, 0, 0, 1);
-	glTranslatef(-backingWidth / 2.0f, -backingHeight / 2.0f, 0.0f);
+	glTranslatef(-backingWidth / 2.0f, -backingHeight / 2.0f, 0.0f);*/
 	
     glClearColor(101.0f / 255.0f, 97.0f / 255.0f, 85.0f / 255.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -448,11 +345,7 @@ NSArray *GetLevelsInDocumentDirectory(void)
 			[[FPGameAtlas sharedAtlas] addElevator:2 atPoint:CGPointMake(40.0f, winY) widthSegments:8 heightSegments:1];
 			[[FPGameAtlas sharedAtlas] drawAllTiles];
 		}
-	}
-	else
-	{
-		[FPStage drawCurrentStage];
-	}
+	}	
 	
 	glPopMatrix();	
     

@@ -21,6 +21,11 @@ FPGameAtlas *gameAtlas = nil;
 	return gameAtlas;
 }
 
++ (void)resetSharedAtlas
+{
+    gameAtlas = nil;
+}
+
 - (id)initWithFile:(NSString *)fileName
 {
 	self = [super init];

@@ -16,6 +16,7 @@ void CreateVertexBuffer(void);
 void DrawUsingVertexBuffer(void);
 void UnbindVertexBuffer(void);
 void ChangeVertexBufferIfNeeded(void);
+void DestroyVertexBuffer(void);
 
 @interface FPGame : NSObject <FPGameProtocol, FPXMLParserDelegate>
 {
@@ -43,6 +44,7 @@ void ChangeVertexBufferIfNeeded(void);
 
 + (void)loadFontAndBackgroundIfNeeded;
 + (FPFont *)font;
++ (void)resetAllTextures;
 + (void)setBackgroundIndex:(int)index;
 - (id)initWithWidth:(float)aWidth height:(float)aHeight;
 - (id)initWithBinaryData:(NSData *)data width:(float)aWidth height:(float)aHeight;

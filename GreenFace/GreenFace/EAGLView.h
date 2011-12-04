@@ -17,7 +17,6 @@
 #import "FPFont.h"
 #import "FPGame.h"
 #import "FPExit.h"
-#import "FPStage.h"
 
 // This class wraps the CAEAGLLayer from CoreAnimation into a convenient UIView subclass.
 // The view content is basically an EAGL surface you render your OpenGL scene into.
@@ -52,10 +51,13 @@
     id displayLink;
     NSTimer *animationTimer;
 	float lastAcceleration;
+    
+    NSString *levelName;
 }
 
 @property (readonly, nonatomic, getter=isAnimating) BOOL animating;
 @property (nonatomic) NSInteger animationFrameInterval;
+@property (readwrite, copy) NSString *levelName;
 
 - (void)startAnimation;
 - (void)stopAnimation;

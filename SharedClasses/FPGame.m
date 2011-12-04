@@ -44,6 +44,12 @@ void UnbindVertexBuffer(void)
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
+void DestroyVertexBuffer(void)
+{
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    vertexBufferID = 0;
+}
+
 void ChangeVertexBufferIfNeeded(void)
 {
     if (backgroundIndex != oldBackgroundIndex)
@@ -75,6 +81,14 @@ void ChangeVertexBufferIfNeeded(void)
 	if (!background)
 		background = [[FPTexture alloc] initWithFile:@"marbleblue.png" convertToAlpha:NO];
 #endif
+}
+
++ (void)resetAllTextures
+{
+    font = nil;
+    [FPPlayer resetTextures];
+    [FPGameAtlas resetSharedAtlas];
+    DestroyVertexBuffer();
 }
 
 + (FPFont *)font
@@ -231,8 +245,6 @@ void ChangeVertexBufferIfNeeded(void)
 #if TARGET_OS_IPHONE
     ChangeVertexBufferIfNeeded();
     
-	offset.x -= 80.0f;
-	offset.y += 80.0f;
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D, [[FPGameAtlas sharedAtlas] texture].textureID);
 	glPushMatrix();

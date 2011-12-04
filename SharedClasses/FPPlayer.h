@@ -48,6 +48,7 @@ extern const int maxSpeedUpCount;
 @property (readwrite, assign) float moveX, moveY, alpha;
 @property (readwrite, assign) int speedUpCounter;
 
++ (void)resetTextures;
 - (id)initWithWidth:(float)aWidth height:(float)aHeight;
 - (BOOL)collisionLeftRight:(id<FPGameProtocol>)game;
 - (BOOL)collisionUpDown:(id<FPGameProtocol>)game;

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7395317148BD55C009AA9BA /* GFLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7395316148BD55C009AA9BA /* GFLevelsViewController.m */; };
+		A764AED8148BDB1900A18E09 /* GFWebLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764AED7148BDB1900A18E09 /* GFWebLevelsViewController.m */; };
+		A764AEE2148BE91A00A18E09 /* GFGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764AEE0148BE91A00A18E09 /* GFGameViewController.m */; };
+		A764AEE3148BE91A00A18E09 /* GFGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A764AEE1148BE91A00A18E09 /* GFGameViewController.xib */; };
 		A76664D1147847B5002A4159 /* Tutorial.greenlevel in Resources */ = {isa = PBXBuildFile; fileRef = A76664CF147847B5002A4159 /* Tutorial.greenlevel */; };
 		A76664D314784E3D002A4159 /* Puzzle.greenlevel in Resources */ = {isa = PBXBuildFile; fileRef = A76664D214784E3D002A4159 /* Puzzle.greenlevel */; };
 		A774F3F1147AE99A00C6D8CD /* W_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A774F3EB147AE99A00C6D8CD /* W_01.png */; };
@@ -38,7 +42,6 @@
 		A7E6E6871477FD900037750E /* FPPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6641477FD8F0037750E /* FPPlayer.m */; };
 		A7E6E6881477FD900037750E /* FPReplay.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6661477FD8F0037750E /* FPReplay.m */; };
 		A7E6E6891477FD900037750E /* FPSpeedPowerUp.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6681477FD8F0037750E /* FPSpeedPowerUp.m */; };
-		A7E6E68A1477FD900037750E /* FPStage.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E66A1477FD8F0037750E /* FPStage.m */; };
 		A7E6E68B1477FD900037750E /* FPTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E66C1477FD8F0037750E /* FPTexture.m */; };
 		A7E6E68C1477FD900037750E /* FPTextureArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E66E1477FD8F0037750E /* FPTextureArray.m */; };
 		A7E6E68D1477FD900037750E /* FPTextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6701477FD8F0037750E /* FPTextureAtlas.m */; };
@@ -61,6 +64,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7395315148BD55C009AA9BA /* GFLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFLevelsViewController.h; sourceTree = "<group>"; };
+		A7395316148BD55C009AA9BA /* GFLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFLevelsViewController.m; sourceTree = "<group>"; };
+		A764AED6148BDB1900A18E09 /* GFWebLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFWebLevelsViewController.h; sourceTree = "<group>"; };
+		A764AED7148BDB1900A18E09 /* GFWebLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFWebLevelsViewController.m; sourceTree = "<group>"; };
+		A764AEDF148BE91A00A18E09 /* GFGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGameViewController.h; sourceTree = "<group>"; };
+		A764AEE0148BE91A00A18E09 /* GFGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGameViewController.m; sourceTree = "<group>"; };
+		A764AEE1148BE91A00A18E09 /* GFGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFGameViewController.xib; sourceTree = "<group>"; };
 		A76664CF147847B5002A4159 /* Tutorial.greenlevel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tutorial.greenlevel; sourceTree = "<group>"; };
 		A76664D214784E3D002A4159 /* Puzzle.greenlevel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Puzzle.greenlevel; sourceTree = "<group>"; };
 		A774F3EB147AE99A00C6D8CD /* W_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = W_01.png; path = ../../SharedImages/W_01.png; sourceTree = "<group>"; };
@@ -112,8 +122,6 @@
 		A7E6E6661477FD8F0037750E /* FPReplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPReplay.m; path = ../../SharedClasses/FPReplay.m; sourceTree = "<group>"; };
 		A7E6E6671477FD8F0037750E /* FPSpeedPowerUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPSpeedPowerUp.h; path = ../../SharedClasses/FPSpeedPowerUp.h; sourceTree = "<group>"; };
 		A7E6E6681477FD8F0037750E /* FPSpeedPowerUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPSpeedPowerUp.m; path = ../../SharedClasses/FPSpeedPowerUp.m; sourceTree = "<group>"; };
-		A7E6E6691477FD8F0037750E /* FPStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPStage.h; path = ../../SharedClasses/FPStage.h; sourceTree = "<group>"; };
-		A7E6E66A1477FD8F0037750E /* FPStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPStage.m; path = ../../SharedClasses/FPStage.m; sourceTree = "<group>"; };
 		A7E6E66B1477FD8F0037750E /* FPTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPTexture.h; path = ../../SharedClasses/FPTexture.h; sourceTree = "<group>"; };
 		A7E6E66C1477FD8F0037750E /* FPTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPTexture.m; path = ../../SharedClasses/FPTexture.m; sourceTree = "<group>"; };
 		A7E6E66D1477FD8F0037750E /* FPTextureArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPTextureArray.h; path = ../../SharedClasses/FPTextureArray.h; sourceTree = "<group>"; };
@@ -206,6 +214,13 @@
 				A7E6E6451477FD840037750E /* Images */,
 				A774F3E9147AE96D00C6D8CD /* SharedImages */,
 				A7E6E6441477FD790037750E /* SharedClasses */,
+				A7395315148BD55C009AA9BA /* GFLevelsViewController.h */,
+				A7395316148BD55C009AA9BA /* GFLevelsViewController.m */,
+				A764AED6148BDB1900A18E09 /* GFWebLevelsViewController.h */,
+				A764AED7148BDB1900A18E09 /* GFWebLevelsViewController.m */,
+				A764AEDF148BE91A00A18E09 /* GFGameViewController.h */,
+				A764AEE0148BE91A00A18E09 /* GFGameViewController.m */,
+				A764AEE1148BE91A00A18E09 /* GFGameViewController.xib */,
 				A7E6E63E1477FD620037750E /* EAGLView.h */,
 				A7E6E63F1477FD620037750E /* EAGLView.m */,
 				A7E6E6401477FD620037750E /* IronJumpAppDelegate.h */,
@@ -261,8 +276,6 @@
 				A7E6E6661477FD8F0037750E /* FPReplay.m */,
 				A7E6E6671477FD8F0037750E /* FPSpeedPowerUp.h */,
 				A7E6E6681477FD8F0037750E /* FPSpeedPowerUp.m */,
-				A7E6E6691477FD8F0037750E /* FPStage.h */,
-				A7E6E66A1477FD8F0037750E /* FPStage.m */,
 				A7E6E66B1477FD8F0037750E /* FPTexture.h */,
 				A7E6E66C1477FD8F0037750E /* FPTexture.m */,
 				A7E6E66D1477FD8F0037750E /* FPTextureArray.h */,
@@ -378,6 +391,7 @@
 				A774F3F5147AE99A00C6D8CD /* WJ_01.png in Resources */,
 				A774F3F6147AE99A00C6D8CD /* WJ_02.png in Resources */,
 				A774F404147B0B1F00C6D8CD /* Jump.greenlevel in Resources */,
+				A764AEE3148BE91A00A18E09 /* GFGameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,13 +419,15 @@
 				A7E6E6871477FD900037750E /* FPPlayer.m in Sources */,
 				A7E6E6881477FD900037750E /* FPReplay.m in Sources */,
 				A7E6E6891477FD900037750E /* FPSpeedPowerUp.m in Sources */,
-				A7E6E68A1477FD900037750E /* FPStage.m in Sources */,
 				A7E6E68B1477FD900037750E /* FPTexture.m in Sources */,
 				A7E6E68C1477FD900037750E /* FPTextureArray.m in Sources */,
 				A7E6E68D1477FD900037750E /* FPTextureAtlas.m in Sources */,
 				A7E6E68E1477FD900037750E /* FPTrampoline.m in Sources */,
 				A7E6E68F1477FD900037750E /* FPXMLParser.m in Sources */,
 				A7E6E6901477FD900037750E /* FPXMLWriter.m in Sources */,
+				A7395317148BD55C009AA9BA /* GFLevelsViewController.m in Sources */,
+				A764AED8148BDB1900A18E09 /* GFWebLevelsViewController.m in Sources */,
+				A764AEE2148BE91A00A18E09 /* GFGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
