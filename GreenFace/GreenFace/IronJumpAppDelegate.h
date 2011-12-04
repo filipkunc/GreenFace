@@ -15,10 +15,8 @@
 @interface IronJumpAppDelegate : NSObject <UIApplicationDelegate> 
 {
     UIWindow *window;
-    UITabBarController *tabBarController;
     UINavigationController *navigationController;
     GFLevelsViewController *levelsViewController;
-    GFWebLevelsViewController *webLevelsViewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

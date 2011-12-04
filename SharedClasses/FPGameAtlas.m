@@ -65,9 +65,11 @@ FPGameAtlas *gameAtlas = nil;
 
 - (void)addTile:(CGRect)aTile atPoint:(CGPoint)aPoint
 {
-	if (aPoint.x > 400.0f || aPoint.x + aTile.size.width < -80.0f ||
-		aPoint.y > 400.0f || aPoint.y + aTile.size.height < -80.0f)
-		return;
+    CGRect screenRect = CGRectMake(0.0f, 0.0f, 480.0f, 320.0f);
+    CGRect tileRect = CGRectMake(aPoint.x, aPoint.y, aTile.size.width, aTile.size.height);
+    
+    if (!CGRectIntersectsRect(screenRect, tileRect))
+        return;
 	
 	const float left = CGRectGetMinX(aTile) * texCoordNormalizeX;
 	const float right = CGRectGetMaxX(aTile) * texCoordNormalizeX;
@@ -101,15 +103,17 @@ FPGameAtlas *gameAtlas = nil;
 	const float right = CGRectGetMaxX(aTile) * texCoordNormalizeX;
 	const float top = CGRectGetMinY(aTile) * texCoordNormalizeY;
 	const float bottom = CGRectGetMaxY(aTile) * texCoordNormalizeY;
-	
+    
+    CGRect screenRect = CGRectMake(0.0f, 0.0f, 480.0f, 320.0f);
+    
 	for (int y = 0; y < aHeightSegments; y++)
 	{
 		for (int x = 0; x < aWidthSegments; x++)
 		{
 			CGPoint pt = CGPointMake(aPoint.x + x * aTile.size.width, aPoint.y + y * aTile.size.height);
+            CGRect tileRect = CGRectMake(pt.x, pt.y, aTile.size.width, aTile.size.height);
 			
-			if (pt.x > 400.0f || pt.x + aTile.size.width < -80.0f ||
-				pt.y > 400.0f || pt.y + aTile.size.height < -80.0f)
+			if (!CGRectIntersectsRect(screenRect, tileRect))
 				continue;				
 			
 			const FPAtlasVertex vertices[] = 

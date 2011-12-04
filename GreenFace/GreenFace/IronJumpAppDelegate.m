@@ -9,7 +9,6 @@
 
 #import "IronJumpAppDelegate.h"
 #import "GFLevelsViewController.h"
-#import "GFWebLevelsViewController.h"
 
 @implementation IronJumpAppDelegate
 
@@ -17,15 +16,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 {
-    tabBarController = [[UITabBarController alloc] init];
-    
     levelsViewController = [[GFLevelsViewController alloc] init];
-    webLevelsViewController = [[GFWebLevelsViewController alloc] init];
     
     navigationController = [[UINavigationController alloc] initWithRootViewController:levelsViewController];
-    navigationController.navigationBar.translucent = YES;
-    
-    //[tabBarController setViewControllers:[NSArray arrayWithObjects:navigationController, webLevelsViewController, nil]];
     
     [window addSubview:[navigationController view]];
     [window makeKeyAndVisible];    

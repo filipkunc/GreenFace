@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A7395317148BD55C009AA9BA /* GFLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7395316148BD55C009AA9BA /* GFLevelsViewController.m */; };
-		A764AED8148BDB1900A18E09 /* GFWebLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764AED7148BDB1900A18E09 /* GFWebLevelsViewController.m */; };
 		A764AEE2148BE91A00A18E09 /* GFGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764AEE0148BE91A00A18E09 /* GFGameViewController.m */; };
 		A764AEE3148BE91A00A18E09 /* GFGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A764AEE1148BE91A00A18E09 /* GFGameViewController.xib */; };
 		A76664D1147847B5002A4159 /* Tutorial.greenlevel in Resources */ = {isa = PBXBuildFile; fileRef = A76664CF147847B5002A4159 /* Tutorial.greenlevel */; };
 		A76664D314784E3D002A4159 /* Puzzle.greenlevel in Resources */ = {isa = PBXBuildFile; fileRef = A76664D214784E3D002A4159 /* Puzzle.greenlevel */; };
+		A76FCE58148C198B00B6B2A1 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76FCE57148C198B00B6B2A1 /* GLKit.framework */; };
 		A774F3F1147AE99A00C6D8CD /* W_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A774F3EB147AE99A00C6D8CD /* W_01.png */; };
 		A774F3F2147AE99A00C6D8CD /* W_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A774F3EC147AE99A00C6D8CD /* W_02.png */; };
 		A774F3F3147AE99A00C6D8CD /* W_03.png in Resources */ = {isa = PBXBuildFile; fileRef = A774F3ED147AE99A00C6D8CD /* W_03.png */; };
@@ -26,7 +26,6 @@
 		A7E6E6221477FBF50037750E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6E6211477FBF50037750E /* OpenGLES.framework */; };
 		A7E6E6281477FBF50037750E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7E6E6261477FBF50037750E /* InfoPlist.strings */; };
 		A7E6E62A1477FBF50037750E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6291477FBF50037750E /* main.m */; };
-		A7E6E6421477FD620037750E /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E63F1477FD620037750E /* EAGLView.m */; };
 		A7E6E6431477FD620037750E /* IronJumpAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6411477FD620037750E /* IronJumpAppDelegate.m */; };
 		A7E6E6791477FD900037750E /* FPDiamond.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6471477FD8F0037750E /* FPDiamond.m */; };
 		A7E6E67A1477FD900037750E /* FPElevator.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6E6491477FD8F0037750E /* FPElevator.m */; };
@@ -66,13 +65,12 @@
 /* Begin PBXFileReference section */
 		A7395315148BD55C009AA9BA /* GFLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFLevelsViewController.h; sourceTree = "<group>"; };
 		A7395316148BD55C009AA9BA /* GFLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFLevelsViewController.m; sourceTree = "<group>"; };
-		A764AED6148BDB1900A18E09 /* GFWebLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFWebLevelsViewController.h; sourceTree = "<group>"; };
-		A764AED7148BDB1900A18E09 /* GFWebLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFWebLevelsViewController.m; sourceTree = "<group>"; };
 		A764AEDF148BE91A00A18E09 /* GFGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGameViewController.h; sourceTree = "<group>"; };
 		A764AEE0148BE91A00A18E09 /* GFGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGameViewController.m; sourceTree = "<group>"; };
 		A764AEE1148BE91A00A18E09 /* GFGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFGameViewController.xib; sourceTree = "<group>"; };
 		A76664CF147847B5002A4159 /* Tutorial.greenlevel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tutorial.greenlevel; sourceTree = "<group>"; };
 		A76664D214784E3D002A4159 /* Puzzle.greenlevel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Puzzle.greenlevel; sourceTree = "<group>"; };
+		A76FCE57148C198B00B6B2A1 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		A774F3EB147AE99A00C6D8CD /* W_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = W_01.png; path = ../../SharedImages/W_01.png; sourceTree = "<group>"; };
 		A774F3EC147AE99A00C6D8CD /* W_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = W_02.png; path = ../../SharedImages/W_02.png; sourceTree = "<group>"; };
 		A774F3ED147AE99A00C6D8CD /* W_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = W_03.png; path = ../../SharedImages/W_03.png; sourceTree = "<group>"; };
@@ -89,8 +87,6 @@
 		A7E6E6271477FBF50037750E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A7E6E6291477FBF50037750E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7E6E62B1477FBF50037750E /* GreenFace-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GreenFace-Prefix.pch"; sourceTree = "<group>"; };
-		A7E6E63E1477FD620037750E /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
-		A7E6E63F1477FD620037750E /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
 		A7E6E6401477FD620037750E /* IronJumpAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IronJumpAppDelegate.h; sourceTree = "<group>"; };
 		A7E6E6411477FD620037750E /* IronJumpAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IronJumpAppDelegate.m; sourceTree = "<group>"; };
 		A7E6E6461477FD8F0037750E /* FPDiamond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPDiamond.h; path = ../../SharedClasses/FPDiamond.h; sourceTree = "<group>"; };
@@ -154,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A76FCE58148C198B00B6B2A1 /* GLKit.framework in Frameworks */,
 				A7E6E6AA1478063A0037750E /* QuartzCore.framework in Frameworks */,
 				A7E6E61A1477FBF50037750E /* UIKit.framework in Frameworks */,
 				A7E6E61C1477FBF50037750E /* Foundation.framework in Frameworks */,
@@ -198,6 +195,7 @@
 		A7E6E6181477FBF50037750E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A76FCE57148C198B00B6B2A1 /* GLKit.framework */,
 				A7E6E6A91478063A0037750E /* QuartzCore.framework */,
 				A7E6E6191477FBF50037750E /* UIKit.framework */,
 				A7E6E61B1477FBF50037750E /* Foundation.framework */,
@@ -216,13 +214,9 @@
 				A7E6E6441477FD790037750E /* SharedClasses */,
 				A7395315148BD55C009AA9BA /* GFLevelsViewController.h */,
 				A7395316148BD55C009AA9BA /* GFLevelsViewController.m */,
-				A764AED6148BDB1900A18E09 /* GFWebLevelsViewController.h */,
-				A764AED7148BDB1900A18E09 /* GFWebLevelsViewController.m */,
 				A764AEDF148BE91A00A18E09 /* GFGameViewController.h */,
 				A764AEE0148BE91A00A18E09 /* GFGameViewController.m */,
 				A764AEE1148BE91A00A18E09 /* GFGameViewController.xib */,
-				A7E6E63E1477FD620037750E /* EAGLView.h */,
-				A7E6E63F1477FD620037750E /* EAGLView.m */,
 				A7E6E6401477FD620037750E /* IronJumpAppDelegate.h */,
 				A7E6E6411477FD620037750E /* IronJumpAppDelegate.m */,
 				A7E6E6A61477FFF50037750E /* MainWindow.xib */,
@@ -403,7 +397,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7E6E62A1477FBF50037750E /* main.m in Sources */,
-				A7E6E6421477FD620037750E /* EAGLView.m in Sources */,
 				A7E6E6431477FD620037750E /* IronJumpAppDelegate.m in Sources */,
 				A7E6E6791477FD900037750E /* FPDiamond.m in Sources */,
 				A7E6E67A1477FD900037750E /* FPElevator.m in Sources */,
@@ -426,7 +419,6 @@
 				A7E6E68F1477FD900037750E /* FPXMLParser.m in Sources */,
 				A7E6E6901477FD900037750E /* FPXMLWriter.m in Sources */,
 				A7395317148BD55C009AA9BA /* GFLevelsViewController.m in Sources */,
-				A764AED8148BDB1900A18E09 /* GFWebLevelsViewController.m in Sources */,
 				A764AEE2148BE91A00A18E09 /* GFGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +493,7 @@
 		A7E6E63C1477FBF50037750E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GreenFace/GreenFace-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
@@ -513,6 +506,7 @@
 		A7E6E63D1477FBF50037750E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GreenFace/GreenFace-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
