@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A72A35861494DEA600216F6B /* GFLevelName.m in Sources */ = {isa = PBXBuildFile; fileRef = A72A35851494DEA600216F6B /* GFLevelName.m */; };
 		A7395317148BD55C009AA9BA /* GFLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7395316148BD55C009AA9BA /* GFLevelsViewController.m */; };
 		A764AEE2148BE91A00A18E09 /* GFGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764AEE0148BE91A00A18E09 /* GFGameViewController.m */; };
 		A764AEE3148BE91A00A18E09 /* GFGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A764AEE1148BE91A00A18E09 /* GFGameViewController.xib */; };
@@ -20,6 +21,14 @@
 		A774F3F5147AE99A00C6D8CD /* WJ_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A774F3EF147AE99A00C6D8CD /* WJ_01.png */; };
 		A774F3F6147AE99A00C6D8CD /* WJ_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A774F3F0147AE99A00C6D8CD /* WJ_02.png */; };
 		A774F404147B0B1F00C6D8CD /* Jump.greenlevel in Resources */ = {isa = PBXBuildFile; fileRef = A774F403147B0B1F00C6D8CD /* Jump.greenlevel */; };
+		A78808CA148D7B970034951A /* GFWebLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78808C9148D7B970034951A /* GFWebLevelsViewController.m */; };
+		A7D35F5F14937DE20087A7E7 /* GFSoldier.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D35F5E14937DE20087A7E7 /* GFSoldier.m */; };
+		A7D5A8111493CB2C006D7BEB /* D_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D5A80B1493CB2C006D7BEB /* D_01.png */; };
+		A7D5A8121493CB2C006D7BEB /* D_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D5A80C1493CB2C006D7BEB /* D_02.png */; };
+		A7D5A8131493CB2C006D7BEB /* D_03.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D5A80D1493CB2C006D7BEB /* D_03.png */; };
+		A7D5A8141493CB2C006D7BEB /* D_04.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D5A80E1493CB2C006D7BEB /* D_04.png */; };
+		A7D5A8151493CB2C006D7BEB /* DH_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D5A80F1493CB2C006D7BEB /* DH_01.png */; };
+		A7D5A8161493CB2C006D7BEB /* DH_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D5A8101493CB2C006D7BEB /* DH_02.png */; };
 		A7E6E61A1477FBF50037750E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6E6191477FBF50037750E /* UIKit.framework */; };
 		A7E6E61C1477FBF50037750E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6E61B1477FBF50037750E /* Foundation.framework */; };
 		A7E6E61E1477FBF50037750E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6E61D1477FBF50037750E /* CoreGraphics.framework */; };
@@ -63,6 +72,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A72A35841494DEA600216F6B /* GFLevelName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFLevelName.h; sourceTree = "<group>"; };
+		A72A35851494DEA600216F6B /* GFLevelName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFLevelName.m; sourceTree = "<group>"; };
 		A7395315148BD55C009AA9BA /* GFLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFLevelsViewController.h; sourceTree = "<group>"; };
 		A7395316148BD55C009AA9BA /* GFLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFLevelsViewController.m; sourceTree = "<group>"; };
 		A764AEDF148BE91A00A18E09 /* GFGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGameViewController.h; sourceTree = "<group>"; };
@@ -78,6 +89,16 @@
 		A774F3EF147AE99A00C6D8CD /* WJ_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WJ_01.png; path = ../../SharedImages/WJ_01.png; sourceTree = "<group>"; };
 		A774F3F0147AE99A00C6D8CD /* WJ_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WJ_02.png; path = ../../SharedImages/WJ_02.png; sourceTree = "<group>"; };
 		A774F403147B0B1F00C6D8CD /* Jump.greenlevel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Jump.greenlevel; sourceTree = "<group>"; };
+		A78808C8148D7B970034951A /* GFWebLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFWebLevelsViewController.h; sourceTree = "<group>"; };
+		A78808C9148D7B970034951A /* GFWebLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFWebLevelsViewController.m; sourceTree = "<group>"; };
+		A7D35F5D14937DE20087A7E7 /* GFSoldier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GFSoldier.h; path = ../../SharedClasses/GFSoldier.h; sourceTree = "<group>"; };
+		A7D35F5E14937DE20087A7E7 /* GFSoldier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GFSoldier.m; path = ../../SharedClasses/GFSoldier.m; sourceTree = "<group>"; };
+		A7D5A80B1493CB2C006D7BEB /* D_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = D_01.png; path = ../../SharedImages/D_01.png; sourceTree = "<group>"; };
+		A7D5A80C1493CB2C006D7BEB /* D_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = D_02.png; path = ../../SharedImages/D_02.png; sourceTree = "<group>"; };
+		A7D5A80D1493CB2C006D7BEB /* D_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = D_03.png; path = ../../SharedImages/D_03.png; sourceTree = "<group>"; };
+		A7D5A80E1493CB2C006D7BEB /* D_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = D_04.png; path = ../../SharedImages/D_04.png; sourceTree = "<group>"; };
+		A7D5A80F1493CB2C006D7BEB /* DH_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DH_01.png; path = ../../SharedImages/DH_01.png; sourceTree = "<group>"; };
+		A7D5A8101493CB2C006D7BEB /* DH_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DH_02.png; path = ../../SharedImages/DH_02.png; sourceTree = "<group>"; };
 		A7E6E6151477FBF50037750E /* GreenFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E6E6191477FBF50037750E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7E6E61B1477FBF50037750E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -165,6 +186,12 @@
 		A774F3E9147AE96D00C6D8CD /* SharedImages */ = {
 			isa = PBXGroup;
 			children = (
+				A7D5A80B1493CB2C006D7BEB /* D_01.png */,
+				A7D5A80C1493CB2C006D7BEB /* D_02.png */,
+				A7D5A80D1493CB2C006D7BEB /* D_03.png */,
+				A7D5A80E1493CB2C006D7BEB /* D_04.png */,
+				A7D5A80F1493CB2C006D7BEB /* DH_01.png */,
+				A7D5A8101493CB2C006D7BEB /* DH_02.png */,
 				A774F3EB147AE99A00C6D8CD /* W_01.png */,
 				A774F3EC147AE99A00C6D8CD /* W_02.png */,
 				A774F3ED147AE99A00C6D8CD /* W_03.png */,
@@ -212,8 +239,12 @@
 				A7E6E6451477FD840037750E /* Images */,
 				A774F3E9147AE96D00C6D8CD /* SharedImages */,
 				A7E6E6441477FD790037750E /* SharedClasses */,
+				A72A35841494DEA600216F6B /* GFLevelName.h */,
+				A72A35851494DEA600216F6B /* GFLevelName.m */,
 				A7395315148BD55C009AA9BA /* GFLevelsViewController.h */,
 				A7395316148BD55C009AA9BA /* GFLevelsViewController.m */,
+				A78808C8148D7B970034951A /* GFWebLevelsViewController.h */,
+				A78808C9148D7B970034951A /* GFWebLevelsViewController.m */,
 				A764AEDF148BE91A00A18E09 /* GFGameViewController.h */,
 				A764AEE0148BE91A00A18E09 /* GFGameViewController.m */,
 				A764AEE1148BE91A00A18E09 /* GFGameViewController.xib */,
@@ -241,6 +272,8 @@
 		A7E6E6441477FD790037750E /* SharedClasses */ = {
 			isa = PBXGroup;
 			children = (
+				A7D35F5D14937DE20087A7E7 /* GFSoldier.h */,
+				A7D35F5E14937DE20087A7E7 /* GFSoldier.m */,
 				A7E6E6461477FD8F0037750E /* FPDiamond.h */,
 				A7E6E6471477FD8F0037750E /* FPDiamond.m */,
 				A7E6E6481477FD8F0037750E /* FPElevator.h */,
@@ -386,6 +419,12 @@
 				A774F3F6147AE99A00C6D8CD /* WJ_02.png in Resources */,
 				A774F404147B0B1F00C6D8CD /* Jump.greenlevel in Resources */,
 				A764AEE3148BE91A00A18E09 /* GFGameViewController.xib in Resources */,
+				A7D5A8111493CB2C006D7BEB /* D_01.png in Resources */,
+				A7D5A8121493CB2C006D7BEB /* D_02.png in Resources */,
+				A7D5A8131493CB2C006D7BEB /* D_03.png in Resources */,
+				A7D5A8141493CB2C006D7BEB /* D_04.png in Resources */,
+				A7D5A8151493CB2C006D7BEB /* DH_01.png in Resources */,
+				A7D5A8161493CB2C006D7BEB /* DH_02.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +459,9 @@
 				A7E6E6901477FD900037750E /* FPXMLWriter.m in Sources */,
 				A7395317148BD55C009AA9BA /* GFLevelsViewController.m in Sources */,
 				A764AEE2148BE91A00A18E09 /* GFGameViewController.m in Sources */,
+				A78808CA148D7B970034951A /* GFWebLevelsViewController.m in Sources */,
+				A7D35F5F14937DE20087A7E7 /* GFSoldier.m in Sources */,
+				A72A35861494DEA600216F6B /* GFLevelName.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

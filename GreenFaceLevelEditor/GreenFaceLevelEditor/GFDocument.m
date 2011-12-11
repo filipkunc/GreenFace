@@ -20,6 +20,7 @@
 		
 		factories = [[NSMutableArray alloc] init];
 		[factories addObject:[FPPlayer class]];
+        [factories addObject:[GFSoldier class]];
 		[factories addObject:[FPPlatform class]];
 		[factories addObject:[FPMovablePlatform class]];
 		[factories addObject:[FPElevator class]];

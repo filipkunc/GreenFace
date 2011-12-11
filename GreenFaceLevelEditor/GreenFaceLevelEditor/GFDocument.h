@@ -10,6 +10,7 @@
 #import <Cocoa/Cocoa.h>
 #import "FPGame.h"
 #import "FPPlayer.h"
+#import "GFSoldier.h"
 #import "FPPlatform.h"
 #import "FPMovablePlatform.h"
 #import "FPDiamond.h"

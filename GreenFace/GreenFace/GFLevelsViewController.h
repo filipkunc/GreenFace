@@ -10,7 +10,8 @@
 
 @interface GFLevelsViewController : UITableViewController
 {
-    NSMutableArray *levels;
+    NSArray *bundledLevels;
+    NSArray *downloadedLevels;
 }
 
 @end

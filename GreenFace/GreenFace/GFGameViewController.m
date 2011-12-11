@@ -93,8 +93,7 @@
 
 - (void)resetGame
 {
-	NSString *path = [[NSBundle mainBundle] pathForResource:levelName ofType:@"greenlevel"];
-	NSData *data = [NSData dataWithContentsOfFile:path];
+	NSData *data = [NSData dataWithContentsOfFile:[levelName path]];
     
     game = [[FPGame alloc] initWithXMLData:data width:480 height:320];
     

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
+#import "GFLevelName.h"
 #import "FPMath.h"
 #import "FPTextureAtlas.h"
 #import "FPFont.h"
@@ -16,7 +17,7 @@
 
 @interface GFGameViewController : GLKViewController <UIAccelerometerDelegate>
 {
-    NSString *levelName;
+    GFLevelName *levelName;
     
     GLint backingWidth;
     GLint backingHeight;
@@ -32,7 +33,7 @@
     float lastAcceleration;
 }
 
-@property (readwrite, copy) NSString *levelName;
+@property (readwrite, retain) GFLevelName *levelName;
 @property (strong, nonatomic) EAGLContext *context;
 
 - (void)setupGL;
