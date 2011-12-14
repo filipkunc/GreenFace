@@ -1,41 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <IronJumpLevel>
   <FPPlatform>
-    <x>64.000000</x>
-    <y>672.000000</y>
+    <x>192.000000</x>
+    <y>736.000000</y>
     <widthSegments>10</widthSegments>
     <heightSegments>4</heightSegments>
   </FPPlatform>
   <FPPlayer>
-    <x>96.000000</x>
-    <y>608.000000</y>
+    <x>224.000000</x>
+    <y>672.000000</y>
   </FPPlayer>
   <GFSoldier>
-    <x>512.000000</x>
-    <y>576.000000</y>
+    <x>416.000000</x>
+    <y>672.000000</y>
   </GFSoldier>
   <FPPlatform>
-    <x>480.000000</x>
-    <y>640.000000</y>
-    <widthSegments>13</widthSegments>
-    <heightSegments>5</heightSegments>
+    <x>640.000000</x>
+    <y>800.000000</y>
+    <widthSegments>8</widthSegments>
+    <heightSegments>4</heightSegments>
   </FPPlatform>
   <GFSoldier>
     <x>832.000000</x>
-    <y>576.000000</y>
+    <y>736.000000</y>
   </GFSoldier>
   <FPPlatform>
-    <x>1024.000000</x>
-    <y>640.000000</y>
-    <widthSegments>10</widthSegments>
-    <heightSegments>5</heightSegments>
+    <x>960.000000</x>
+    <y>672.000000</y>
+    <widthSegments>7</widthSegments>
+    <heightSegments>3</heightSegments>
   </FPPlatform>
-  <GFSoldier>
-    <x>1216.000000</x>
+  <FPExit>
+    <x>1056.000000</x>
     <y>576.000000</y>
-  </GFSoldier>
+  </FPExit>
   <GFSoldier>
-    <x>288.000000</x>
-    <y>608.000000</y>
+    <x>672.000000</x>
+    <y>736.000000</y>
   </GFSoldier>
 </IronJumpLevel>

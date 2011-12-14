@@ -13,11 +13,13 @@
 	float x, y;
 	float moveX, moveY;
     
+    BOOL isDying;
     BOOL isAttacking;
 	BOOL isVisible;
     
     int moveCounter;
     int attackCounter;
+    int dieCounter;
     float animationCounter;
     BOOL leftOriented;
 }

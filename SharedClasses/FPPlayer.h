@@ -47,6 +47,7 @@ extern const int maxSpeedUpCount;
 
 @property (readwrite, assign) float moveX, moveY, alpha;
 @property (readwrite, assign) int speedUpCounter;
+@property (readonly) BOOL falling;
 
 + (void)resetTextures;
 - (id)initWithWidth:(float)aWidth height:(float)aHeight;

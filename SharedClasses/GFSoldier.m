@@ -13,6 +13,7 @@
 
 FPTextureArray *soldierTexture = nil;
 FPTextureArray *attackTexture = nil;
+FPTextureArray *deathTexture = nil;
 
 const float soldierSize = 64.0f;
 
@@ -33,6 +34,12 @@ const float soldierSize = 64.0f;
         attackTexture = [[FPTextureArray alloc] init];
         [attackTexture addTexture:@"DH_01.png"];
         [attackTexture addTexture:@"DH_02.png"];
+        [attackTexture addTexture:@"DH_03.png"];
+        
+        deathTexture = [[FPTextureArray alloc] init];
+        [deathTexture addTexture:@"DD_01.png"];
+        [deathTexture addTexture:@"DD_02.png"];
+        [deathTexture addTexture:@"DD_03.png"];
 	}
 	return [soldierTexture textureAtIndex:3];
 }
@@ -53,9 +60,11 @@ const float soldierSize = 64.0f;
 		moveX = 0.0f;
 		moveY = 0.0f;
         isAttacking = NO;
+        isDying = NO;
 		isVisible = YES;
         moveCounter = 3;
         attackCounter = 0;
+        dieCounter = 0;
         animationCounter = 0;
         leftOriented = NO;
 	}
@@ -121,7 +130,7 @@ const float soldierSize = 64.0f;
     float oldX = x;
     float oldY = y;
     
-    float moveSpeed = 3.6f;
+    float moveSpeed = 3.0f;
     
     FPPlayer *player = (FPPlayer *)[game player];
     CGRect playerRect = [player rect];
@@ -134,17 +143,38 @@ const float soldierSize = 64.0f;
     
     BOOL isCollidingWithPlayer = NO;
     
-    if (CGRectIntersectsRect(attackRect, playerRect))
+    if (!isDying && CGRectIntersectsRect(attackRect, playerRect))
+    {
+        if (player.falling && playerRect.origin.y + playerRect.size.height - 10.0f < y)
+        {
+            isDying = YES;
+            player.moveY = -player.moveY;
+        }
+        
         isCollidingWithPlayer = YES;
+
+    }
     
-    if (isAttacking)
+    if (isDying)
+    {
+        animationCounter += 0.6f;
+        y += 1.8f;
+        
+        if (animationCounter > 5)
+        {
+            if (++dieCounter >= [deathTexture count])
+                dieCounter = (int)[deathTexture count] - 1;
+            animationCounter = 0;  
+        }
+    }
+    else if (isAttacking)
     {
         if (player.x < self.x)
             leftOriented = YES;
         else
             leftOriented = NO;
         
-        animationCounter += 0.4f;
+        animationCounter += 0.6f;
         
         if (animationCounter > 5)
         {
@@ -320,7 +350,7 @@ const float soldierSize = 64.0f;
 	glPushMatrix();
     if (leftOriented)
     {
-        if (isAttacking && attackCounter == 1)
+        if (isAttacking && attackCounter == 2)
             glTranslatef(x + soldierSize - 7.0f, y, 0.0f);
         else
             glTranslatef(x + soldierSize, y, 0.0f);
@@ -328,13 +358,15 @@ const float soldierSize = 64.0f;
     }
     else
     {
-        if (isAttacking && attackCounter == 1)
+        if (isAttacking && attackCounter == 2)
             glTranslatef(x + 7.0f, y, 0.0f);
         else
             glTranslatef(x, y, 0.0f);
         glScalef(1.0f, 1.0f, 1);
     }
-    if (isAttacking)
+    if (isDying)
+        [[deathTexture textureAtIndex:dieCounter] draw];
+    else if (isAttacking)
         [[attackTexture textureAtIndex:attackCounter] draw];
     else
         [[soldierTexture textureAtIndex:moveCounter] draw];

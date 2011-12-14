@@ -20,6 +20,10 @@
 		A774F400147AE9A300C6D8CD /* W_04.png in Resources */ = {isa = PBXBuildFile; fileRef = A774F3FA147AE9A300C6D8CD /* W_04.png */; };
 		A774F401147AE9A300C6D8CD /* WJ_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A774F3FB147AE9A300C6D8CD /* WJ_01.png */; };
 		A774F402147AE9A300C6D8CD /* WJ_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A774F3FC147AE9A300C6D8CD /* WJ_02.png */; };
+		A7C43EDA14994A31009C13ED /* DD_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C43ED614994A31009C13ED /* DD_01.png */; };
+		A7C43EDB14994A31009C13ED /* DD_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C43ED714994A31009C13ED /* DD_02.png */; };
+		A7C43EDC14994A31009C13ED /* DD_03.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C43ED814994A31009C13ED /* DD_03.png */; };
+		A7C43EDD14994A31009C13ED /* DH_03.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C43ED914994A31009C13ED /* DH_03.png */; };
 		A7D35F5B14937DCB0087A7E7 /* GFSoldier.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D35F5A14937DCB0087A7E7 /* GFSoldier.m */; };
 		A7D5A8041493CB25006D7BEB /* D_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D5A7FE1493CB25006D7BEB /* D_01.png */; };
 		A7D5A8051493CB25006D7BEB /* D_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D5A7FF1493CB25006D7BEB /* D_02.png */; };
@@ -92,6 +96,10 @@
 		A774F3FA147AE9A300C6D8CD /* W_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = W_04.png; path = ../../SharedImages/W_04.png; sourceTree = "<group>"; };
 		A774F3FB147AE9A300C6D8CD /* WJ_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WJ_01.png; path = ../../SharedImages/WJ_01.png; sourceTree = "<group>"; };
 		A774F3FC147AE9A300C6D8CD /* WJ_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WJ_02.png; path = ../../SharedImages/WJ_02.png; sourceTree = "<group>"; };
+		A7C43ED614994A31009C13ED /* DD_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DD_01.png; path = ../../SharedImages/DD_01.png; sourceTree = "<group>"; };
+		A7C43ED714994A31009C13ED /* DD_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DD_02.png; path = ../../SharedImages/DD_02.png; sourceTree = "<group>"; };
+		A7C43ED814994A31009C13ED /* DD_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DD_03.png; path = ../../SharedImages/DD_03.png; sourceTree = "<group>"; };
+		A7C43ED914994A31009C13ED /* DH_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DH_03.png; path = ../../SharedImages/DH_03.png; sourceTree = "<group>"; };
 		A7D35F5914937DCB0087A7E7 /* GFSoldier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GFSoldier.h; path = ../../SharedClasses/GFSoldier.h; sourceTree = "<group>"; };
 		A7D35F5A14937DCB0087A7E7 /* GFSoldier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GFSoldier.m; path = ../../SharedClasses/GFSoldier.m; sourceTree = "<group>"; };
 		A7D5A7FE1493CB25006D7BEB /* D_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = D_01.png; path = ../../SharedImages/D_01.png; sourceTree = "<group>"; };
@@ -257,6 +265,10 @@
 		A774F3EA147AE98800C6D8CD /* SharedImages */ = {
 			isa = PBXGroup;
 			children = (
+				A7C43ED614994A31009C13ED /* DD_01.png */,
+				A7C43ED714994A31009C13ED /* DD_02.png */,
+				A7C43ED814994A31009C13ED /* DD_03.png */,
+				A7C43ED914994A31009C13ED /* DH_03.png */,
 				A7D5A7FE1493CB25006D7BEB /* D_01.png */,
 				A7D5A7FF1493CB25006D7BEB /* D_02.png */,
 				A7D5A8001493CB25006D7BEB /* D_03.png */,
@@ -431,6 +443,10 @@
 				A7D5A8071493CB25006D7BEB /* D_04.png in Resources */,
 				A7D5A8081493CB25006D7BEB /* DH_01.png in Resources */,
 				A7D5A8091493CB25006D7BEB /* DH_02.png in Resources */,
+				A7C43EDA14994A31009C13ED /* DD_01.png in Resources */,
+				A7C43EDB14994A31009C13ED /* DD_02.png in Resources */,
+				A7C43EDC14994A31009C13ED /* DD_03.png in Resources */,
+				A7C43EDD14994A31009C13ED /* DH_03.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

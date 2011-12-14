@@ -247,6 +247,10 @@ const float playerSize = 64.0f;
     }
 }
 
+- (BOOL)falling
+{
+    return moveY < 0.0f && jumping;
+}
 
 - (BOOL)collisionLeftRight:(id<FPGameProtocol>)game
 {
