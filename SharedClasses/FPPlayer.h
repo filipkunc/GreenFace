@@ -43,16 +43,20 @@ extern const int maxSpeedUpCount;
     int jumpCounter;
     float animationCounter;
     BOOL leftOriented;
+    int lives;
+    int damageCounter;
 }
 
 @property (readwrite, assign) float moveX, moveY, alpha;
 @property (readwrite, assign) int speedUpCounter;
 @property (readonly) BOOL falling;
+@property (readwrite, assign) int lives;
 
 + (void)resetTextures;
 - (id)initWithWidth:(float)aWidth height:(float)aHeight;
 - (BOOL)collisionLeftRight:(id<FPGameProtocol>)game;
 - (BOOL)collisionUpDown:(id<FPGameProtocol>)game;
 - (void)drawSpeedUp;
+- (void)hit;
 
 @end

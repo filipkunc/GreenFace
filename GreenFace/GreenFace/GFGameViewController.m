@@ -115,18 +115,23 @@
 
 - (void)resetIfNeeded
 {
-	float playerY = CGRectGetMinY([game player].rect);
-	for (id<FPGameObject> gameObject in [game gameObjects])
-	{
-		if (gameObject.isPlatform && !gameObject.isMovable)
-		{
-			float gameObjectY = CGRectGetMaxY(gameObject.rect);
-			if (playerY < gameObjectY)
-			{
-				return;
-			}
-		}
-	}
+    FPPlayer *player = (FPPlayer *)[game player];
+    
+    if (player.lives > 0)
+    {
+        float playerY = CGRectGetMinY([game player].rect);
+        for (id<FPGameObject> gameObject in [game gameObjects])
+        {
+            if (gameObject.isPlatform && !gameObject.isMovable)
+            {
+                float gameObjectY = CGRectGetMaxY(gameObject.rect);
+                if (playerY < gameObjectY)
+                {
+                    return;
+                }
+            }
+        }
+    }
 	
 	nextLevelCounter++;
 	if (nextLevelCounter > 30)

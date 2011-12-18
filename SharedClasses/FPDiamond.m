@@ -7,6 +7,7 @@
 //
 
 #import "FPDiamond.h"
+#import "FPPlayer.h"
 
 #if !TARGET_OS_IPHONE
 FPTexture *diamondTexture = nil;
@@ -85,10 +86,13 @@ FPTexture *diamondTexture = nil;
     if (!isVisible)
         return;
     
-    CGRect playerRect = game.player.rect;
+    FPPlayer *player = (FPPlayer *)game.player;
+   
+    CGRect playerRect = player.rect;
     if (CGRectIntersectsRect(playerRect, [self rect]))
     {
         isVisible = NO;
+        player.lives++;
     }
 }
 

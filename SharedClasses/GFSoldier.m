@@ -148,7 +148,7 @@ const float soldierSize = 64.0f;
         if (player.falling && playerRect.origin.y + playerRect.size.height - 10.0f < y)
         {
             isDying = YES;
-            player.moveY = -player.moveY;
+            player.moveY = -player.moveY * 1.1f;
         }
         
         isCollidingWithPlayer = YES;
@@ -179,7 +179,10 @@ const float soldierSize = 64.0f;
         if (animationCounter > 5)
         {
             if (++attackCounter >= [attackTexture count])
+            {
                 attackCounter = 0;
+                [player hit];                
+            }
             animationCounter = 0;  
             
             if (!isCollidingWithPlayer)

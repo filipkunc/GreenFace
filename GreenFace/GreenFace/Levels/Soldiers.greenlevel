@@ -7,11 +7,11 @@
     <heightSegments>4</heightSegments>
   </FPPlatform>
   <FPPlayer>
-    <x>224.000000</x>
+    <x>192.000000</x>
     <y>672.000000</y>
   </FPPlayer>
   <GFSoldier>
-    <x>416.000000</x>
+    <x>384.000000</x>
     <y>672.000000</y>
   </GFSoldier>
   <FPPlatform>
@@ -21,21 +21,69 @@
     <heightSegments>4</heightSegments>
   </FPPlatform>
   <GFSoldier>
-    <x>832.000000</x>
+    <x>736.000000</x>
     <y>736.000000</y>
   </GFSoldier>
   <FPPlatform>
     <x>960.000000</x>
-    <y>672.000000</y>
-    <widthSegments>7</widthSegments>
+    <y>704.000000</y>
+    <widthSegments>3</widthSegments>
+    <heightSegments>3</heightSegments>
+  </FPPlatform>
+  <FPPlatform>
+    <x>1504.000000</x>
+    <y>544.000000</y>
+    <widthSegments>4</widthSegments>
     <heightSegments>3</heightSegments>
   </FPPlatform>
   <FPExit>
-    <x>1056.000000</x>
-    <y>576.000000</y>
+    <x>1536.000000</x>
+    <y>448.000000</y>
   </FPExit>
+  <GFSoldier>
+    <x>1152.000000</x>
+    <y>864.000000</y>
+  </GFSoldier>
+  <FPPlatform>
+    <x>1088.000000</x>
+    <y>928.000000</y>
+    <widthSegments>8</widthSegments>
+    <heightSegments>4</heightSegments>
+  </FPPlatform>
+  <GFSoldier>
+    <x>1088.000000</x>
+    <y>864.000000</y>
+  </GFSoldier>
+  <GFSoldier>
+    <x>1216.000000</x>
+    <y>864.000000</y>
+  </GFSoldier>
+  <GFSoldier>
+    <x>1280.000000</x>
+    <y>864.000000</y>
+  </GFSoldier>
+  <GFSoldier>
+    <x>800.000000</x>
+    <y>736.000000</y>
+  </GFSoldier>
   <GFSoldier>
     <x>672.000000</x>
     <y>736.000000</y>
   </GFSoldier>
+  <GFSoldier>
+    <x>288.000000</x>
+    <y>672.000000</y>
+  </GFSoldier>
+  <FPDiamond>
+    <x>960.000000</x>
+    <y>608.000000</y>
+  </FPDiamond>
+  <FPDiamond>
+    <x>992.000000</x>
+    <y>640.000000</y>
+  </FPDiamond>
+  <FPDiamond>
+    <x>1024.000000</x>
+    <y>672.000000</y>
+  </FPDiamond>
 </IronJumpLevel>

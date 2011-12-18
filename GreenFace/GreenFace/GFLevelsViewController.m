@@ -48,6 +48,7 @@ NSArray *GetLevelsInDocumentDirectory(void)
                          [[GFLevelName alloc] initWithName:@"Tutorial"], 
                          [[GFLevelName alloc] initWithName:@"Jump"], 
                          [[GFLevelName alloc] initWithName:@"Puzzle"], 
+                         [[GFLevelName alloc] initWithName:@"Soldiers"], 
                          nil];
         
         downloadedLevels = GetLevelsInDocumentDirectory();

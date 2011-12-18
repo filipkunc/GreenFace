@@ -10,6 +10,7 @@
 #import "FPTexture.h"
 #import "FPFont.h"
 #import "FPDiamond.h"
+#import "GFSoldier.h"
 
 FPFont *font = nil;
 FPTexture *background = nil;
@@ -87,6 +88,7 @@ void ChangeVertexBufferIfNeeded(void)
 {
     font = nil;
     [FPPlayer resetTextures];
+    [GFSoldier resetTextures];
     [FPGameAtlas resetSharedAtlas];
     DestroyVertexBuffer();
 }
@@ -309,10 +311,10 @@ void ChangeVertexBufferIfNeeded(void)
 	[font drawText:currentFPS atPoint:CGPointZero];
 	
 #else
-	NSString *diamondsText = [NSString stringWithFormat:@"Diamonds: %i/%i", diamondsPicked, diamondsCount];
+	NSString *livestText = [NSString stringWithFormat:@"Lives: %i", player.lives > 0 ? player.lives : 0];
 	NSString *speedUpText = player.speedUpCounter == 0 ? nil : [NSString stringWithFormat:@"%.1f", (maxSpeedUpCount - player.speedUpCounter) / 60.0f]; 
 	
-	[font drawText:diamondsText atPoint:CGPointMake(3.0f, 0.0f)];
+	[font drawText:livestText atPoint:CGPointMake(3.0f, 0.0f)];
 	glColor4f(0.5f, 1.0f, 1.0f, 0.8f);
 	[font drawText:speedUpText atPoint:CGPointMake(430.0f, 285.0f)];
 		

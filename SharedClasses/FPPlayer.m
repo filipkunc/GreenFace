@@ -27,10 +27,11 @@ const float deceleration = 1.1f * 0.2f;
 const float changeDirectionSpeed = 3.0f;
 const int maxSpeedUpCount = 60 * 6; // 60 FPS * 6 sec
 const float playerSize = 64.0f;
+const int maxDamageCounter = 7;
 
 @implementation FPPlayer
 
-@synthesize x, y, moveX, moveY, speedUpCounter, isVisible, alpha;
+@synthesize x, y, moveX, moveY, speedUpCounter, isVisible, alpha, lives;
 
 + (FPTexture *)loadTextureIfNeeded
 {
@@ -74,6 +75,8 @@ const float playerSize = 64.0f;
         jumpCounter = 0;
         animationCounter = 0;
         leftOriented = NO;
+        lives = 5;
+        damageCounter = 0;
 	}
 	return self;
 }
@@ -348,6 +351,15 @@ const float playerSize = 64.0f;
 	return isColliding;
 }
 
+- (void)hit
+{
+    if (damageCounter == 0)
+    {
+        damageCounter = maxDamageCounter;
+        lives--;
+    }
+}
+
 - (void)draw
 {
 //#if TARGET_OS_IPHONE
@@ -365,6 +377,14 @@ const float playerSize = 64.0f;
         glTranslatef(x, y, 0.0f);
         glScalef(1.0f, 1.0f, 1);
     }
+    
+    if (damageCounter > 0)
+    {
+        float c = (float)damageCounter / (float)maxDamageCounter;
+        glColor4f(c, 1.0f - c, 1.0f - c, MAX(1.0f - c, 0.5f));  
+        damageCounter--;
+    }
+    
     if (jumping)
         [[jumpTexture textureAtIndex:jumpCounter] draw];
     else
