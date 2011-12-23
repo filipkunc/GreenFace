@@ -41,6 +41,7 @@ extern const int maxSpeedUpCount;
     
     int moveCounter;
     int jumpCounter;
+    int deathCounter;
     float animationCounter;
     BOOL leftOriented;
     int lives;

@@ -21,7 +21,7 @@
     <heightSegments>4</heightSegments>
   </FPPlatform>
   <GFSoldier>
-    <x>736.000000</x>
+    <x>704.000000</x>
     <y>736.000000</y>
   </GFSoldier>
   <FPPlatform>
@@ -31,15 +31,11 @@
     <heightSegments>3</heightSegments>
   </FPPlatform>
   <FPPlatform>
-    <x>1504.000000</x>
-    <y>544.000000</y>
-    <widthSegments>4</widthSegments>
+    <x>1568.000000</x>
+    <y>672.000000</y>
+    <widthSegments>3</widthSegments>
     <heightSegments>3</heightSegments>
   </FPPlatform>
-  <FPExit>
-    <x>1536.000000</x>
-    <y>448.000000</y>
-  </FPExit>
   <GFSoldier>
     <x>1152.000000</x>
     <y>864.000000</y>
@@ -63,11 +59,11 @@
     <y>864.000000</y>
   </GFSoldier>
   <GFSoldier>
-    <x>800.000000</x>
+    <x>768.000000</x>
     <y>736.000000</y>
   </GFSoldier>
   <GFSoldier>
-    <x>672.000000</x>
+    <x>640.000000</x>
     <y>736.000000</y>
   </GFSoldier>
   <GFSoldier>
@@ -75,15 +71,71 @@
     <y>672.000000</y>
   </GFSoldier>
   <FPDiamond>
-    <x>960.000000</x>
+    <x>992.000000</x>
     <y>608.000000</y>
   </FPDiamond>
   <FPDiamond>
-    <x>992.000000</x>
+    <x>1120.000000</x>
+    <y>704.000000</y>
+  </FPDiamond>
+  <FPDiamond>
+    <x>1216.000000</x>
+    <y>768.000000</y>
+  </FPDiamond>
+  <FPPlatform>
+    <x>1792.000000</x>
+    <y>896.000000</y>
+    <widthSegments>2</widthSegments>
+    <heightSegments>3</heightSegments>
+  </FPPlatform>
+  <GFSoldier>
+    <x>1792.000000</x>
+    <y>832.000000</y>
+  </GFSoldier>
+  <FPPlatform>
+    <x>2112.000000</x>
+    <y>576.000000</y>
+    <widthSegments>2</widthSegments>
+    <heightSegments>3</heightSegments>
+  </FPPlatform>
+  <FPExit>
+    <x>2112.000000</x>
+    <y>480.000000</y>
+  </FPExit>
+  <FPDiamond>
+    <x>1696.000000</x>
+    <y>512.000000</y>
+  </FPDiamond>
+  <FPDiamond>
+    <x>1760.000000</x>
+    <y>576.000000</y>
+  </FPDiamond>
+  <FPDiamond>
+    <x>1824.000000</x>
+    <y>672.000000</y>
+  </FPDiamond>
+  <FPDiamond>
+    <x>1792.000000</x>
+    <y>768.000000</y>
+  </FPDiamond>
+  <FPDiamond>
+    <x>1312.000000</x>
+    <y>704.000000</y>
+  </FPDiamond>
+  <FPDiamond>
+    <x>1376.000000</x>
     <y>640.000000</y>
   </FPDiamond>
   <FPDiamond>
-    <x>1024.000000</x>
-    <y>672.000000</y>
+    <x>1440.000000</x>
+    <y>576.000000</y>
+  </FPDiamond>
+  <FPDiamond>
+    <x>1504.000000</x>
+    <y>512.000000</y>
+  </FPDiamond>
+  <FPDiamond>
+    <x>1984.000000</x>
+    <y>544.000000</y>
   </FPDiamond>
 </IronJumpLevel>

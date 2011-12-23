@@ -12,6 +12,7 @@
 
 FPTextureArray *playerTexture = nil;
 FPTextureArray *jumpTexture = nil;
+FPTextureArray *playerDeathTexture = nil;
 
 #if !TARGET_OS_IPHONE
 FPTexture *speedTexture = nil;
@@ -45,6 +46,10 @@ const int maxDamageCounter = 7;
 		jumpTexture = [[FPTextureArray alloc] init];
         [jumpTexture addTexture:@"WJ_01.png"];
         [jumpTexture addTexture:@"WJ_02.png"];
+        playerDeathTexture = [[FPTextureArray alloc] init];
+        [playerDeathTexture addTexture:@"WD_01.png"];
+        [playerDeathTexture addTexture:@"WD_02.png"];
+        [playerDeathTexture addTexture:@"WD_03.png"];        
 #if !TARGET_OS_IPHONE
         speedTexture = [[FPTexture alloc] initWithFile:@"speed.png" convertToAlpha:NO];
 #endif
@@ -56,6 +61,7 @@ const int maxDamageCounter = 7;
 {
     playerTexture = nil;
     jumpTexture = nil;
+    playerDeathTexture = nil;
 }
 
 - (id)init
@@ -77,6 +83,7 @@ const int maxDamageCounter = 7;
         leftOriented = NO;
         lives = 5;
         damageCounter = 0;
+        deathCounter = 0;
 	}
 	return self;
 }
@@ -136,7 +143,21 @@ const int maxDamageCounter = 7;
 }
 
 - (void)updateWithGame:(id<FPGameProtocol>)game
-{	
+{
+	if (lives <= 0)
+    {
+        animationCounter++;
+        
+        if (animationCounter > 10)
+        {
+            if (++deathCounter >= [playerDeathTexture count])
+                deathCounter = (int)[playerDeathTexture count] - 2;
+            animationCounter = 0;
+        }
+        
+        return;
+    }
+    
 	CGPoint inputAcceleration = [game inputAcceleration];
 	BOOL moveLeftOrRight = NO;
 	
@@ -353,10 +374,17 @@ const int maxDamageCounter = 7;
 
 - (void)hit
 {
+    if (lives <= 0)
+        return;
+    
     if (damageCounter == 0)
     {
         damageCounter = maxDamageCounter;
-        lives--;
+        if (--lives <= 0)
+        {
+            animationCounter = 0;
+            deathCounter = 0;
+        }
     }
 }
 
@@ -385,7 +413,9 @@ const int maxDamageCounter = 7;
         damageCounter--;
     }
     
-    if (jumping)
+    if (lives <= 0)
+        [[playerDeathTexture textureAtIndex:deathCounter] draw];
+    else if (jumping)
         [[jumpTexture textureAtIndex:jumpCounter] draw];
     else
         [[playerTexture textureAtIndex:moveCounter] draw];

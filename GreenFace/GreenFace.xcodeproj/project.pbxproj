@@ -22,6 +22,9 @@
 		A774F3F6147AE99A00C6D8CD /* WJ_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A774F3F0147AE99A00C6D8CD /* WJ_02.png */; };
 		A774F404147B0B1F00C6D8CD /* Jump.greenlevel in Resources */ = {isa = PBXBuildFile; fileRef = A774F403147B0B1F00C6D8CD /* Jump.greenlevel */; };
 		A78808CA148D7B970034951A /* GFWebLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78808C9148D7B970034951A /* GFWebLevelsViewController.m */; };
+		A7ACD61614A284FF002739C3 /* WD_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7ACD61314A284FF002739C3 /* WD_01.png */; };
+		A7ACD61714A284FF002739C3 /* WD_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7ACD61414A284FF002739C3 /* WD_02.png */; };
+		A7ACD61814A284FF002739C3 /* WD_03.png in Resources */ = {isa = PBXBuildFile; fileRef = A7ACD61514A284FF002739C3 /* WD_03.png */; };
 		A7D35F5F14937DE20087A7E7 /* GFSoldier.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D35F5E14937DE20087A7E7 /* GFSoldier.m */; };
 		A7D5A8111493CB2C006D7BEB /* D_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D5A80B1493CB2C006D7BEB /* D_01.png */; };
 		A7D5A8121493CB2C006D7BEB /* D_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D5A80C1493CB2C006D7BEB /* D_02.png */; };
@@ -96,6 +99,9 @@
 		A774F403147B0B1F00C6D8CD /* Jump.greenlevel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Jump.greenlevel; sourceTree = "<group>"; };
 		A78808C8148D7B970034951A /* GFWebLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFWebLevelsViewController.h; sourceTree = "<group>"; };
 		A78808C9148D7B970034951A /* GFWebLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFWebLevelsViewController.m; sourceTree = "<group>"; };
+		A7ACD61314A284FF002739C3 /* WD_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WD_01.png; path = ../../SharedImages/WD_01.png; sourceTree = "<group>"; };
+		A7ACD61414A284FF002739C3 /* WD_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WD_02.png; path = ../../SharedImages/WD_02.png; sourceTree = "<group>"; };
+		A7ACD61514A284FF002739C3 /* WD_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WD_03.png; path = ../../SharedImages/WD_03.png; sourceTree = "<group>"; };
 		A7D35F5D14937DE20087A7E7 /* GFSoldier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GFSoldier.h; path = ../../SharedClasses/GFSoldier.h; sourceTree = "<group>"; };
 		A7D35F5E14937DE20087A7E7 /* GFSoldier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GFSoldier.m; path = ../../SharedClasses/GFSoldier.m; sourceTree = "<group>"; };
 		A7D5A80B1493CB2C006D7BEB /* D_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = D_01.png; path = ../../SharedImages/D_01.png; sourceTree = "<group>"; };
@@ -196,6 +202,9 @@
 		A774F3E9147AE96D00C6D8CD /* SharedImages */ = {
 			isa = PBXGroup;
 			children = (
+				A7ACD61314A284FF002739C3 /* WD_01.png */,
+				A7ACD61414A284FF002739C3 /* WD_02.png */,
+				A7ACD61514A284FF002739C3 /* WD_03.png */,
 				A7D97D0B149E1A500011A868 /* DD_01.png */,
 				A7D97D0C149E1A500011A868 /* DD_02.png */,
 				A7D97D0D149E1A500011A868 /* DD_03.png */,
@@ -445,6 +454,9 @@
 				A7D97D10149E1A500011A868 /* DD_02.png in Resources */,
 				A7D97D11149E1A500011A868 /* DD_03.png in Resources */,
 				A7D97D12149E1A500011A868 /* DH_03.png in Resources */,
+				A7ACD61614A284FF002739C3 /* WD_01.png in Resources */,
+				A7ACD61714A284FF002739C3 /* WD_02.png in Resources */,
+				A7ACD61814A284FF002739C3 /* WD_03.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +572,7 @@
 				GCC_PREFIX_HEADER = "GreenFace/GreenFace-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "GreenFace/GreenFace-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -573,6 +586,7 @@
 				GCC_PREFIX_HEADER = "GreenFace/GreenFace-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "GreenFace/GreenFace-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
