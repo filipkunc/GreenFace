@@ -6,13 +6,6 @@
 //  For license see LICENSE.TXT
 //
 
-#if TARGET_OS_IPHONE
-#import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
-#else
-#import <Cocoa/Cocoa.h>
-#endif
-
 #import "FPGameProtocols.h"
 
 @interface FPPlatform : NSObject <FPGameObject> 

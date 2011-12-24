@@ -28,6 +28,7 @@
 		[factories addObject:[FPMagnet class]];
 		[factories addObject:[FPSpeedPowerUp class]];
 		[factories addObject:[FPTrampoline class]];
+        [factories addObject:[GFTurret class]];
 		[factories addObject:[FPExit class]];
 		activeFactory = nil;
 		
@@ -415,6 +416,29 @@
 {
 	NSLog(@"endResize");
 	[self afterActionWithName:@"Resize Selected"];
+}
+
+- (void)publish:(id)sender
+{
+    NSString *webServerName = @"http://localhost:4567";
+    NSString *levelName = [[[self fileURL] lastPathComponent] stringByDeletingPathExtension];
+    NSString *urlString = [NSString stringWithFormat:@"%@/Levels/%@.xml", webServerName, levelName];
+
+    NSMutableURLRequest *post = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    
+    [post setHTTPMethod:@"POST"];    
+    [post setHTTPBody:[self xmlData]];
+    
+    NSURLResponse *response;    
+    NSError *error;
+    
+    NSData *result = [NSURLConnection sendSynchronousRequest:post returningResponse:&response error:&error];
+    
+    NSLog(@"%@", [[NSString alloc] initWithData:result encoding:NSASCIIStringEncoding]);
+    
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:[NSString stringWithFormat:@"Level was published at\n%@", urlString]];
+    [alert runModal];
 }
 
 @end

@@ -25,6 +25,11 @@
 		A7ACD61614A284FF002739C3 /* WD_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7ACD61314A284FF002739C3 /* WD_01.png */; };
 		A7ACD61714A284FF002739C3 /* WD_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7ACD61414A284FF002739C3 /* WD_02.png */; };
 		A7ACD61814A284FF002739C3 /* WD_03.png in Resources */ = {isa = PBXBuildFile; fileRef = A7ACD61514A284FF002739C3 /* WD_03.png */; };
+		A7C2839114A637340049FCAD /* T_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C2838D14A637340049FCAD /* T_01.png */; };
+		A7C2839214A637340049FCAD /* T_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C2838E14A637340049FCAD /* T_02.png */; };
+		A7C2839314A637340049FCAD /* T_03.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C2838F14A637340049FCAD /* T_03.png */; };
+		A7C2839A14A637A00049FCAD /* GFTurret.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C2839914A637A00049FCAD /* GFTurret.m */; };
+		A7C2839C14A651970049FCAD /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C2839B14A651970049FCAD /* green.png */; };
 		A7D35F5F14937DE20087A7E7 /* GFSoldier.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D35F5E14937DE20087A7E7 /* GFSoldier.m */; };
 		A7D5A8111493CB2C006D7BEB /* D_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D5A80B1493CB2C006D7BEB /* D_01.png */; };
 		A7D5A8121493CB2C006D7BEB /* D_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D5A80C1493CB2C006D7BEB /* D_02.png */; };
@@ -102,6 +107,12 @@
 		A7ACD61314A284FF002739C3 /* WD_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WD_01.png; path = ../../SharedImages/WD_01.png; sourceTree = "<group>"; };
 		A7ACD61414A284FF002739C3 /* WD_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WD_02.png; path = ../../SharedImages/WD_02.png; sourceTree = "<group>"; };
 		A7ACD61514A284FF002739C3 /* WD_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WD_03.png; path = ../../SharedImages/WD_03.png; sourceTree = "<group>"; };
+		A7C2838D14A637340049FCAD /* T_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = T_01.png; path = ../../SharedImages/T_01.png; sourceTree = "<group>"; };
+		A7C2838E14A637340049FCAD /* T_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = T_02.png; path = ../../SharedImages/T_02.png; sourceTree = "<group>"; };
+		A7C2838F14A637340049FCAD /* T_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = T_03.png; path = ../../SharedImages/T_03.png; sourceTree = "<group>"; };
+		A7C2839814A637A00049FCAD /* GFTurret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GFTurret.h; path = ../../SharedClasses/GFTurret.h; sourceTree = "<group>"; };
+		A7C2839914A637A00049FCAD /* GFTurret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GFTurret.m; path = ../../SharedClasses/GFTurret.m; sourceTree = "<group>"; };
+		A7C2839B14A651970049FCAD /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = ../../SharedImages/green.png; sourceTree = "<group>"; };
 		A7D35F5D14937DE20087A7E7 /* GFSoldier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GFSoldier.h; path = ../../SharedClasses/GFSoldier.h; sourceTree = "<group>"; };
 		A7D35F5E14937DE20087A7E7 /* GFSoldier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GFSoldier.m; path = ../../SharedClasses/GFSoldier.m; sourceTree = "<group>"; };
 		A7D5A80B1493CB2C006D7BEB /* D_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = D_01.png; path = ../../SharedImages/D_01.png; sourceTree = "<group>"; };
@@ -202,6 +213,10 @@
 		A774F3E9147AE96D00C6D8CD /* SharedImages */ = {
 			isa = PBXGroup;
 			children = (
+				A7C2839B14A651970049FCAD /* green.png */,
+				A7C2838D14A637340049FCAD /* T_01.png */,
+				A7C2838E14A637340049FCAD /* T_02.png */,
+				A7C2838F14A637340049FCAD /* T_03.png */,
 				A7ACD61314A284FF002739C3 /* WD_01.png */,
 				A7ACD61414A284FF002739C3 /* WD_02.png */,
 				A7ACD61514A284FF002739C3 /* WD_03.png */,
@@ -295,6 +310,8 @@
 		A7E6E6441477FD790037750E /* SharedClasses */ = {
 			isa = PBXGroup;
 			children = (
+				A7C2839814A637A00049FCAD /* GFTurret.h */,
+				A7C2839914A637A00049FCAD /* GFTurret.m */,
 				A7D35F5D14937DE20087A7E7 /* GFSoldier.h */,
 				A7D35F5E14937DE20087A7E7 /* GFSoldier.m */,
 				A7E6E6461477FD8F0037750E /* FPDiamond.h */,
@@ -457,6 +474,10 @@
 				A7ACD61614A284FF002739C3 /* WD_01.png in Resources */,
 				A7ACD61714A284FF002739C3 /* WD_02.png in Resources */,
 				A7ACD61814A284FF002739C3 /* WD_03.png in Resources */,
+				A7C2839114A637340049FCAD /* T_01.png in Resources */,
+				A7C2839214A637340049FCAD /* T_02.png in Resources */,
+				A7C2839314A637340049FCAD /* T_03.png in Resources */,
+				A7C2839C14A651970049FCAD /* green.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +515,7 @@
 				A78808CA148D7B970034951A /* GFWebLevelsViewController.m in Sources */,
 				A7D35F5F14937DE20087A7E7 /* GFSoldier.m in Sources */,
 				A72A35861494DEA600216F6B /* GFLevelName.m in Sources */,
+				A7C2839A14A637A00049FCAD /* GFTurret.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

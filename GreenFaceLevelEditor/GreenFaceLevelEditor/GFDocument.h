@@ -19,6 +19,7 @@
 #import "FPExit.h"
 #import "FPMagnet.h"
 #import "FPSpeedPowerUp.h"
+#import "GFTurret.h"
 #import "FPFactoryView.h"
 #import "FPLevelView.h"
 #import "FPGameView.h"
@@ -48,6 +49,7 @@
 - (IBAction)runGame:(id)sender;
 - (IBAction)playWithKeyboard:(id)sender;
 - (IBAction)playFromRecord:(id)sender;
+- (IBAction)publish:(id)sender;
 - (GFDocument *)prepareUndoWithName:(NSString *)name;
 - (void)duplicateCurrentObjects:(NSMutableArray *)currentObjects andIndices:(NSMutableIndexSet *)currentIndices;
 - (void)revertActionWithName:(NSString *)name objects:(NSMutableArray *)objects andIndices:(NSMutableIndexSet *)indices;

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<IronJumpLevel>
+  <FPPlatform>
+    <x>224.000000</x>
+    <y>448.000000</y>
+    <widthSegments>8</widthSegments>
+    <heightSegments>5</heightSegments>
+  </FPPlatform>
+  <FPPlayer>
+    <x>320.000000</x>
+    <y>384.000000</y>
+  </FPPlayer>
+  <FPPlatform>
+    <x>704.000000</x>
+    <y>448.000000</y>
+    <widthSegments>7</widthSegments>
+    <heightSegments>4</heightSegments>
+  </FPPlatform>
+  <FPMovablePlatform>
+    <x>736.000000</x>
+    <y>320.000000</y>
+    <widthSegments>4</widthSegments>
+    <heightSegments>4</heightSegments>
+  </FPMovablePlatform>
+  <GFSoldier>
+    <x>416.000000</x>
+    <y>384.000000</y>
+  </GFSoldier>
+  <FPExit>
+    <x>768.000000</x>
+    <y>224.000000</y>
+  </FPExit>
+  <GFSoldier>
+    <x>608.000000</x>
+    <y>608.000000</y>
+  </GFSoldier>
+  <FPPlatform>
+    <x>512.000000</x>
+    <y>672.000000</y>
+    <widthSegments>5</widthSegments>
+    <heightSegments>2</heightSegments>
+  </FPPlatform>
+</IronJumpLevel>
