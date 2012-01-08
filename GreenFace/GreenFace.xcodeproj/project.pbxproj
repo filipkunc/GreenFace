@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A72A35861494DEA600216F6B /* GFLevelName.m in Sources */ = {isa = PBXBuildFile; fileRef = A72A35851494DEA600216F6B /* GFLevelName.m */; };
+		A72C0AF814A892AF00F8E4C7 /* GFGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = A72C0AF714A892AF00F8E4C7 /* GFGameController.m */; };
+		A72C0AFF14A8A19400F8E4C7 /* Turret.greenlevel in Resources */ = {isa = PBXBuildFile; fileRef = A72C0AFE14A8A19400F8E4C7 /* Turret.greenlevel */; };
 		A7395317148BD55C009AA9BA /* GFLevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7395316148BD55C009AA9BA /* GFLevelsViewController.m */; };
 		A764AEE2148BE91A00A18E09 /* GFGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A764AEE0148BE91A00A18E09 /* GFGameViewController.m */; };
 		A764AEE3148BE91A00A18E09 /* GFGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A764AEE1148BE91A00A18E09 /* GFGameViewController.xib */; };
@@ -87,6 +89,9 @@
 /* Begin PBXFileReference section */
 		A72A35841494DEA600216F6B /* GFLevelName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFLevelName.h; sourceTree = "<group>"; };
 		A72A35851494DEA600216F6B /* GFLevelName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFLevelName.m; sourceTree = "<group>"; };
+		A72C0AF614A892AF00F8E4C7 /* GFGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GFGameController.h; path = ../../SharedClasses/GFGameController.h; sourceTree = "<group>"; };
+		A72C0AF714A892AF00F8E4C7 /* GFGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GFGameController.m; path = ../../SharedClasses/GFGameController.m; sourceTree = "<group>"; };
+		A72C0AFE14A8A19400F8E4C7 /* Turret.greenlevel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Turret.greenlevel; sourceTree = "<group>"; };
 		A7395315148BD55C009AA9BA /* GFLevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFLevelsViewController.h; sourceTree = "<group>"; };
 		A7395316148BD55C009AA9BA /* GFLevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFLevelsViewController.m; sourceTree = "<group>"; };
 		A764AEDF148BE91A00A18E09 /* GFGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGameViewController.h; sourceTree = "<group>"; };
@@ -310,6 +315,8 @@
 		A7E6E6441477FD790037750E /* SharedClasses */ = {
 			isa = PBXGroup;
 			children = (
+				A72C0AF614A892AF00F8E4C7 /* GFGameController.h */,
+				A72C0AF714A892AF00F8E4C7 /* GFGameController.m */,
 				A7C2839814A637A00049FCAD /* GFTurret.h */,
 				A7C2839914A637A00049FCAD /* GFTurret.m */,
 				A7D35F5D14937DE20087A7E7 /* GFSoldier.h */,
@@ -378,6 +385,7 @@
 		A7E6E6F9147806D90037750E /* Levels */ = {
 			isa = PBXGroup;
 			children = (
+				A72C0AFE14A8A19400F8E4C7 /* Turret.greenlevel */,
 				A7D97D08149E1A180011A868 /* Soldiers.greenlevel */,
 				A774F403147B0B1F00C6D8CD /* Jump.greenlevel */,
 				A76664D214784E3D002A4159 /* Puzzle.greenlevel */,
@@ -478,6 +486,7 @@
 				A7C2839214A637340049FCAD /* T_02.png in Resources */,
 				A7C2839314A637340049FCAD /* T_03.png in Resources */,
 				A7C2839C14A651970049FCAD /* green.png in Resources */,
+				A72C0AFF14A8A19400F8E4C7 /* Turret.greenlevel in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +525,7 @@
 				A7D35F5F14937DE20087A7E7 /* GFSoldier.m in Sources */,
 				A72A35861494DEA600216F6B /* GFLevelName.m in Sources */,
 				A7C2839A14A637A00049FCAD /* GFTurret.m in Sources */,
+				A72C0AF814A892AF00F8E4C7 /* GFGameController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A72C0AF414A8905D00F8E4C7 /* GFGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = A72C0AF314A8905D00F8E4C7 /* GFGameController.m */; };
+		A72C0AFB14A8970000F8E4C7 /* win.png in Resources */ = {isa = PBXBuildFile; fileRef = A72C0AFA14A8970000F8E4C7 /* win.png */; };
+		A72C0AFD14A89C6C00F8E4C7 /* levelatlas.png in Resources */ = {isa = PBXBuildFile; fileRef = A72C0AFC14A89C6C00F8E4C7 /* levelatlas.png */; };
 		A75FA4351477EDF8005E3A14 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75FA4341477EDF8005E3A14 /* Cocoa.framework */; };
 		A75FA43F1477EDF8005E3A14 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A75FA43D1477EDF8005E3A14 /* InfoPlist.strings */; };
 		A75FA4411477EDF8005E3A14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A75FA4401477EDF8005E3A14 /* main.m */; };
@@ -84,6 +87,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A72C0AF214A8905D00F8E4C7 /* GFGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GFGameController.h; path = ../../SharedClasses/GFGameController.h; sourceTree = "<group>"; };
+		A72C0AF314A8905D00F8E4C7 /* GFGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GFGameController.m; path = ../../SharedClasses/GFGameController.m; sourceTree = "<group>"; };
+		A72C0AFA14A8970000F8E4C7 /* win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = win.png; path = Images/win.png; sourceTree = "<group>"; };
+		A72C0AFC14A89C6C00F8E4C7 /* levelatlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = levelatlas.png; path = Images/levelatlas.png; sourceTree = "<group>"; };
 		A75FA4301477EDF8005E3A14 /* GreenFaceLevelEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenFaceLevelEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75FA4341477EDF8005E3A14 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A75FA4371477EDF8005E3A14 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -357,6 +364,8 @@
 				A7D35F5A14937DCB0087A7E7 /* GFSoldier.m */,
 				A7C2839514A6378F0049FCAD /* GFTurret.h */,
 				A7C2839614A6378F0049FCAD /* GFTurret.m */,
+				A72C0AF214A8905D00F8E4C7 /* GFGameController.h */,
+				A72C0AF314A8905D00F8E4C7 /* GFGameController.m */,
 			);
 			name = SharedClasses;
 			sourceTree = "<group>";
@@ -364,6 +373,8 @@
 		A7E6E5E01477FBA50037750E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A72C0AFC14A89C6C00F8E4C7 /* levelatlas.png */,
+				A72C0AFA14A8970000F8E4C7 /* win.png */,
 				A7E6E5E11477FBBC0037750E /* AndaleMono.png */,
 				A7E6E5E21477FBBC0037750E /* ball.png */,
 				A7E6E5E31477FBBC0037750E /* diamond.png */,
@@ -480,6 +491,8 @@
 				A7C2838914A6372B0049FCAD /* T_02.png in Resources */,
 				A7C2838A14A6372B0049FCAD /* T_03.png in Resources */,
 				A7C2839E14A6519D0049FCAD /* green.png in Resources */,
+				A72C0AFB14A8970000F8E4C7 /* win.png in Resources */,
+				A72C0AFD14A89C6C00F8E4C7 /* levelatlas.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +531,7 @@
 				A7E6E6A51477FE140037750E /* NSOpenGLView+Helpers.m in Sources */,
 				A7D35F5B14937DCB0087A7E7 /* GFSoldier.m in Sources */,
 				A7C2839714A6378F0049FCAD /* GFTurret.m in Sources */,
+				A72C0AF414A8905D00F8E4C7 /* GFGameController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

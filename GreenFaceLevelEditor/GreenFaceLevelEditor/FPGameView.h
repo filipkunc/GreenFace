@@ -7,24 +7,15 @@
 //
 
 #import "NSOpenGLView+Helpers.h"
-#import "FPFont.h"
-#import "FPGame.h"
-#import "FPReplay.h"
+#import "GFGameController.h"
 
 @interface FPGameView : NSOpenGLView
 {
 	NSTimer *timer;
-	FPGame *game;
 	NSMutableSet *pressedKeys;
-    FPReplay *replay;
-    BOOL replayingGame;
+    GFGameController *gameController;
 }
 
-@property (readwrite, retain) FPGame *game;
-
-- (void)removeAllPressedKeys;
-- (void)gameLoop;
-- (void)playWithKeyboard;
-- (void)playFromRecord;
+- (void)runGameWithLevelData:(NSData *)data;
 
 @end

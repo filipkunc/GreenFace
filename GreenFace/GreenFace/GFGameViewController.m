@@ -77,9 +77,8 @@
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
-    win = [[FPTexture alloc] initWithFile:@"win.png" convertToAlpha:NO];
-    
-    [self resetGame];
+    gameController = [[GFGameController alloc] initWithLevelData:[NSData dataWithContentsOfFile:[levelName path]]];
+    [gameController resetGame];
 }
 
 - (void)tearDownGL
@@ -91,85 +90,9 @@
     [[UIApplication sharedApplication] setIdleTimerDisabled:NO];  
 }
 
-- (void)resetGame
-{
-	NSData *data = [NSData dataWithContentsOfFile:[levelName path]];
-    
-    game = [[FPGame alloc] initWithXMLData:data width:480 height:320];
-    
-    for (id<FPGameObject> gameObject in [game gameObjects])
-	{
-		if ([gameObject isMemberOfClass:[FPExit class]])
-        {
-            exit = gameObject;
-            break;
-        }
-    }
-    
-    [FPGame setBackgroundIndex:1];
-    
-	nextLevelCounter = 0;
-	winAnimation = 0.0f;
-	victory = NO;
-}
-
-- (void)resetIfNeeded
-{
-    FPPlayer *player = (FPPlayer *)[game player];
-    
-    if (player.lives > 0)
-    {
-        float playerY = CGRectGetMinY([game player].rect);
-        for (id<FPGameObject> gameObject in [game gameObjects])
-        {
-            if (gameObject.isPlatform && !gameObject.isMovable)
-            {
-                float gameObjectY = CGRectGetMaxY(gameObject.rect);
-                if (playerY < gameObjectY)
-                {
-                    return;
-                }
-            }
-        }
-    }
-	
-	nextLevelCounter++;
-	if (nextLevelCounter > 30)
-	{
-		nextLevelCounter = 0;
-		[self resetGame];
-	}	
-}
-
-- (void)nextLevelIfNeeded
-{
-	if (exit.isVisible)
-        return;
-	
-	nextLevelCounter++;
-	if (nextLevelCounter > 30)
-	{
-		nextLevelCounter = 0;
-		
-        victory = YES;
-		return;		
-	}
-}
-
 - (void)update
 {
-    if (victory)
-	{
-		winAnimation += 0.01f;
-		if (winAnimation > 0.7f)
-			winAnimation = 0.7f;
-	}
-	else if (game)
-	{
-		[self nextLevelIfNeeded];
-		[self resetIfNeeded];
-		[game update];	
-	}
+    [gameController update];
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
@@ -192,41 +115,7 @@
     glClearColor(101.0f / 255.0f, 97.0f / 255.0f, 85.0f / 255.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
     
-	if (game)
-	{
-		[game draw];
-		
-		if (victory)
-		{
-			const float quad[] = 
-			{
-				0,				0,
-				backingWidth,	0,
-				0,				backingHeight,
-				backingWidth,	backingHeight
-			};
-			
-			glDisable(GL_TEXTURE_2D);
-			glEnable(GL_BLEND);
-			glColor4f(0, 0, 0, winAnimation);
-			
-			glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-			glEnableClientState(GL_VERTEX_ARRAY);
-			glVertexPointer(2, GL_FLOAT, sizeof(float) * 2, quad);	
-			glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-			
-			glColor4f(1, 1, 1, 1);
-			
-			float winY = 300.0f - winAnimation * 280.0f;
-			[win drawAtPoint:CGPointMake(120.0f, winY)];
-			
-			winY += 64.0f;
-			
-			[[FPGameAtlas sharedAtlas] removeAllTiles];
-			[[FPGameAtlas sharedAtlas] addElevator:2 atPoint:CGPointMake(120.0f, winY) widthSegments:8 heightSegments:1];
-			[[FPGameAtlas sharedAtlas] drawAllTiles];
-		}
-	}	
+    [gameController draw];
 	
 	glPopMatrix();
 }
@@ -249,7 +138,7 @@
     [[UIAccelerometer sharedAccelerometer] setDelegate:nil];
     [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
     
-    [navController  popToRootViewControllerAnimated:YES];    
+    [navController popToRootViewControllerAnimated:YES];    
     [navController setNavigationBarHidden:NO animated:YES];
 }
 
@@ -262,7 +151,7 @@
 	inputAcceleration.y = acceleration.x - (lastAcceleration + 0.05f);
 	lastAcceleration = flerpf(acceleration.x, lastAcceleration, 0.4f);
     
-	[game setInputAcceleration:inputAcceleration];
+	[[gameController game] setInputAcceleration:inputAcceleration];
 }
 
 @end

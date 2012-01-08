@@ -10,8 +10,6 @@
 
 @implementation FPGameView
 
-@synthesize game;
-
 - (id)initWithCoder:(NSCoder *)coder
 {
 	self = [super initWithCoder:coder];
@@ -22,16 +20,15 @@
 		glEnable(GL_TEXTURE_2D);
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);	
-		
-		timer = [NSTimer scheduledTimerWithTimeInterval:1.0 / 60.0
-												 target:self 
-											   selector:@selector(gameLoop)
-											   userInfo:nil
-												repeats:YES];
-		
+
+        timer = [NSTimer scheduledTimerWithTimeInterval:1.0 / 60.0
+                                                 target:self 
+                                               selector:@selector(gameLoop)
+                                               userInfo:nil
+                                                repeats:YES];
+        
 		pressedKeys = [[NSMutableSet alloc] init];
-        replay = [[FPReplay alloc] init];
-        replayingGame = NO;
+        gameController = nil;
 	}
     return self;
 }
@@ -47,38 +44,27 @@
 	[self setNeedsDisplay:YES];
 }
 
-- (void)playWithKeyboard
+- (void)runGameWithLevelData:(NSData *)data
 {
-    replayingGame = NO;
-    replay = [FPReplay new];
-}
-
-- (void)playFromRecord
-{
-    replayingGame = YES;
-    [replay resetReplay];
+    gameController = [[GFGameController alloc] initWithLevelData:data];
+    [gameController resetGame];
+    
+    [pressedKeys removeAllObjects];    
 }
 
 - (void)gameLoop
 {
-    if (replayingGame)
-    {
-        [replay playFrameToGame:game];
-    }
-    else
-    {
-        CGPoint inputAcceleration = CGPointZero;
-        if ([pressedKeys containsObject:[NSNumber numberWithUnsignedShort:NSLeftArrowFunctionKey]])
-            inputAcceleration.x = -1.0f;
-        else if ([pressedKeys containsObject:[NSNumber numberWithUnsignedShort:NSRightArrowFunctionKey]])
-            inputAcceleration.x = 1.0f;
-        if ([pressedKeys containsObject:[NSNumber numberWithUnsignedShort:NSUpArrowFunctionKey]])
-            inputAcceleration.y = 1.0f;
-        
-        [game setInputAcceleration:inputAcceleration];
-        [game update];
-        //[replay addFrameFromGame:game];
-    }
+    CGPoint inputAcceleration = CGPointZero;
+    if ([pressedKeys containsObject:[NSNumber numberWithUnsignedShort:NSLeftArrowFunctionKey]])
+        inputAcceleration.x = -1.0f;
+    else if ([pressedKeys containsObject:[NSNumber numberWithUnsignedShort:NSRightArrowFunctionKey]])
+        inputAcceleration.x = 1.0f;
+    if ([pressedKeys containsObject:[NSNumber numberWithUnsignedShort:NSUpArrowFunctionKey]])
+        inputAcceleration.y = 1.0f;
+    
+    [[gameController game] setInputAcceleration:inputAcceleration];
+    [gameController update];
+
 	[self setNeedsDisplay:YES];
 }
 
@@ -93,7 +79,7 @@
 	glTranslatef(0, rect.size.height, 0);
 	glScalef(1, -1, 1);
 	
-	[game draw];
+	[gameController draw];
 	
 	[[self openGLContext] flushBuffer];
 }
@@ -103,11 +89,6 @@
 - (BOOL)acceptsFirstResponder
 {
 	return YES;
-}
-
-- (void)removeAllPressedKeys
-{
-	[pressedKeys removeAllObjects];
 }
 
 - (void)processChar:(unichar)character isKeyDown:(BOOL)keyDown

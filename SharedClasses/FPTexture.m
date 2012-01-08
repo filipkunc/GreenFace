@@ -140,11 +140,10 @@ void CreateTexture(GLubyte *data, int components, GLuint *textureID, int width, 
 - (void)drawAtPoint:(CGPoint)pt
 {
 #if TARGET_OS_IPHONE
-	if (pt.x > 400.0f || pt.x + width < -80.0f)
-		return;
-	
-	if (pt.y > 400.0f || pt.y + height < -80.0f)
-		return;
+    CGRect screenRect = CGRectMake(0.0f, 0.0f, 480.0f, 320.0f);
+    CGRect tileRect = CGRectMake(pt.x, pt.y, width, height);
+    if (!CGRectIntersectsRect(screenRect, tileRect))
+        return;
 #endif
 	
 	const FPVertex vertices[] = 
@@ -185,16 +184,18 @@ void CreateTexture(GLubyte *data, int components, GLuint *textureID, int width, 
 	FPVertex *vertexBuffer = (FPVertex *)globalVertexBuffer;
 	FPVertex *vertexPtr = vertexBuffer;
 	int verticesUsed = 0;
+    
+    CGRect screenRect = CGRectMake(0.0f, 0.0f, 480.0f, 320.0f);
 	
 	for (int y = 0; y < heightSegments; y++)
 	{
 		for (int x = 0; x < widthSegments; x++)
 		{
 			CGPoint pt = CGPointMake(point.x + x * width, point.y + y * height);
+            CGRect tileRect = CGRectMake(pt.x, pt.y, width, height);
 			
-			if (pt.x > 400.0f || pt.x + width < -80.0f ||
-				pt.y > 400.0f || pt.y + height < -80.0f)
-				continue;
+            if (!CGRectIntersectsRect(screenRect, tileRect))
+                continue;
 			
 			/*
 			 0     1

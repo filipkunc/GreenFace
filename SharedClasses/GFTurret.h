@@ -25,4 +25,6 @@ typedef struct
     GFFireball *fireballs;
 }
 
++ (void)resetTextures;
+
 @end

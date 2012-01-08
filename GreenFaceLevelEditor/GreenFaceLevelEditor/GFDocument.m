@@ -266,20 +266,7 @@
 - (IBAction)runGame:(id)sender
 {
 	[gameWindow makeKeyAndOrderFront:self];
-	FPGame *game = [[FPGame alloc] initWithBinaryData:[self dataOfType:@"Binary" error:NULL] width:480 height:320];
-	[gameView setGame:game];
-	[gameView removeAllPressedKeys];
-    [gameView playWithKeyboard];
-}
-
-- (IBAction)playWithKeyboard:(id)sender
-{
-    [gameView playWithKeyboard];
-}
-
-- (IBAction)playFromRecord:(id)sender
-{
-    [gameView playFromRecord];
+    [gameView runGameWithLevelData:[self dataOfType:@"XML" error:NULL]];
 }
 
 #pragma mark Undo
@@ -420,7 +407,7 @@
 
 - (void)publish:(id)sender
 {
-    NSString *webServerName = @"http://localhost:4567";
+    NSString *webServerName = @"http://greenface.heroku.com";
     NSString *levelName = [[[self fileURL] lastPathComponent] stringByDeletingPathExtension];
     NSString *urlString = [NSString stringWithFormat:@"%@/Levels/%@.xml", webServerName, levelName];
 

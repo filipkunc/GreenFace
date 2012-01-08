@@ -14,7 +14,8 @@
 FPTextureArray *turretTexture = nil;
 FPTexture *fireballTexture = nil;
 
-const int maxFireballsCount = 20;
+const int maxFireballsCount = 40;
+const float maxFireballDistance = 1000.0f;
 
 @implementation GFTurret
 
@@ -31,6 +32,12 @@ const int maxFireballsCount = 20;
         fireballTexture = [[FPTexture alloc] initWithFile:@"green.png" convertToAlpha:NO];
     }
 	return [turretTexture textureAtIndex:0];
+}
+
++ (void)resetTextures
+{
+    turretTexture = nil;
+    fireballTexture = nil;
 }
 
 - (id)init
@@ -158,7 +165,7 @@ const int maxFireballsCount = 20;
             
             fireballs[i].x -= 6.0f;
             
-            if (fabsf(fireballs[i].x - x) > 400.0f)
+            if (fabsf(fireballs[i].x - x) > maxFireballDistance)
                 fireballs[i].isVisible = NO;
         }        
     }

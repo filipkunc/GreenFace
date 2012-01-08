@@ -47,8 +47,6 @@
 - (void)delete:(id)sender;
 - (void)duplicateSelected:(id)sender;
 - (IBAction)runGame:(id)sender;
-- (IBAction)playWithKeyboard:(id)sender;
-- (IBAction)playFromRecord:(id)sender;
 - (IBAction)publish:(id)sender;
 - (GFDocument *)prepareUndoWithName:(NSString *)name;
 - (void)duplicateCurrentObjects:(NSMutableArray *)currentObjects andIndices:(NSMutableIndexSet *)currentIndices;

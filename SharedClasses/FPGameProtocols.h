@@ -48,6 +48,7 @@
 #if !TARGET_OS_IPHONE
 + (FPTexture *)loadTextureIfNeeded;
 #endif
++ (void)resetTextures;
 - (void)updateWithGame:(id<FPGameProtocol>)game;
 - (BOOL)collisionLeftRight:(id<FPGameProtocol>)game;
 
