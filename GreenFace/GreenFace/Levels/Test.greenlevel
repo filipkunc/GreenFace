@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<IronJumpLevel>
+  <FPPlatform>
+    <x>128.000000</x>
+    <y>352.000000</y>
+    <widthSegments>13</widthSegments>
+    <heightSegments>4</heightSegments>
+  </FPPlatform>
+  <GFPushButton>
+    <x>320.000000</x>
+    <y>288.000000</y>
+  </GFPushButton>
+  <FPPlayer>
+    <x>320.000000</x>
+    <y>160.000000</y>
+  </FPPlayer>
+  <FPPlatform>
+    <x>448.000000</x>
+    <y>224.000000</y>
+    <widthSegments>3</widthSegments>
+    <heightSegments>4</heightSegments>
+  </FPPlatform>
+  <FPExit>
+    <x>512.000000</x>
+    <y>64.000000</y>
+  </FPExit>
+</IronJumpLevel>

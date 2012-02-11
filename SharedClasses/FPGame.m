@@ -12,6 +12,7 @@
 #import "FPDiamond.h"
 #import "GFSoldier.h"
 #import "GFTurret.h"
+#import "GFPushButton.h"
 
 FPFont *font = nil;
 FPTexture *background = nil;
@@ -91,6 +92,7 @@ void ChangeVertexBufferIfNeeded(void)
     [FPPlayer resetTextures];
     [GFSoldier resetTextures];
     [GFTurret resetTextures];
+    [GFPushButton resetTextures];
     [FPGameAtlas resetSharedAtlas];
     DestroyVertexBuffer();
 }

@@ -20,6 +20,7 @@
 #import "FPMagnet.h"
 #import "FPSpeedPowerUp.h"
 #import "GFTurret.h"
+#import "GFPushButton.h"
 #import "FPFactoryView.h"
 #import "FPLevelView.h"
 #import "FPGameView.h"

@@ -26,6 +26,10 @@
 		A7ACD60F14A284F5002739C3 /* WD_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7ACD60C14A284F5002739C3 /* WD_01.png */; };
 		A7ACD61014A284F5002739C3 /* WD_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7ACD60D14A284F5002739C3 /* WD_02.png */; };
 		A7ACD61114A284F5002739C3 /* WD_03.png in Resources */ = {isa = PBXBuildFile; fileRef = A7ACD60E14A284F5002739C3 /* WD_03.png */; };
+		A7AE758814E698130022120C /* GFPushButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AE758714E698130022120C /* GFPushButton.m */; };
+		A7AE759114E69B5A0022120C /* button_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7AE758E14E69B5A0022120C /* button_01.png */; };
+		A7AE759214E69B5A0022120C /* button_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7AE758F14E69B5A0022120C /* button_02.png */; };
+		A7AE759314E69B5A0022120C /* button_03.png in Resources */ = {isa = PBXBuildFile; fileRef = A7AE759014E69B5A0022120C /* button_03.png */; };
 		A7C2838814A6372B0049FCAD /* T_01.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C2838414A6372B0049FCAD /* T_01.png */; };
 		A7C2838914A6372B0049FCAD /* T_02.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C2838514A6372B0049FCAD /* T_02.png */; };
 		A7C2838A14A6372B0049FCAD /* T_03.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C2838614A6372B0049FCAD /* T_03.png */; };
@@ -114,6 +118,11 @@
 		A7ACD60C14A284F5002739C3 /* WD_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WD_01.png; path = ../../SharedImages/WD_01.png; sourceTree = "<group>"; };
 		A7ACD60D14A284F5002739C3 /* WD_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WD_02.png; path = ../../SharedImages/WD_02.png; sourceTree = "<group>"; };
 		A7ACD60E14A284F5002739C3 /* WD_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WD_03.png; path = ../../SharedImages/WD_03.png; sourceTree = "<group>"; };
+		A7AE758614E698130022120C /* GFPushButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GFPushButton.h; path = ../../SharedClasses/GFPushButton.h; sourceTree = "<group>"; };
+		A7AE758714E698130022120C /* GFPushButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GFPushButton.m; path = ../../SharedClasses/GFPushButton.m; sourceTree = "<group>"; };
+		A7AE758E14E69B5A0022120C /* button_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_01.png; path = ../../SharedImages/button_01.png; sourceTree = "<group>"; };
+		A7AE758F14E69B5A0022120C /* button_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_02.png; path = ../../SharedImages/button_02.png; sourceTree = "<group>"; };
+		A7AE759014E69B5A0022120C /* button_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_03.png; path = ../../SharedImages/button_03.png; sourceTree = "<group>"; };
 		A7C2838414A6372B0049FCAD /* T_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = T_01.png; path = ../../SharedImages/T_01.png; sourceTree = "<group>"; };
 		A7C2838514A6372B0049FCAD /* T_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = T_02.png; path = ../../SharedImages/T_02.png; sourceTree = "<group>"; };
 		A7C2838614A6372B0049FCAD /* T_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = T_03.png; path = ../../SharedImages/T_03.png; sourceTree = "<group>"; };
@@ -289,6 +298,9 @@
 		A774F3EA147AE98800C6D8CD /* SharedImages */ = {
 			isa = PBXGroup;
 			children = (
+				A7AE758E14E69B5A0022120C /* button_01.png */,
+				A7AE758F14E69B5A0022120C /* button_02.png */,
+				A7AE759014E69B5A0022120C /* button_03.png */,
 				A7C2839D14A6519D0049FCAD /* green.png */,
 				A7C2838414A6372B0049FCAD /* T_01.png */,
 				A7C2838514A6372B0049FCAD /* T_02.png */,
@@ -366,6 +378,8 @@
 				A7C2839614A6378F0049FCAD /* GFTurret.m */,
 				A72C0AF214A8905D00F8E4C7 /* GFGameController.h */,
 				A72C0AF314A8905D00F8E4C7 /* GFGameController.m */,
+				A7AE758614E698130022120C /* GFPushButton.h */,
+				A7AE758714E698130022120C /* GFPushButton.m */,
 			);
 			name = SharedClasses;
 			sourceTree = "<group>";
@@ -493,6 +507,9 @@
 				A7C2839E14A6519D0049FCAD /* green.png in Resources */,
 				A72C0AFB14A8970000F8E4C7 /* win.png in Resources */,
 				A72C0AFD14A89C6C00F8E4C7 /* levelatlas.png in Resources */,
+				A7AE759114E69B5A0022120C /* button_01.png in Resources */,
+				A7AE759214E69B5A0022120C /* button_02.png in Resources */,
+				A7AE759314E69B5A0022120C /* button_03.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +549,7 @@
 				A7D35F5B14937DCB0087A7E7 /* GFSoldier.m in Sources */,
 				A7C2839714A6378F0049FCAD /* GFTurret.m in Sources */,
 				A72C0AF414A8905D00F8E4C7 /* GFGameController.m in Sources */,
+				A7AE758814E698130022120C /* GFPushButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

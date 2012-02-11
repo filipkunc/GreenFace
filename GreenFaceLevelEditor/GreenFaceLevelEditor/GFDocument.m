@@ -29,6 +29,7 @@
 		[factories addObject:[FPSpeedPowerUp class]];
 		[factories addObject:[FPTrampoline class]];
         [factories addObject:[GFTurret class]];
+        [factories addObject:[GFPushButton class]];
 		[factories addObject:[FPExit class]];
 		activeFactory = nil;
 		
